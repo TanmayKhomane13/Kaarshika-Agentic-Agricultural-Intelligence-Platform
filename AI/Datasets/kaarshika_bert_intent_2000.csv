@@ -1,0 +1,2001 @@
+text,label
+Should I apply an organic manure treatment to my brinjal?,DECISION
+how does excess rainfall affect okra?,INFORMATION
+"For a farmer in Wayanad, should I apply an organic manure treatment to my coconut?",DECISION
+"For my farm, how often is pepper usually irrigated during vegetative stage?",INFORMATION
+"For a farmer in Wayanad, what are the important growth stages of pepper?",INFORMATION
+"On my farm, what soil type is suitable for growing brinjal?",INFORMATION
+"For my farm, what causes leaf curling in banana?",INFORMATION
+"In my field, what should I do if my pepper is showing yellow leaves?",DECISION
+"For a farmer in Wayanad, what are the signs of nitrogen deficiency in rice?",INFORMATION
+"For my farm, should I change my irrigation schedule for rice?",DECISION
+"For a farmer in Wayanad, should I use mulch in my tapioca field?",DECISION
+How often is banana usually irrigated during vegetative stage?,INFORMATION
+"For my crop, what nutrients does rice need during fruiting stage?",INFORMATION
+"On my farm, what soil type is suitable for growing rice?",INFORMATION
+Should I irrigate my rice today?,DECISION
+"For a farmer in Wayanad, what fertilizer is suitable for chilli?",INFORMATION
+"In Kerala, what soil type is suitable for growing tapioca?",INFORMATION
+"On my farm, what are common irrigation methods for okra?",INFORMATION
+"On my farm, should I take action immediately for my tomato problem?",DECISION
+"For my crop, what would be the better option for my banana under the current conditions?",DECISION
+"In my field, what causes yellow leaves in brinjal?",INFORMATION
+"In my field, what are the common pests that affect coconut?",INFORMATION
+"For a farmer in Wayanad, should I apply an organic manure treatment to my rice?",DECISION
+What is the ideal soil pH for pineapple cultivation?,INFORMATION
+"In my field, what fertilizer is suitable for coconut?",INFORMATION
+How can I improve drainage in a field growing pepper?,INFORMATION
+Should I take action immediately for my banana problem?,DECISION
+"In my field, what soil type is suitable for growing coconut?",INFORMATION
+"For a farmer in Wayanad, what causes leaf curling in rice?",INFORMATION
+"On my farm, what should I do about my coconut after heavy rainfall?",DECISION
+"On my farm, what are the common pests that affect pineapple?",INFORMATION
+"For my crop, what are the signs of nitrogen deficiency in pineapple?",INFORMATION
+what are the benefits of organic manure for tomato?,INFORMATION
+What nutrients does pineapple need during flowering stage?,INFORMATION
+"For my farm, how can I improve drainage in a field growing tomato?",INFORMATION
+"For my crop, what is the ideal soil pH for coconut cultivation?",INFORMATION
+What precautions should I take during heavy rainfall for pepper?,INFORMATION
+"For my crop, what are the common pests that affect okra?",INFORMATION
+what should I do about my brinjal after heavy rainfall?,DECISION
+"For a farmer in Wayanad, what nutrients does coconut need during flowering stage?",INFORMATION
+"In my field, what is the best time to plant coconut in Kerala?",INFORMATION
+what should I do if my rice is showing yellow leaves?,DECISION
+"On my farm, how can I improve drainage in a field growing pepper?",INFORMATION
+"For my farm, which option is better for improving my rice yield?",DECISION
+"In my field, which fertilizer should I choose for my tapioca?",DECISION
+"For my crop, how does excess rainfall affect pepper?",INFORMATION
+"In Kerala, which fertilizer should I choose for my chilli?",DECISION
+"For my farm, should I change my irrigation schedule for pineapple?",DECISION
+what are the signs of nitrogen deficiency in chilli?,INFORMATION
+"On my farm, should I harvest my chilli now or wait?",DECISION
+"For my farm, how can I improve drainage in a field growing pineapple?",INFORMATION
+"For my crop, which option is better for improving my brinjal yield?",DECISION
+What are the benefits of mulching for tomato?,INFORMATION
+Should I take action immediately for my coconut problem?,DECISION
+Which fertilizer should I choose for my tomato?,DECISION
+"In my field, what are common irrigation methods for banana?",INFORMATION
+"For a farmer in Wayanad, should I harvest my rice now or wait?",DECISION
+"For a farmer in Wayanad, what are the common diseases affecting pepper?",INFORMATION
+"In my field, how often is rice usually irrigated during fruiting stage?",INFORMATION
+"In Kerala, should I reduce irrigation because of the rain?",DECISION
+should I improve drainage in my rice field?,DECISION
+"On my farm, how can I improve drainage in a field growing tapioca?",INFORMATION
+"For my crop, which irrigation method should I use for my rice?",DECISION
+What soil type is suitable for growing pineapple?,INFORMATION
+Should I apply fertilizer to my tapioca now?,DECISION
+"For my crop, should I take action immediately for my tomato problem?",DECISION
+"In my field, should I change my irrigation schedule for banana?",DECISION
+should I use mulch in my chilli field?,DECISION
+"For a farmer in Wayanad, should I increase irrigation because the soil is dry?",DECISION
+Should I use mulch in my pineapple field?,DECISION
+"In my field, what fertilizer is suitable for pineapple?",INFORMATION
+How often is banana usually irrigated during seedling stage?,INFORMATION
+"For my farm, should I spray a treatment for the pest affecting my tomato?",DECISION
+"In my field, what would be the better option for my tomato under the current conditions?",DECISION
+"On my farm, what are common irrigation methods for pepper?",INFORMATION
+Should I wait for the rain before irrigating my rice?,DECISION
+what are the common pests that affect pepper?,INFORMATION
+"For my crop, what nutrients does chilli need during harvesting stage?",INFORMATION
+What causes leaf curling in okra?,INFORMATION
+"For a farmer in Wayanad, which option is better for improving my pepper yield?",DECISION
+"In Kerala, should I use mulch in my brinjal field?",DECISION
+"In my field, should I irrigate my chilli today?",DECISION
+What soil type is suitable for growing brinjal?,INFORMATION
+what would be the better option for my pepper under the current conditions?,DECISION
+How often is tapioca usually irrigated during flowering stage?,INFORMATION
+"In my field, how can I improve drainage in a field growing brinjal?",INFORMATION
+which irrigation method should I use for my chilli?,DECISION
+"For my farm, should I apply fertilizer to my rice now?",DECISION
+"In my field, which irrigation method should I use for my pepper?",DECISION
+"For my crop, should I improve drainage in my pepper field?",DECISION
+"For my crop, should I plant brinjal now or wait for better weather?",DECISION
+"For my farm, what are the signs of nitrogen deficiency in pineapple?",INFORMATION
+"In my field, which fertilizer should I choose for my pepper?",DECISION
+Should I take action immediately for my tomato problem?,DECISION
+"For my crop, what soil type is suitable for growing brinjal?",INFORMATION
+"In my field, what is the best time to plant tapioca in Kerala?",INFORMATION
+"On my farm, what are the common diseases affecting pepper?",INFORMATION
+"For my farm, how often is banana usually irrigated during fruiting stage?",INFORMATION
+Should I plant coconut now or wait for better weather?,DECISION
+"On my farm, what causes yellow leaves in banana?",INFORMATION
+"In Kerala, what is the best time to plant rice in Kerala?",INFORMATION
+"In Kerala, should I apply an organic manure treatment to my coconut?",DECISION
+What would be the better option for my banana under the current conditions?,DECISION
+"For a farmer in Wayanad, what are the important growth stages of rice?",INFORMATION
+"In my field, what causes yellow leaves in tomato?",INFORMATION
+"In my field, should I use mulch in my tapioca field?",DECISION
+"For a farmer in Wayanad, should I improve drainage in my pepper field?",DECISION
+"In Kerala, what are the important growth stages of chilli?",INFORMATION
+"On my farm, which irrigation method should I use for my banana?",DECISION
+"In my field, what are the common pests that affect chilli?",INFORMATION
+what are common irrigation methods for pineapple?,INFORMATION
+"In my field, how does excess rainfall affect pepper?",INFORMATION
+"In Kerala, what should I do if my okra is showing yellow leaves?",DECISION
+"In Kerala, should I wait for the rain before irrigating my pepper?",DECISION
+"For a farmer in Wayanad, what is the best time to plant pepper in Kerala?",INFORMATION
+what soil type is suitable for growing coconut?,INFORMATION
+What soil type is suitable for growing pepper?,INFORMATION
+should I plant brinjal now or wait for better weather?,DECISION
+How often is rice usually irrigated during seedling stage?,INFORMATION
+What is the best time to plant chilli in Kerala?,INFORMATION
+what are the benefits of mulching for okra?,INFORMATION
+"For my farm, should I wait for the rain before irrigating my rice?",DECISION
+How does excess rainfall affect tapioca?,INFORMATION
+what fertilizer is suitable for pineapple?,INFORMATION
+"For my farm, what are the common pests that affect pepper?",INFORMATION
+What is the ideal soil pH for chilli cultivation?,INFORMATION
+"On my farm, should I apply an organic manure treatment to my tapioca?",DECISION
+Which option is better for improving my brinjal yield?,DECISION
+"For my farm, what precautions should I take during heavy rainfall for banana?",INFORMATION
+should I take action immediately for my okra problem?,DECISION
+"On my farm, what causes leaf curling in pineapple?",INFORMATION
+What are common irrigation methods for tapioca?,INFORMATION
+how does excess rainfall affect pepper?,INFORMATION
+"For my crop, what are the benefits of mulching for rice?",INFORMATION
+what is the ideal soil pH for pineapple cultivation?,INFORMATION
+"In my field, what should I do about my tomato after heavy rainfall?",DECISION
+"On my farm, what are the benefits of organic manure for banana?",INFORMATION
+"In Kerala, should I change my irrigation schedule for coconut?",DECISION
+"For my crop, which option is better for improving my pineapple yield?",DECISION
+what are common irrigation methods for banana?,INFORMATION
+"On my farm, should I harvest my tapioca now or wait?",DECISION
+"On my farm, what are the signs of nitrogen deficiency in tomato?",INFORMATION
+"For my crop, what precautions should I take during heavy rainfall for rice?",INFORMATION
+"In Kerala, should I spray a treatment for the pest affecting my brinjal?",DECISION
+Which irrigation method should I use for my tapioca?,DECISION
+"For a farmer in Wayanad, what are the symptoms of potassium deficiency in pepper?",INFORMATION
+"For a farmer in Wayanad, what are the benefits of organic manure for tomato?",INFORMATION
+"For a farmer in Wayanad, what nutrients does tapioca need during flowering stage?",INFORMATION
+What nutrients does tomato need during seedling stage?,INFORMATION
+"In Kerala, should I sell my tomato now or wait for better prices?",DECISION
+"For my crop, what fertilizer is suitable for brinjal?",INFORMATION
+What are the benefits of organic manure for tapioca?,INFORMATION
+"For my farm, how can I improve drainage in a field growing brinjal?",INFORMATION
+"For my crop, what are the symptoms of potassium deficiency in rice?",INFORMATION
+What are the common diseases affecting okra?,INFORMATION
+What are the important growth stages of pineapple?,INFORMATION
+What is drip irrigation and how does it work for tapioca?,INFORMATION
+"In my field, which irrigation method should I use for my tomato?",DECISION
+"In Kerala, what causes yellow leaves in tapioca?",INFORMATION
+What is the best time to plant okra in Kerala?,INFORMATION
+"For a farmer in Wayanad, how often is pepper usually irrigated during flowering stage?",INFORMATION
+"For a farmer in Wayanad, what are the signs of nitrogen deficiency in tapioca?",INFORMATION
+"For my farm, what should I do if my pepper is showing yellow leaves?",DECISION
+"On my farm, which option is better for improving my okra yield?",DECISION
+what fertilizer is suitable for chilli?,INFORMATION
+"In Kerala, should I change my irrigation schedule for brinjal?",DECISION
+"In Kerala, should I apply fertilizer to my coconut now?",DECISION
+"In my field, what are the signs of nitrogen deficiency in pineapple?",INFORMATION
+"For a farmer in Wayanad, what would be the better option for my rice under the current conditions?",DECISION
+What are the signs of nitrogen deficiency in brinjal?,INFORMATION
+"For my crop, what are the signs of nitrogen deficiency in banana?",INFORMATION
+"On my farm, how often is banana usually irrigated during vegetative stage?",INFORMATION
+"On my farm, which fertilizer should I choose for my tapioca?",DECISION
+"On my farm, what fertilizer is suitable for okra?",INFORMATION
+"For my farm, what should I do about my pepper after heavy rainfall?",DECISION
+"In Kerala, what is the ideal soil pH for banana cultivation?",INFORMATION
+"In my field, which fertilizer should I choose for my okra?",DECISION
+"On my farm, should I apply an organic manure treatment to my okra?",DECISION
+what fertilizer is suitable for tapioca?,INFORMATION
+"In Kerala, what are the benefits of organic manure for banana?",INFORMATION
+What are the important growth stages of okra?,INFORMATION
+should I harvest my okra now or wait?,DECISION
+"In my field, which fertilizer should I choose for my banana?",DECISION
+"In my field, should I take action immediately for my tapioca problem?",DECISION
+Should I irrigate my pepper today?,DECISION
+"In Kerala, should I wait for the rain before irrigating my coconut?",DECISION
+"In Kerala, should I spray a treatment for the pest affecting my rice?",DECISION
+"In my field, should I improve drainage in my coconut field?",DECISION
+should I apply fertilizer to my banana now?,DECISION
+What should I do if my tomato is showing yellow leaves?,DECISION
+"In my field, what are the benefits of mulching for pepper?",INFORMATION
+should I irrigate my pineapple today?,DECISION
+should I apply fertilizer to my tapioca now?,DECISION
+What are the important growth stages of rice?,INFORMATION
+"For my farm, should I plant chilli now or wait for better weather?",DECISION
+"On my farm, should I apply fertilizer to my tapioca now?",DECISION
+"On my farm, what precautions should I take during heavy rainfall for tomato?",INFORMATION
+What are the benefits of organic manure for chilli?,INFORMATION
+How can I improve drainage in a field growing coconut?,INFORMATION
+"For my crop, should I apply fertilizer to my chilli now?",DECISION
+what should I do if my chilli is showing yellow leaves?,DECISION
+"On my farm, should I apply fertilizer to my banana now?",DECISION
+"In Kerala, what are the common diseases affecting tomato?",INFORMATION
+"In Kerala, should I improve drainage in my chilli field?",DECISION
+"In Kerala, what are the symptoms of potassium deficiency in coconut?",INFORMATION
+"In my field, which irrigation method should I use for my banana?",DECISION
+"For my farm, which option is better for improving my banana yield?",DECISION
+"For my crop, what fertilizer is suitable for tapioca?",INFORMATION
+"For my farm, what are the benefits of organic manure for tomato?",INFORMATION
+"For my farm, what are the common pests that affect coconut?",INFORMATION
+Should I apply an organic manure treatment to my chilli?,DECISION
+what are the common diseases affecting banana?,INFORMATION
+"For my farm, should I plant rice now or wait for better weather?",DECISION
+"For my farm, should I increase irrigation because the soil is dry?",DECISION
+"On my farm, how can I improve drainage in a field growing okra?",INFORMATION
+what are the signs of nitrogen deficiency in pineapple?,INFORMATION
+"For a farmer in Wayanad, should I improve drainage in my rice field?",DECISION
+should I use mulch in my rice field?,DECISION
+"In my field, should I wait for the rain before irrigating my chilli?",DECISION
+What would be the better option for my coconut under the current conditions?,DECISION
+Should I change my irrigation schedule for brinjal?,DECISION
+What is the best time to plant pepper in Kerala?,INFORMATION
+"For my crop, what are the benefits of mulching for coconut?",INFORMATION
+"On my farm, what soil type is suitable for growing tapioca?",INFORMATION
+"In Kerala, what are the benefits of mulching for okra?",INFORMATION
+"In my field, should I plant okra now or wait for better weather?",DECISION
+"In Kerala, what is the best time to plant coconut in Kerala?",INFORMATION
+What should I do about my tomato after heavy rainfall?,DECISION
+"For a farmer in Wayanad, what would be the better option for my tapioca under the current conditions?",DECISION
+"For a farmer in Wayanad, what are common irrigation methods for tapioca?",INFORMATION
+"For my farm, which fertilizer should I choose for my pineapple?",DECISION
+"On my farm, what are common irrigation methods for pineapple?",INFORMATION
+What should I do if my tapioca is showing yellow leaves?,DECISION
+How does excess rainfall affect tomato?,INFORMATION
+should I wait for the rain before irrigating my chilli?,DECISION
+What are the benefits of organic manure for pepper?,INFORMATION
+"On my farm, how does excess rainfall affect pineapple?",INFORMATION
+"On my farm, how can I improve drainage in a field growing brinjal?",INFORMATION
+"For my crop, what fertilizer is suitable for chilli?",INFORMATION
+"In Kerala, what are the benefits of mulching for pineapple?",INFORMATION
+"For a farmer in Wayanad, what soil type is suitable for growing banana?",INFORMATION
+"For my crop, should I irrigate my chilli today?",DECISION
+which irrigation method should I use for my tapioca?,DECISION
+should I wait for the rain before irrigating my brinjal?,DECISION
+"For a farmer in Wayanad, what are the important growth stages of coconut?",INFORMATION
+What nutrients does banana need during seedling stage?,INFORMATION
+"In Kerala, how often is banana usually irrigated during flowering stage?",INFORMATION
+"For my crop, should I spray a treatment for the pest affecting my pepper?",DECISION
+"For my crop, should I sell my brinjal now or wait for better prices?",DECISION
+How often is brinjal usually irrigated during seedling stage?,INFORMATION
+"For my farm, what is the best time to plant banana in Kerala?",INFORMATION
+Which option is better for improving my pineapple yield?,DECISION
+What nutrients does okra need during harvesting stage?,INFORMATION
+What fertilizer is suitable for rice?,INFORMATION
+Should I harvest my pineapple now or wait?,DECISION
+"On my farm, what precautions should I take during heavy rainfall for brinjal?",INFORMATION
+"In my field, what are the common diseases affecting brinjal?",INFORMATION
+"For my farm, should I improve drainage in my banana field?",DECISION
+"For a farmer in Wayanad, should I reduce irrigation because of the rain?",DECISION
+"For my crop, how does excess rainfall affect banana?",INFORMATION
+"On my farm, should I sell my pineapple now or wait for better prices?",DECISION
+"On my farm, what are the common pests that affect banana?",INFORMATION
+"For my farm, should I take action immediately for my okra problem?",DECISION
+What are the benefits of mulching for chilli?,INFORMATION
+"In Kerala, should I apply fertilizer to my okra now?",DECISION
+"For a farmer in Wayanad, should I plant banana now or wait for better weather?",DECISION
+"For my crop, what are the important growth stages of tomato?",INFORMATION
+"In Kerala, should I improve drainage in my pepper field?",DECISION
+what are the important growth stages of okra?,INFORMATION
+"In my field, what should I do about my chilli after heavy rainfall?",DECISION
+What should I do if my rice is showing yellow leaves?,DECISION
+What should I do if my pepper is showing yellow leaves?,DECISION
+"For my farm, what fertilizer is suitable for tomato?",INFORMATION
+what is the ideal soil pH for rice cultivation?,INFORMATION
+"In Kerala, which option is better for improving my pepper yield?",DECISION
+which fertilizer should I choose for my brinjal?,DECISION
+"In Kerala, what are the common pests that affect pineapple?",INFORMATION
+"In my field, should I apply an organic manure treatment to my tapioca?",DECISION
+what is drip irrigation and how does it work for tapioca?,INFORMATION
+Should I plant okra now or wait for better weather?,DECISION
+what nutrients does tapioca need during fruiting stage?,INFORMATION
+"On my farm, what are the common pests that affect okra?",INFORMATION
+What are common irrigation methods for rice?,INFORMATION
+"In Kerala, what is the ideal soil pH for rice cultivation?",INFORMATION
+"In Kerala, what should I do about my okra after heavy rainfall?",DECISION
+"In my field, what is drip irrigation and how does it work for pineapple?",INFORMATION
+"For a farmer in Wayanad, should I sell my banana now or wait for better prices?",DECISION
+What are the common pests that affect tomato?,INFORMATION
+should I irrigate my tomato today?,DECISION
+What soil type is suitable for growing rice?,INFORMATION
+"In Kerala, what are common irrigation methods for banana?",INFORMATION
+"In Kerala, should I take action immediately for my brinjal problem?",DECISION
+"In Kerala, what causes leaf curling in chilli?",INFORMATION
+"In Kerala, should I harvest my tomato now or wait?",DECISION
+"For a farmer in Wayanad, what are the common pests that affect rice?",INFORMATION
+"For my farm, should I wait for the rain before irrigating my coconut?",DECISION
+"For my crop, what are the common diseases affecting tapioca?",INFORMATION
+"In Kerala, what precautions should I take during heavy rainfall for chilli?",INFORMATION
+"For my farm, should I apply fertilizer to my pineapple now?",DECISION
+should I plant pepper now or wait for better weather?,DECISION
+"In Kerala, what would be the better option for my rice under the current conditions?",DECISION
+"In my field, what should I do about my rice after heavy rainfall?",DECISION
+"For a farmer in Wayanad, what are the common diseases affecting brinjal?",INFORMATION
+"For my crop, how often is pineapple usually irrigated during harvesting stage?",INFORMATION
+"On my farm, what nutrients does pineapple need during fruiting stage?",INFORMATION
+what is the best time to plant rice in Kerala?,INFORMATION
+What are the benefits of organic manure for banana?,INFORMATION
+"For a farmer in Wayanad, what is the best time to plant okra in Kerala?",INFORMATION
+"In Kerala, what nutrients does pepper need during vegetative stage?",INFORMATION
+should I wait for the rain before irrigating my rice?,DECISION
+"In my field, should I spray a treatment for the pest affecting my tapioca?",DECISION
+"In Kerala, what are the signs of nitrogen deficiency in pineapple?",INFORMATION
+"On my farm, should I change my irrigation schedule for banana?",DECISION
+"On my farm, should I use mulch in my rice field?",DECISION
+"For a farmer in Wayanad, how can I improve drainage in a field growing coconut?",INFORMATION
+what fertilizer is suitable for banana?,INFORMATION
+what are the common pests that affect coconut?,INFORMATION
+Should I use mulch in my banana field?,DECISION
+"For my crop, should I apply an organic manure treatment to my brinjal?",DECISION
+"In my field, what fertilizer is suitable for pepper?",INFORMATION
+Should I improve drainage in my okra field?,DECISION
+What nutrients does tapioca need during vegetative stage?,INFORMATION
+How often is coconut usually irrigated during fruiting stage?,INFORMATION
+What are the signs of nitrogen deficiency in tapioca?,INFORMATION
+"For my crop, should I apply fertilizer to my pepper now?",DECISION
+"On my farm, should I spray a treatment for the pest affecting my okra?",DECISION
+How can I improve drainage in a field growing tomato?,INFORMATION
+should I harvest my brinjal now or wait?,DECISION
+"For my crop, should I spray a treatment for the pest affecting my banana?",DECISION
+"In my field, what should I do about my banana after heavy rainfall?",DECISION
+What nutrients does rice need during harvesting stage?,INFORMATION
+How often is okra usually irrigated during fruiting stage?,INFORMATION
+"For my crop, what are the signs of nitrogen deficiency in chilli?",INFORMATION
+"For my farm, what are the symptoms of potassium deficiency in tomato?",INFORMATION
+Should I take action immediately for my pepper problem?,DECISION
+"On my farm, what is the ideal soil pH for tapioca cultivation?",INFORMATION
+"In my field, what causes yellow leaves in pineapple?",INFORMATION
+"For a farmer in Wayanad, should I change my irrigation schedule for okra?",DECISION
+"In Kerala, what are the symptoms of potassium deficiency in pineapple?",INFORMATION
+"In my field, what nutrients does chilli need during flowering stage?",INFORMATION
+"For a farmer in Wayanad, should I harvest my pineapple now or wait?",DECISION
+"In my field, what are the symptoms of potassium deficiency in pepper?",INFORMATION
+"In my field, should I plant tomato now or wait for better weather?",DECISION
+"For my farm, should I spray a treatment for the pest affecting my okra?",DECISION
+"In my field, should I wait for the rain before irrigating my pineapple?",DECISION
+should I use mulch in my coconut field?,DECISION
+"For my farm, what are the common pests that affect banana?",INFORMATION
+"In Kerala, should I irrigate my rice today?",DECISION
+"For my farm, which fertilizer should I choose for my chilli?",DECISION
+"For a farmer in Wayanad, which fertilizer should I choose for my tomato?",DECISION
+"For my crop, should I increase irrigation because the soil is dry?",DECISION
+Should I improve drainage in my tapioca field?,DECISION
+"For my farm, how can I improve drainage in a field growing tapioca?",INFORMATION
+"In my field, what are the common pests that affect tapioca?",INFORMATION
+"In my field, what are the common diseases affecting pineapple?",INFORMATION
+"For a farmer in Wayanad, should I use mulch in my brinjal field?",DECISION
+"For my farm, what should I do about my tomato after heavy rainfall?",DECISION
+what are the symptoms of potassium deficiency in coconut?,INFORMATION
+"On my farm, what are the symptoms of potassium deficiency in okra?",INFORMATION
+"In Kerala, should I use mulch in my tomato field?",DECISION
+"For my crop, which irrigation method should I use for my pineapple?",DECISION
+What are common irrigation methods for okra?,INFORMATION
+"On my farm, what are the common pests that affect tomato?",INFORMATION
+"For my crop, how does excess rainfall affect rice?",INFORMATION
+should I take action immediately for my tapioca problem?,DECISION
+"For my farm, what is the best time to plant tapioca in Kerala?",INFORMATION
+"For my farm, what should I do about my banana after heavy rainfall?",DECISION
+"For my farm, what are the common diseases affecting tapioca?",INFORMATION
+"In my field, what are common irrigation methods for chilli?",INFORMATION
+"In my field, what should I do about my coconut after heavy rainfall?",DECISION
+"In Kerala, should I spray a treatment for the pest affecting my pepper?",DECISION
+"For a farmer in Wayanad, which irrigation method should I use for my banana?",DECISION
+"For my crop, how can I improve drainage in a field growing pepper?",INFORMATION
+"For my crop, which fertilizer should I choose for my pineapple?",DECISION
+Should I wait for the rain before irrigating my brinjal?,DECISION
+"In Kerala, should I take action immediately for my tapioca problem?",DECISION
+"For my crop, should I sell my rice now or wait for better prices?",DECISION
+"For my farm, should I sell my pepper now or wait for better prices?",DECISION
+"For my crop, what is the best time to plant tomato in Kerala?",INFORMATION
+How often is coconut usually irrigated during seedling stage?,INFORMATION
+"In Kerala, which fertilizer should I choose for my tapioca?",DECISION
+Should I sell my tomato now or wait for better prices?,DECISION
+"In Kerala, should I take action immediately for my tomato problem?",DECISION
+"In Kerala, should I wait for the rain before irrigating my chilli?",DECISION
+"In Kerala, what precautions should I take during heavy rainfall for tapioca?",INFORMATION
+What nutrients does pineapple need during seedling stage?,INFORMATION
+What should I do if my brinjal is showing yellow leaves?,DECISION
+"In my field, what precautions should I take during heavy rainfall for banana?",INFORMATION
+Should I irrigate my banana today?,DECISION
+"On my farm, should I apply an organic manure treatment to my coconut?",DECISION
+"For my farm, what are common irrigation methods for pineapple?",INFORMATION
+"For my crop, what are the important growth stages of okra?",INFORMATION
+"On my farm, what are the signs of nitrogen deficiency in pepper?",INFORMATION
+What fertilizer is suitable for okra?,INFORMATION
+how often is pepper usually irrigated during seedling stage?,INFORMATION
+"In Kerala, what are the important growth stages of tomato?",INFORMATION
+"For my crop, what causes leaf curling in coconut?",INFORMATION
+"For my farm, what is the ideal soil pH for okra cultivation?",INFORMATION
+"In my field, how often is chilli usually irrigated during fruiting stage?",INFORMATION
+How often is coconut usually irrigated during harvesting stage?,INFORMATION
+"In my field, should I harvest my rice now or wait?",DECISION
+Should I harvest my pepper now or wait?,DECISION
+What fertilizer is suitable for coconut?,INFORMATION
+What is drip irrigation and how does it work for rice?,INFORMATION
+What are the common pests that affect chilli?,INFORMATION
+"On my farm, what is the ideal soil pH for pineapple cultivation?",INFORMATION
+"For my farm, what are the benefits of mulching for banana?",INFORMATION
+"For my crop, what should I do about my brinjal after heavy rainfall?",DECISION
+"In my field, what are the signs of nitrogen deficiency in tomato?",INFORMATION
+"For a farmer in Wayanad, what would be the better option for my pepper under the current conditions?",DECISION
+what precautions should I take during heavy rainfall for pepper?,INFORMATION
+"For my crop, what causes leaf curling in tomato?",INFORMATION
+"For a farmer in Wayanad, what should I do if my tapioca is showing yellow leaves?",DECISION
+"For my farm, should I use mulch in my tapioca field?",DECISION
+What are the important growth stages of chilli?,INFORMATION
+"In Kerala, how often is tomato usually irrigated during flowering stage?",INFORMATION
+"For a farmer in Wayanad, should I apply fertilizer to my banana now?",DECISION
+"For my farm, should I spray a treatment for the pest affecting my tapioca?",DECISION
+"In Kerala, what are the signs of nitrogen deficiency in tomato?",INFORMATION
+How often is banana usually irrigated during fruiting stage?,INFORMATION
+"In my field, what soil type is suitable for growing pineapple?",INFORMATION
+"In Kerala, should I spray a treatment for the pest affecting my okra?",DECISION
+what precautions should I take during heavy rainfall for chilli?,INFORMATION
+"In my field, should I improve drainage in my pepper field?",DECISION
+"For my crop, should I take action immediately for my chilli problem?",DECISION
+"In Kerala, should I increase irrigation because the soil is dry?",DECISION
+Should I use mulch in my tomato field?,DECISION
+"For my crop, what is the best time to plant coconut in Kerala?",INFORMATION
+how does excess rainfall affect chilli?,INFORMATION
+"On my farm, should I sell my brinjal now or wait for better prices?",DECISION
+"For a farmer in Wayanad, should I apply fertilizer to my brinjal now?",DECISION
+what should I do if my pepper is showing yellow leaves?,DECISION
+Which irrigation method should I use for my pepper?,DECISION
+what is the best time to plant coconut in Kerala?,INFORMATION
+"For a farmer in Wayanad, should I improve drainage in my brinjal field?",DECISION
+"On my farm, should I take action immediately for my tapioca problem?",DECISION
+"In my field, what is drip irrigation and how does it work for chilli?",INFORMATION
+"For a farmer in Wayanad, what should I do about my coconut after heavy rainfall?",DECISION
+"On my farm, what soil type is suitable for growing chilli?",INFORMATION
+"For my farm, what soil type is suitable for growing pepper?",INFORMATION
+"In Kerala, what precautions should I take during heavy rainfall for okra?",INFORMATION
+"On my farm, what precautions should I take during heavy rainfall for rice?",INFORMATION
+What are common irrigation methods for tomato?,INFORMATION
+"For my farm, what causes yellow leaves in brinjal?",INFORMATION
+Which irrigation method should I use for my brinjal?,DECISION
+"In Kerala, what would be the better option for my banana under the current conditions?",DECISION
+Should I plant tomato now or wait for better weather?,DECISION
+"For a farmer in Wayanad, what causes yellow leaves in pepper?",INFORMATION
+"For a farmer in Wayanad, what is the best time to plant banana in Kerala?",INFORMATION
+"On my farm, should I use mulch in my coconut field?",DECISION
+what are the common diseases affecting rice?,INFORMATION
+what causes leaf curling in rice?,INFORMATION
+What are the common pests that affect banana?,INFORMATION
+"On my farm, should I plant banana now or wait for better weather?",DECISION
+"For my farm, what nutrients does brinjal need during vegetative stage?",INFORMATION
+"On my farm, what precautions should I take during heavy rainfall for coconut?",INFORMATION
+"On my farm, should I harvest my banana now or wait?",DECISION
+"For a farmer in Wayanad, what would be the better option for my chilli under the current conditions?",DECISION
+"For my crop, should I use mulch in my chilli field?",DECISION
+"For my crop, what are the benefits of mulching for chilli?",INFORMATION
+"In Kerala, what fertilizer is suitable for pineapple?",INFORMATION
+"On my farm, should I harvest my rice now or wait?",DECISION
+"For my crop, should I harvest my chilli now or wait?",DECISION
+should I change my irrigation schedule for okra?,DECISION
+"For my crop, should I sell my chilli now or wait for better prices?",DECISION
+"For my farm, which irrigation method should I use for my okra?",DECISION
+"In Kerala, which option is better for improving my chilli yield?",DECISION
+what are the important growth stages of brinjal?,INFORMATION
+"On my farm, should I sell my okra now or wait for better prices?",DECISION
+"On my farm, should I irrigate my banana today?",DECISION
+"On my farm, what is the ideal soil pH for chilli cultivation?",INFORMATION
+"On my farm, what is the best time to plant chilli in Kerala?",INFORMATION
+"On my farm, should I irrigate my pepper today?",DECISION
+what are the benefits of mulching for pepper?,INFORMATION
+"For a farmer in Wayanad, what is the ideal soil pH for pepper cultivation?",INFORMATION
+"In Kerala, what are the signs of nitrogen deficiency in tapioca?",INFORMATION
+"In Kerala, should I apply fertilizer to my pepper now?",DECISION
+what are the common diseases affecting tapioca?,INFORMATION
+"In my field, should I improve drainage in my banana field?",DECISION
+"For my crop, what precautions should I take during heavy rainfall for chilli?",INFORMATION
+"In Kerala, what causes yellow leaves in tomato?",INFORMATION
+"For my crop, should I take action immediately for my okra problem?",DECISION
+"For my crop, what nutrients does rice need during flowering stage?",INFORMATION
+"In my field, what should I do if my tapioca is showing yellow leaves?",DECISION
+How often is pepper usually irrigated during flowering stage?,INFORMATION
+"On my farm, should I spray a treatment for the pest affecting my tapioca?",DECISION
+"In Kerala, what is drip irrigation and how does it work for tapioca?",INFORMATION
+"For a farmer in Wayanad, should I apply an organic manure treatment to my banana?",DECISION
+"For my crop, should I take action immediately for my pineapple problem?",DECISION
+"For a farmer in Wayanad, should I plant brinjal now or wait for better weather?",DECISION
+what are common irrigation methods for tomato?,INFORMATION
+What precautions should I take during heavy rainfall for chilli?,INFORMATION
+Should I sell my coconut now or wait for better prices?,DECISION
+"For my crop, what is drip irrigation and how does it work for rice?",INFORMATION
+What nutrients does tapioca need during seedling stage?,INFORMATION
+"For my farm, should I improve drainage in my pineapple field?",DECISION
+"For a farmer in Wayanad, which fertilizer should I choose for my pepper?",DECISION
+What nutrients does brinjal need during fruiting stage?,INFORMATION
+"In my field, should I apply fertilizer to my rice now?",DECISION
+should I change my irrigation schedule for pepper?,DECISION
+"For my crop, what should I do about my okra after heavy rainfall?",DECISION
+"In Kerala, what causes leaf curling in pineapple?",INFORMATION
+"In Kerala, should I take action immediately for my pepper problem?",DECISION
+"In Kerala, should I improve drainage in my okra field?",DECISION
+"In Kerala, should I irrigate my pepper today?",DECISION
+"For my farm, what is drip irrigation and how does it work for coconut?",INFORMATION
+"In my field, should I apply an organic manure treatment to my coconut?",DECISION
+"For my farm, should I apply fertilizer to my chilli now?",DECISION
+"For my crop, should I use mulch in my coconut field?",DECISION
+"For my crop, what precautions should I take during heavy rainfall for coconut?",INFORMATION
+"For a farmer in Wayanad, what fertilizer is suitable for tapioca?",INFORMATION
+"For a farmer in Wayanad, what causes leaf curling in okra?",INFORMATION
+"For a farmer in Wayanad, what is drip irrigation and how does it work for tapioca?",INFORMATION
+"In my field, what is the ideal soil pH for pepper cultivation?",INFORMATION
+"In my field, what is the ideal soil pH for tapioca cultivation?",INFORMATION
+"For my crop, what nutrients does tapioca need during fruiting stage?",INFORMATION
+What are the common pests that affect coconut?,INFORMATION
+what are the important growth stages of coconut?,INFORMATION
+Should I wait for the rain before irrigating my pepper?,DECISION
+"For my farm, what causes yellow leaves in tomato?",INFORMATION
+"For a farmer in Wayanad, should I irrigate my pepper today?",DECISION
+"In my field, which option is better for improving my brinjal yield?",DECISION
+"In Kerala, what are the benefits of organic manure for chilli?",INFORMATION
+"In my field, what are the benefits of organic manure for banana?",INFORMATION
+What are the benefits of organic manure for brinjal?,INFORMATION
+"For my farm, what are the common diseases affecting rice?",INFORMATION
+Which irrigation method should I use for my coconut?,DECISION
+"On my farm, should I wait for the rain before irrigating my pepper?",DECISION
+"In Kerala, which fertilizer should I choose for my coconut?",DECISION
+"In my field, what nutrients does brinjal need during flowering stage?",INFORMATION
+"In Kerala, what should I do if my coconut is showing yellow leaves?",DECISION
+"In my field, what should I do if my tomato is showing yellow leaves?",DECISION
+"In Kerala, should I improve drainage in my tapioca field?",DECISION
+"For a farmer in Wayanad, what are the common diseases affecting tomato?",INFORMATION
+should I take action immediately for my banana problem?,DECISION
+Should I improve drainage in my tomato field?,DECISION
+"For my farm, which fertilizer should I choose for my tapioca?",DECISION
+what are the benefits of mulching for chilli?,INFORMATION
+"For my crop, what are the symptoms of potassium deficiency in coconut?",INFORMATION
+"For a farmer in Wayanad, what is drip irrigation and how does it work for okra?",INFORMATION
+"In my field, should I irrigate my tapioca today?",DECISION
+"For a farmer in Wayanad, should I harvest my coconut now or wait?",DECISION
+What is the best time to plant banana in Kerala?,INFORMATION
+What nutrients does pepper need during harvesting stage?,INFORMATION
+"For my farm, what are the important growth stages of pepper?",INFORMATION
+"In my field, should I wait for the rain before irrigating my okra?",DECISION
+"On my farm, should I use mulch in my pepper field?",DECISION
+"On my farm, what are the benefits of organic manure for rice?",INFORMATION
+Should I wait for the rain before irrigating my tomato?,DECISION
+what are the benefits of organic manure for coconut?,INFORMATION
+"In my field, what fertilizer is suitable for okra?",INFORMATION
+"For my farm, what is drip irrigation and how does it work for chilli?",INFORMATION
+"On my farm, what are common irrigation methods for chilli?",INFORMATION
+"In Kerala, what nutrients does rice need during vegetative stage?",INFORMATION
+"In Kerala, what are the important growth stages of okra?",INFORMATION
+"In Kerala, what are common irrigation methods for coconut?",INFORMATION
+"For my farm, what soil type is suitable for growing brinjal?",INFORMATION
+what should I do if my tomato is showing yellow leaves?,DECISION
+"On my farm, which option is better for improving my brinjal yield?",DECISION
+should I irrigate my okra today?,DECISION
+"On my farm, should I wait for the rain before irrigating my rice?",DECISION
+"For a farmer in Wayanad, which irrigation method should I use for my brinjal?",DECISION
+"On my farm, what precautions should I take during heavy rainfall for pineapple?",INFORMATION
+"For my farm, what are common irrigation methods for tomato?",INFORMATION
+What are the common pests that affect tapioca?,INFORMATION
+"In my field, how does excess rainfall affect coconut?",INFORMATION
+"For a farmer in Wayanad, what are the signs of nitrogen deficiency in brinjal?",INFORMATION
+"For a farmer in Wayanad, should I wait for the rain before irrigating my brinjal?",DECISION
+What nutrients does okra need during flowering stage?,INFORMATION
+Should I plant rice now or wait for better weather?,DECISION
+"For a farmer in Wayanad, should I irrigate my okra today?",DECISION
+What should I do about my brinjal after heavy rainfall?,DECISION
+"For my crop, should I apply fertilizer to my pineapple now?",DECISION
+should I spray a treatment for the pest affecting my pineapple?,DECISION
+what soil type is suitable for growing pineapple?,INFORMATION
+"For my crop, should I harvest my rice now or wait?",DECISION
+"In Kerala, which option is better for improving my pineapple yield?",DECISION
+"For a farmer in Wayanad, should I apply fertilizer to my coconut now?",DECISION
+"For a farmer in Wayanad, should I irrigate my banana today?",DECISION
+Should I spray a treatment for the pest affecting my pineapple?,DECISION
+"For my farm, which fertilizer should I choose for my tomato?",DECISION
+"On my farm, what is drip irrigation and how does it work for okra?",INFORMATION
+Which option is better for improving my okra yield?,DECISION
+"In Kerala, what would be the better option for my pineapple under the current conditions?",DECISION
+"On my farm, what causes yellow leaves in rice?",INFORMATION
+"In Kerala, what soil type is suitable for growing tomato?",INFORMATION
+"For my farm, what are the symptoms of potassium deficiency in banana?",INFORMATION
+"For a farmer in Wayanad, should I take action immediately for my tomato problem?",DECISION
+"For my crop, what are the common diseases affecting pepper?",INFORMATION
+"On my farm, should I plant pepper now or wait for better weather?",DECISION
+What nutrients does tomato need during flowering stage?,INFORMATION
+"For my farm, should I take action immediately for my banana problem?",DECISION
+"For a farmer in Wayanad, how does excess rainfall affect pineapple?",INFORMATION
+"For my farm, should I change my irrigation schedule for banana?",DECISION
+"For a farmer in Wayanad, which irrigation method should I use for my tapioca?",DECISION
+"For my crop, should I apply an organic manure treatment to my pepper?",DECISION
+What are the benefits of mulching for pineapple?,INFORMATION
+"For my farm, what precautions should I take during heavy rainfall for brinjal?",INFORMATION
+What should I do about my banana after heavy rainfall?,DECISION
+should I sell my okra now or wait for better prices?,DECISION
+"For my farm, should I spray a treatment for the pest affecting my chilli?",DECISION
+"For my farm, how does excess rainfall affect brinjal?",INFORMATION
+"For my crop, should I harvest my banana now or wait?",DECISION
+"On my farm, should I change my irrigation schedule for coconut?",DECISION
+"For my farm, what is the best time to plant tomato in Kerala?",INFORMATION
+"On my farm, what nutrients does tapioca need during flowering stage?",INFORMATION
+what is the best time to plant pineapple in Kerala?,INFORMATION
+"In my field, what precautions should I take during heavy rainfall for pineapple?",INFORMATION
+Should I wait for the rain before irrigating my pineapple?,DECISION
+"For a farmer in Wayanad, should I wait for the rain before irrigating my pepper?",DECISION
+"For my crop, what would be the better option for my tomato under the current conditions?",DECISION
+"For my crop, what causes yellow leaves in rice?",INFORMATION
+"For my crop, what should I do about my chilli after heavy rainfall?",DECISION
+what are the benefits of organic manure for okra?,INFORMATION
+"In my field, what nutrients does pepper need during flowering stage?",INFORMATION
+How can I improve drainage in a field growing chilli?,INFORMATION
+"In my field, should I apply an organic manure treatment to my pineapple?",DECISION
+What are the benefits of mulching for brinjal?,INFORMATION
+"In my field, should I irrigate my tomato today?",DECISION
+"For my farm, should I wait for the rain before irrigating my okra?",DECISION
+"In my field, what are the benefits of mulching for brinjal?",INFORMATION
+"In my field, what nutrients does tapioca need during harvesting stage?",INFORMATION
+which fertilizer should I choose for my okra?,DECISION
+"In my field, what should I do about my brinjal after heavy rainfall?",DECISION
+What are the important growth stages of banana?,INFORMATION
+what are the symptoms of potassium deficiency in pineapple?,INFORMATION
+What nutrients does tomato need during vegetative stage?,INFORMATION
+"For my farm, what are the symptoms of potassium deficiency in brinjal?",INFORMATION
+Should I use mulch in my pepper field?,DECISION
+Which fertilizer should I choose for my coconut?,DECISION
+how does excess rainfall affect rice?,INFORMATION
+how does excess rainfall affect brinjal?,INFORMATION
+What causes leaf curling in pepper?,INFORMATION
+"In my field, how does excess rainfall affect rice?",INFORMATION
+"In Kerala, how can I improve drainage in a field growing tomato?",INFORMATION
+"In my field, should I spray a treatment for the pest affecting my banana?",DECISION
+"For my farm, should I use mulch in my pineapple field?",DECISION
+"In my field, which irrigation method should I use for my okra?",DECISION
+how does excess rainfall affect tapioca?,INFORMATION
+"For my farm, what is the best time to plant coconut in Kerala?",INFORMATION
+"For a farmer in Wayanad, what causes leaf curling in brinjal?",INFORMATION
+Should I take action immediately for my okra problem?,DECISION
+Should I take action immediately for my rice problem?,DECISION
+"For my crop, what are the common pests that affect tapioca?",INFORMATION
+"In Kerala, what are the common diseases affecting banana?",INFORMATION
+Should I apply fertilizer to my rice now?,DECISION
+What fertilizer is suitable for tomato?,INFORMATION
+"In Kerala, should I improve drainage in my banana field?",DECISION
+"For a farmer in Wayanad, should I plant tomato now or wait for better weather?",DECISION
+Should I harvest my tomato now or wait?,DECISION
+Should I irrigate my pineapple today?,DECISION
+What is drip irrigation and how does it work for coconut?,INFORMATION
+"For my farm, should I use mulch in my banana field?",DECISION
+should I spray a treatment for the pest affecting my tapioca?,DECISION
+Should I apply fertilizer to my chilli now?,DECISION
+"On my farm, should I change my irrigation schedule for chilli?",DECISION
+"In my field, what are the common pests that affect okra?",INFORMATION
+"For my crop, what are common irrigation methods for pineapple?",INFORMATION
+"For my crop, what causes yellow leaves in pineapple?",INFORMATION
+What causes yellow leaves in chilli?,INFORMATION
+should I sell my coconut now or wait for better prices?,DECISION
+"In Kerala, what are the benefits of organic manure for tapioca?",INFORMATION
+How often is pineapple usually irrigated during harvesting stage?,INFORMATION
+what are the signs of nitrogen deficiency in coconut?,INFORMATION
+"For my crop, what are the common pests that affect tomato?",INFORMATION
+"For my crop, what nutrients does coconut need during harvesting stage?",INFORMATION
+"For my crop, what are the important growth stages of coconut?",INFORMATION
+Should I sell my chilli now or wait for better prices?,DECISION
+"In Kerala, what causes yellow leaves in brinjal?",INFORMATION
+"For my crop, what should I do about my tapioca after heavy rainfall?",DECISION
+"On my farm, what should I do about my pepper after heavy rainfall?",DECISION
+What are the symptoms of potassium deficiency in coconut?,INFORMATION
+What nutrients does chilli need during seedling stage?,INFORMATION
+"On my farm, what are the benefits of mulching for coconut?",INFORMATION
+"For my crop, what soil type is suitable for growing okra?",INFORMATION
+"In my field, what causes leaf curling in rice?",INFORMATION
+"In Kerala, what would be the better option for my okra under the current conditions?",DECISION
+"For my farm, what are the symptoms of potassium deficiency in rice?",INFORMATION
+"For a farmer in Wayanad, what causes leaf curling in coconut?",INFORMATION
+"In my field, which fertilizer should I choose for my tomato?",DECISION
+"On my farm, should I sell my chilli now or wait for better prices?",DECISION
+"For a farmer in Wayanad, should I irrigate my coconut today?",DECISION
+"For my crop, what soil type is suitable for growing chilli?",INFORMATION
+"For my crop, which fertilizer should I choose for my coconut?",DECISION
+"On my farm, what should I do about my tapioca after heavy rainfall?",DECISION
+What are the common diseases affecting banana?,INFORMATION
+what are the symptoms of potassium deficiency in tapioca?,INFORMATION
+"For a farmer in Wayanad, which option is better for improving my tomato yield?",DECISION
+"In Kerala, what is the best time to plant tomato in Kerala?",INFORMATION
+What nutrients does coconut need during seedling stage?,INFORMATION
+what are the symptoms of potassium deficiency in brinjal?,INFORMATION
+"In Kerala, should I sell my banana now or wait for better prices?",DECISION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for brinjal?",INFORMATION
+"For my farm, should I plant coconut now or wait for better weather?",DECISION
+"For my farm, what fertilizer is suitable for brinjal?",INFORMATION
+should I sell my chilli now or wait for better prices?,DECISION
+"For a farmer in Wayanad, what are common irrigation methods for rice?",INFORMATION
+Should I improve drainage in my banana field?,DECISION
+"For my farm, what nutrients does brinjal need during seedling stage?",INFORMATION
+what precautions should I take during heavy rainfall for coconut?,INFORMATION
+"In Kerala, what is the best time to plant okra in Kerala?",INFORMATION
+"In Kerala, what fertilizer is suitable for tomato?",INFORMATION
+What are common irrigation methods for pineapple?,INFORMATION
+"For my farm, should I change my irrigation schedule for coconut?",DECISION
+what are the benefits of mulching for brinjal?,INFORMATION
+"For my crop, how often is rice usually irrigated during seedling stage?",INFORMATION
+"In Kerala, should I apply an organic manure treatment to my rice?",DECISION
+"For my crop, what are the signs of nitrogen deficiency in brinjal?",INFORMATION
+"On my farm, should I wait for the rain before irrigating my tapioca?",DECISION
+what are the common pests that affect banana?,INFORMATION
+"For my farm, what are the common diseases affecting coconut?",INFORMATION
+"For my crop, should I irrigate my banana today?",DECISION
+what soil type is suitable for growing pepper?,INFORMATION
+How often is banana usually irrigated during flowering stage?,INFORMATION
+"On my farm, should I sell my rice now or wait for better prices?",DECISION
+"For a farmer in Wayanad, how can I improve drainage in a field growing tomato?",INFORMATION
+Should I sell my pineapple now or wait for better prices?,DECISION
+What are the benefits of mulching for rice?,INFORMATION
+"For my farm, which option is better for improving my chilli yield?",DECISION
+what would be the better option for my pineapple under the current conditions?,DECISION
+"On my farm, which option is better for improving my pineapple yield?",DECISION
+"In Kerala, which irrigation method should I use for my chilli?",DECISION
+"For my farm, what nutrients does okra need during vegetative stage?",INFORMATION
+Should I sell my rice now or wait for better prices?,DECISION
+"For a farmer in Wayanad, what would be the better option for my pineapple under the current conditions?",DECISION
+"On my farm, should I wait for the rain before irrigating my okra?",DECISION
+"In my field, how often is pineapple usually irrigated during flowering stage?",INFORMATION
+"For my crop, should I wait for the rain before irrigating my chilli?",DECISION
+"For my crop, what are the common pests that affect banana?",INFORMATION
+"On my farm, what fertilizer is suitable for tomato?",INFORMATION
+"For my farm, what are the common diseases affecting brinjal?",INFORMATION
+What are the symptoms of potassium deficiency in chilli?,INFORMATION
+"In my field, what nutrients does tomato need during harvesting stage?",INFORMATION
+"For my crop, what fertilizer is suitable for tomato?",INFORMATION
+"For my crop, should I apply fertilizer to my brinjal now?",DECISION
+"For my crop, what is the ideal soil pH for tapioca cultivation?",INFORMATION
+"For my farm, what are the symptoms of potassium deficiency in pepper?",INFORMATION
+"In Kerala, what is drip irrigation and how does it work for okra?",INFORMATION
+"For a farmer in Wayanad, should I change my irrigation schedule for chilli?",DECISION
+"On my farm, should I use mulch in my pineapple field?",DECISION
+what would be the better option for my coconut under the current conditions?,DECISION
+"For my farm, should I irrigate my tomato today?",DECISION
+"For my crop, what is drip irrigation and how does it work for banana?",INFORMATION
+"In Kerala, should I spray a treatment for the pest affecting my banana?",DECISION
+"In my field, what are the benefits of organic manure for tapioca?",INFORMATION
+"In Kerala, should I plant rice now or wait for better weather?",DECISION
+what are the important growth stages of rice?,INFORMATION
+"For my crop, what should I do about my coconut after heavy rainfall?",DECISION
+what would be the better option for my tomato under the current conditions?,DECISION
+"On my farm, what causes leaf curling in banana?",INFORMATION
+"For my farm, what are the benefits of organic manure for pineapple?",INFORMATION
+"On my farm, what should I do if my coconut is showing yellow leaves?",DECISION
+"For my crop, should I change my irrigation schedule for okra?",DECISION
+"In my field, what are the important growth stages of banana?",INFORMATION
+Should I irrigate my chilli today?,DECISION
+"For my crop, what are the benefits of organic manure for tapioca?",INFORMATION
+What nutrients does banana need during flowering stage?,INFORMATION
+what would be the better option for my banana under the current conditions?,DECISION
+"For a farmer in Wayanad, what are the symptoms of potassium deficiency in brinjal?",INFORMATION
+"For my crop, should I harvest my okra now or wait?",DECISION
+What nutrients does chilli need during fruiting stage?,INFORMATION
+"For a farmer in Wayanad, how does excess rainfall affect brinjal?",INFORMATION
+should I plant rice now or wait for better weather?,DECISION
+"For my farm, should I apply an organic manure treatment to my banana?",DECISION
+What are the benefits of organic manure for okra?,INFORMATION
+"In Kerala, should I change my irrigation schedule for tapioca?",DECISION
+"For my farm, how does excess rainfall affect pepper?",INFORMATION
+"For my crop, what are the signs of nitrogen deficiency in rice?",INFORMATION
+"On my farm, what are the common pests that affect tapioca?",INFORMATION
+what nutrients does tomato need during seedling stage?,INFORMATION
+"For a farmer in Wayanad, should I take action immediately for my chilli problem?",DECISION
+"For my farm, what is drip irrigation and how does it work for rice?",INFORMATION
+"For my farm, should I harvest my coconut now or wait?",DECISION
+Should I apply fertilizer to my okra now?,DECISION
+"On my farm, which option is better for improving my chilli yield?",DECISION
+"On my farm, should I apply fertilizer to my chilli now?",DECISION
+which fertilizer should I choose for my pepper?,DECISION
+Should I sell my pepper now or wait for better prices?,DECISION
+"For a farmer in Wayanad, what should I do about my brinjal after heavy rainfall?",DECISION
+should I apply fertilizer to my pineapple now?,DECISION
+What causes leaf curling in brinjal?,INFORMATION
+What nutrients does tomato need during fruiting stage?,INFORMATION
+"On my farm, should I sell my banana now or wait for better prices?",DECISION
+"For my farm, what are the important growth stages of rice?",INFORMATION
+"In Kerala, what are the symptoms of potassium deficiency in chilli?",INFORMATION
+"For a farmer in Wayanad, what is the ideal soil pH for okra cultivation?",INFORMATION
+"For a farmer in Wayanad, what causes leaf curling in banana?",INFORMATION
+what is the ideal soil pH for banana cultivation?,INFORMATION
+"On my farm, should I spray a treatment for the pest affecting my pineapple?",DECISION
+"For a farmer in Wayanad, should I harvest my okra now or wait?",DECISION
+"In Kerala, what are common irrigation methods for chilli?",INFORMATION
+what should I do about my tapioca after heavy rainfall?,DECISION
+How can I improve drainage in a field growing tapioca?,INFORMATION
+what is the best time to plant pepper in Kerala?,INFORMATION
+How does excess rainfall affect coconut?,INFORMATION
+"In Kerala, should I spray a treatment for the pest affecting my chilli?",DECISION
+"In Kerala, what are common irrigation methods for tomato?",INFORMATION
+what soil type is suitable for growing banana?,INFORMATION
+"In Kerala, what are the benefits of mulching for pepper?",INFORMATION
+"In Kerala, what should I do if my pineapple is showing yellow leaves?",DECISION
+"On my farm, should I change my irrigation schedule for okra?",DECISION
+"On my farm, should I use mulch in my tapioca field?",DECISION
+should I harvest my banana now or wait?,DECISION
+What are common irrigation methods for brinjal?,INFORMATION
+"In Kerala, should I change my irrigation schedule for banana?",DECISION
+Should I wait for the rain before irrigating my banana?,DECISION
+"For a farmer in Wayanad, should I change my irrigation schedule for brinjal?",DECISION
+What should I do if my chilli is showing yellow leaves?,DECISION
+"In my field, what would be the better option for my rice under the current conditions?",DECISION
+"For my farm, should I plant okra now or wait for better weather?",DECISION
+"For my farm, which irrigation method should I use for my tomato?",DECISION
+"For a farmer in Wayanad, should I apply an organic manure treatment to my pineapple?",DECISION
+What is drip irrigation and how does it work for banana?,INFORMATION
+"In my field, which irrigation method should I use for my pineapple?",DECISION
+"On my farm, should I apply an organic manure treatment to my chilli?",DECISION
+"For my farm, which irrigation method should I use for my coconut?",DECISION
+what precautions should I take during heavy rainfall for pineapple?,INFORMATION
+"On my farm, should I irrigate my pineapple today?",DECISION
+"In Kerala, should I take action immediately for my chilli problem?",DECISION
+"In my field, what soil type is suitable for growing pepper?",INFORMATION
+"For my crop, what are common irrigation methods for brinjal?",INFORMATION
+"On my farm, what is the best time to plant coconut in Kerala?",INFORMATION
+What are the symptoms of potassium deficiency in brinjal?,INFORMATION
+"For my farm, what are the benefits of organic manure for chilli?",INFORMATION
+"In my field, should I take action immediately for my tomato problem?",DECISION
+"For my crop, what is the best time to plant banana in Kerala?",INFORMATION
+"For my farm, what are the benefits of mulching for tomato?",INFORMATION
+What would be the better option for my brinjal under the current conditions?,DECISION
+"For my farm, should I harvest my rice now or wait?",DECISION
+"For a farmer in Wayanad, should I sell my chilli now or wait for better prices?",DECISION
+"On my farm, what are the symptoms of potassium deficiency in brinjal?",INFORMATION
+"For a farmer in Wayanad, which irrigation method should I use for my pepper?",DECISION
+"For a farmer in Wayanad, should I spray a treatment for the pest affecting my banana?",DECISION
+"In Kerala, which fertilizer should I choose for my tomato?",DECISION
+what are the important growth stages of tapioca?,INFORMATION
+"For my crop, what causes leaf curling in tapioca?",INFORMATION
+"On my farm, should I change my irrigation schedule for brinjal?",DECISION
+Should I spray a treatment for the pest affecting my banana?,DECISION
+should I improve drainage in my okra field?,DECISION
+How often is tomato usually irrigated during vegetative stage?,INFORMATION
+Should I plant brinjal now or wait for better weather?,DECISION
+"In my field, what should I do about my tapioca after heavy rainfall?",DECISION
+What are the benefits of mulching for banana?,INFORMATION
+"On my farm, how often is chilli usually irrigated during vegetative stage?",INFORMATION
+Should I irrigate my okra today?,DECISION
+"For a farmer in Wayanad, what are the common diseases affecting banana?",INFORMATION
+"For my farm, should I wait for the rain before irrigating my brinjal?",DECISION
+"In my field, what is the ideal soil pH for okra cultivation?",INFORMATION
+"For my farm, should I sell my brinjal now or wait for better prices?",DECISION
+what fertilizer is suitable for coconut?,INFORMATION
+"For my farm, which irrigation method should I use for my rice?",DECISION
+What causes leaf curling in tomato?,INFORMATION
+which option is better for improving my banana yield?,DECISION
+"In my field, should I sell my brinjal now or wait for better prices?",DECISION
+How can I improve drainage in a field growing pineapple?,INFORMATION
+"In my field, what would be the better option for my chilli under the current conditions?",DECISION
+"For my farm, which fertilizer should I choose for my okra?",DECISION
+"In my field, what are the common diseases affecting chilli?",INFORMATION
+"On my farm, should I improve drainage in my banana field?",DECISION
+"On my farm, what soil type is suitable for growing okra?",INFORMATION
+"On my farm, should I apply an organic manure treatment to my banana?",DECISION
+What is the ideal soil pH for tomato cultivation?,INFORMATION
+"For my farm, what are the symptoms of potassium deficiency in pineapple?",INFORMATION
+"For my farm, what fertilizer is suitable for rice?",INFORMATION
+"In my field, should I plant tapioca now or wait for better weather?",DECISION
+"For my crop, what are the important growth stages of chilli?",INFORMATION
+"For a farmer in Wayanad, what should I do if my brinjal is showing yellow leaves?",DECISION
+"For my crop, which irrigation method should I use for my okra?",DECISION
+"For my crop, what should I do if my rice is showing yellow leaves?",DECISION
+What are the common diseases affecting brinjal?,INFORMATION
+What should I do about my pepper after heavy rainfall?,DECISION
+Which fertilizer should I choose for my rice?,DECISION
+What precautions should I take during heavy rainfall for pineapple?,INFORMATION
+what causes leaf curling in okra?,INFORMATION
+"In Kerala, how does excess rainfall affect rice?",INFORMATION
+"For my crop, what are common irrigation methods for rice?",INFORMATION
+What should I do if my pineapple is showing yellow leaves?,DECISION
+What nutrients does pineapple need during vegetative stage?,INFORMATION
+"For my crop, what should I do about my banana after heavy rainfall?",DECISION
+"For a farmer in Wayanad, what are the common pests that affect chilli?",INFORMATION
+"On my farm, what is drip irrigation and how does it work for pineapple?",INFORMATION
+which option is better for improving my tomato yield?,DECISION
+"For my crop, what should I do if my okra is showing yellow leaves?",DECISION
+"In my field, which option is better for improving my pineapple yield?",DECISION
+What would be the better option for my okra under the current conditions?,DECISION
+What are the common pests that affect rice?,INFORMATION
+Should I take action immediately for my tapioca problem?,DECISION
+what are common irrigation methods for tapioca?,INFORMATION
+"On my farm, should I take action immediately for my chilli problem?",DECISION
+What are common irrigation methods for banana?,INFORMATION
+"In Kerala, should I harvest my okra now or wait?",DECISION
+"In my field, how can I improve drainage in a field growing okra?",INFORMATION
+"For my crop, what are the signs of nitrogen deficiency in okra?",INFORMATION
+How often is okra usually irrigated during vegetative stage?,INFORMATION
+"For a farmer in Wayanad, should I change my irrigation schedule for pineapple?",DECISION
+"In Kerala, what are the common pests that affect brinjal?",INFORMATION
+"In Kerala, should I sell my pepper now or wait for better prices?",DECISION
+which option is better for improving my chilli yield?,DECISION
+what are the benefits of organic manure for chilli?,INFORMATION
+"In Kerala, should I harvest my pepper now or wait?",DECISION
+"On my farm, should I apply fertilizer to my okra now?",DECISION
+Should I irrigate my brinjal today?,DECISION
+"On my farm, what are the symptoms of potassium deficiency in tapioca?",INFORMATION
+which irrigation method should I use for my okra?,DECISION
+"For my crop, which irrigation method should I use for my tapioca?",DECISION
+"In my field, should I wait for the rain before irrigating my pepper?",DECISION
+"For a farmer in Wayanad, what causes leaf curling in pepper?",INFORMATION
+"For a farmer in Wayanad, which option is better for improving my okra yield?",DECISION
+"For my crop, should I sell my pineapple now or wait for better prices?",DECISION
+"For my farm, how does excess rainfall affect rice?",INFORMATION
+what should I do if my banana is showing yellow leaves?,DECISION
+"In my field, should I sell my pepper now or wait for better prices?",DECISION
+"For my crop, what soil type is suitable for growing tapioca?",INFORMATION
+"In my field, should I use mulch in my brinjal field?",DECISION
+What soil type is suitable for growing banana?,INFORMATION
+What should I do about my tapioca after heavy rainfall?,DECISION
+should I irrigate my rice today?,DECISION
+"In my field, should I improve drainage in my tomato field?",DECISION
+should I apply an organic manure treatment to my pineapple?,DECISION
+"On my farm, what would be the better option for my pepper under the current conditions?",DECISION
+Should I wait for the rain before irrigating my okra?,DECISION
+"For my crop, what soil type is suitable for growing tomato?",INFORMATION
+"For a farmer in Wayanad, what are common irrigation methods for chilli?",INFORMATION
+"For my farm, should I improve drainage in my tapioca field?",DECISION
+"For my farm, which option is better for improving my coconut yield?",DECISION
+what are the benefits of mulching for coconut?,INFORMATION
+what are the benefits of mulching for pineapple?,INFORMATION
+"On my farm, should I plant tapioca now or wait for better weather?",DECISION
+what are the signs of nitrogen deficiency in banana?,INFORMATION
+"On my farm, which irrigation method should I use for my okra?",DECISION
+"In Kerala, what should I do about my rice after heavy rainfall?",DECISION
+"For my farm, should I take action immediately for my chilli problem?",DECISION
+"On my farm, what would be the better option for my okra under the current conditions?",DECISION
+"For a farmer in Wayanad, what are common irrigation methods for pineapple?",INFORMATION
+"For a farmer in Wayanad, which fertilizer should I choose for my okra?",DECISION
+"For my crop, what are the benefits of mulching for tomato?",INFORMATION
+"In Kerala, what are the benefits of organic manure for okra?",INFORMATION
+should I apply an organic manure treatment to my pepper?,DECISION
+"In my field, what should I do if my pineapple is showing yellow leaves?",DECISION
+"For a farmer in Wayanad, what causes yellow leaves in chilli?",INFORMATION
+"For a farmer in Wayanad, which irrigation method should I use for my coconut?",DECISION
+"For my farm, should I use mulch in my rice field?",DECISION
+"For my farm, should I irrigate my pineapple today?",DECISION
+Should I plant chilli now or wait for better weather?,DECISION
+"For a farmer in Wayanad, should I apply fertilizer to my pineapple now?",DECISION
+"For my farm, what are common irrigation methods for banana?",INFORMATION
+"For my crop, should I change my irrigation schedule for chilli?",DECISION
+should I increase irrigation because the soil is dry?,DECISION
+"On my farm, should I improve drainage in my tomato field?",DECISION
+"In Kerala, should I use mulch in my coconut field?",DECISION
+"In my field, what are the symptoms of potassium deficiency in tomato?",INFORMATION
+"For my crop, should I change my irrigation schedule for banana?",DECISION
+"For my crop, what would be the better option for my okra under the current conditions?",DECISION
+What are the important growth stages of brinjal?,INFORMATION
+what should I do about my banana after heavy rainfall?,DECISION
+"In my field, should I harvest my coconut now or wait?",DECISION
+"In Kerala, should I use mulch in my pepper field?",DECISION
+What precautions should I take during heavy rainfall for rice?,INFORMATION
+"On my farm, should I change my irrigation schedule for tomato?",DECISION
+should I take action immediately for my brinjal problem?,DECISION
+"For my farm, should I plant pepper now or wait for better weather?",DECISION
+"For a farmer in Wayanad, what nutrients does coconut need during fruiting stage?",INFORMATION
+What should I do if my banana is showing yellow leaves?,DECISION
+"For my crop, should I improve drainage in my brinjal field?",DECISION
+Should I change my irrigation schedule for banana?,DECISION
+"For my crop, which option is better for improving my chilli yield?",DECISION
+what causes yellow leaves in coconut?,INFORMATION
+"On my farm, what should I do if my pineapple is showing yellow leaves?",DECISION
+"On my farm, what are common irrigation methods for coconut?",INFORMATION
+"In my field, what fertilizer is suitable for tapioca?",INFORMATION
+"In my field, what causes yellow leaves in okra?",INFORMATION
+What are the benefits of mulching for coconut?,INFORMATION
+"On my farm, what are the signs of nitrogen deficiency in brinjal?",INFORMATION
+"For a farmer in Wayanad, should I irrigate my tomato today?",DECISION
+"In my field, what causes leaf curling in okra?",INFORMATION
+"On my farm, what are the important growth stages of okra?",INFORMATION
+What are the common pests that affect okra?,INFORMATION
+Should I harvest my chilli now or wait?,DECISION
+What nutrients does tapioca need during fruiting stage?,INFORMATION
+"On my farm, should I change my irrigation schedule for pineapple?",DECISION
+"For my crop, what should I do if my pineapple is showing yellow leaves?",DECISION
+"In my field, what are the benefits of organic manure for chilli?",INFORMATION
+What is drip irrigation and how does it work for okra?,INFORMATION
+"In my field, should I sell my banana now or wait for better prices?",DECISION
+how can I improve drainage in a field growing chilli?,INFORMATION
+"In Kerala, what are the common pests that affect chilli?",INFORMATION
+"On my farm, should I harvest my pineapple now or wait?",DECISION
+"For a farmer in Wayanad, should I sell my tomato now or wait for better prices?",DECISION
+What nutrients does okra need during seedling stage?,INFORMATION
+"For my crop, how often is tapioca usually irrigated during flowering stage?",INFORMATION
+"In my field, how can I improve drainage in a field growing banana?",INFORMATION
+"In Kerala, what are the benefits of mulching for coconut?",INFORMATION
+"In Kerala, what fertilizer is suitable for chilli?",INFORMATION
+How can I improve drainage in a field growing okra?,INFORMATION
+"In my field, should I take action immediately for my chilli problem?",DECISION
+"On my farm, should I spray a treatment for the pest affecting my tomato?",DECISION
+"For my farm, should I plant tomato now or wait for better weather?",DECISION
+"For my crop, what are the symptoms of potassium deficiency in okra?",INFORMATION
+"In Kerala, what is the best time to plant brinjal in Kerala?",INFORMATION
+"For my farm, should I irrigate my tapioca today?",DECISION
+"For my crop, what are the symptoms of potassium deficiency in tapioca?",INFORMATION
+"For my farm, what are the benefits of organic manure for tapioca?",INFORMATION
+"In Kerala, what are the benefits of organic manure for brinjal?",INFORMATION
+"In Kerala, should I wait for the rain before irrigating my tomato?",DECISION
+"On my farm, what nutrients does coconut need during fruiting stage?",INFORMATION
+"On my farm, should I apply an organic manure treatment to my pineapple?",DECISION
+"For my crop, what are common irrigation methods for tomato?",INFORMATION
+"In my field, what should I do if my okra is showing yellow leaves?",DECISION
+"For my farm, what are common irrigation methods for pepper?",INFORMATION
+"In Kerala, what fertilizer is suitable for coconut?",INFORMATION
+"For my farm, what are the signs of nitrogen deficiency in banana?",INFORMATION
+What are the common pests that affect pineapple?,INFORMATION
+Should I plant banana now or wait for better weather?,DECISION
+"For my crop, how often is pepper usually irrigated during fruiting stage?",INFORMATION
+"In Kerala, what are the common pests that affect okra?",INFORMATION
+What is the best time to plant brinjal in Kerala?,INFORMATION
+what should I do about my coconut after heavy rainfall?,DECISION
+Should I apply fertilizer to my pepper now?,DECISION
+how can I improve drainage in a field growing pineapple?,INFORMATION
+"On my farm, what are the signs of nitrogen deficiency in rice?",INFORMATION
+"In Kerala, what are the common diseases affecting pepper?",INFORMATION
+"In Kerala, how does excess rainfall affect okra?",INFORMATION
+Which irrigation method should I use for my pineapple?,DECISION
+"For my crop, should I use mulch in my banana field?",DECISION
+"For my farm, should I irrigate my rice today?",DECISION
+"In my field, what precautions should I take during heavy rainfall for pepper?",INFORMATION
+"In Kerala, what are the signs of nitrogen deficiency in coconut?",INFORMATION
+"In my field, which fertilizer should I choose for my chilli?",DECISION
+"For a farmer in Wayanad, how does excess rainfall affect chilli?",INFORMATION
+"In my field, what are the important growth stages of rice?",INFORMATION
+"For my crop, how often is chilli usually irrigated during harvesting stage?",INFORMATION
+"For a farmer in Wayanad, should I plant coconut now or wait for better weather?",DECISION
+what nutrients does tapioca need during harvesting stage?,INFORMATION
+"In Kerala, should I improve drainage in my rice field?",DECISION
+which fertilizer should I choose for my pineapple?,DECISION
+"In my field, what causes leaf curling in coconut?",INFORMATION
+"For a farmer in Wayanad, what would be the better option for my banana under the current conditions?",DECISION
+"For my farm, should I apply fertilizer to my banana now?",DECISION
+what is the ideal soil pH for pepper cultivation?,INFORMATION
+what precautions should I take during heavy rainfall for tomato?,INFORMATION
+"On my farm, should I spray a treatment for the pest affecting my pepper?",DECISION
+Which fertilizer should I choose for my brinjal?,DECISION
+What are the symptoms of potassium deficiency in tapioca?,INFORMATION
+"For a farmer in Wayanad, should I sell my pineapple now or wait for better prices?",DECISION
+"For my farm, what is the ideal soil pH for coconut cultivation?",INFORMATION
+"In Kerala, which irrigation method should I use for my coconut?",DECISION
+"On my farm, which irrigation method should I use for my pineapple?",DECISION
+"For a farmer in Wayanad, what should I do if my pineapple is showing yellow leaves?",DECISION
+"In my field, should I take action immediately for my rice problem?",DECISION
+Should I spray a treatment for the pest affecting my okra?,DECISION
+"In my field, how does excess rainfall affect banana?",INFORMATION
+"For my farm, should I sell my okra now or wait for better prices?",DECISION
+what causes leaf curling in brinjal?,INFORMATION
+which option is better for improving my rice yield?,DECISION
+should I use mulch in my tomato field?,DECISION
+"For my crop, what should I do about my rice after heavy rainfall?",DECISION
+"In my field, should I change my irrigation schedule for coconut?",DECISION
+What nutrients does banana need during fruiting stage?,INFORMATION
+"For my crop, what nutrients does pineapple need during seedling stage?",INFORMATION
+"For a farmer in Wayanad, which fertilizer should I choose for my brinjal?",DECISION
+"For a farmer in Wayanad, what is the ideal soil pH for coconut cultivation?",INFORMATION
+"In Kerala, how often is pineapple usually irrigated during seedling stage?",INFORMATION
+"For my crop, should I sell my tapioca now or wait for better prices?",DECISION
+"In Kerala, should I plant tapioca now or wait for better weather?",DECISION
+what is drip irrigation and how does it work for rice?,INFORMATION
+What soil type is suitable for growing coconut?,INFORMATION
+should I wait for the rain before irrigating my tapioca?,DECISION
+"For my farm, what should I do if my tapioca is showing yellow leaves?",DECISION
+"In Kerala, should I irrigate my pineapple today?",DECISION
+Should I improve drainage in my coconut field?,DECISION
+"For my farm, what causes yellow leaves in tapioca?",INFORMATION
+"On my farm, what are the signs of nitrogen deficiency in coconut?",INFORMATION
+"In Kerala, how can I improve drainage in a field growing pepper?",INFORMATION
+"On my farm, what is the best time to plant tomato in Kerala?",INFORMATION
+"For my crop, what causes leaf curling in pineapple?",INFORMATION
+what nutrients does tapioca need during vegetative stage?,INFORMATION
+"On my farm, how can I improve drainage in a field growing chilli?",INFORMATION
+"On my farm, how does excess rainfall affect rice?",INFORMATION
+"For my farm, what is the ideal soil pH for pepper cultivation?",INFORMATION
+"For my farm, which option is better for improving my okra yield?",DECISION
+What nutrients does banana need during vegetative stage?,INFORMATION
+Which irrigation method should I use for my chilli?,DECISION
+Should I change my irrigation schedule for coconut?,DECISION
+what nutrients does brinjal need during seedling stage?,INFORMATION
+"On my farm, which irrigation method should I use for my chilli?",DECISION
+"For a farmer in Wayanad, should I improve drainage in my banana field?",DECISION
+"For my crop, what causes yellow leaves in tapioca?",INFORMATION
+"In Kerala, should I apply an organic manure treatment to my pepper?",DECISION
+"For a farmer in Wayanad, what is drip irrigation and how does it work for brinjal?",INFORMATION
+What precautions should I take during heavy rainfall for coconut?,INFORMATION
+"For a farmer in Wayanad, should I apply fertilizer to my tomato now?",DECISION
+"In my field, what are the signs of nitrogen deficiency in banana?",INFORMATION
+"In Kerala, which fertilizer should I choose for my rice?",DECISION
+Should I apply fertilizer to my pineapple now?,DECISION
+what soil type is suitable for growing tapioca?,INFORMATION
+"For my farm, should I harvest my okra now or wait?",DECISION
+"In my field, should I use mulch in my okra field?",DECISION
+Which option is better for improving my tomato yield?,DECISION
+"In my field, should I plant pineapple now or wait for better weather?",DECISION
+should I change my irrigation schedule for coconut?,DECISION
+"On my farm, what should I do if my chilli is showing yellow leaves?",DECISION
+"In my field, what are the benefits of mulching for pineapple?",INFORMATION
+"For a farmer in Wayanad, what are the common diseases affecting coconut?",INFORMATION
+"In Kerala, should I apply an organic manure treatment to my brinjal?",DECISION
+what causes leaf curling in pineapple?,INFORMATION
+"For a farmer in Wayanad, what causes yellow leaves in okra?",INFORMATION
+"For a farmer in Wayanad, how often is okra usually irrigated during fruiting stage?",INFORMATION
+"For my farm, what soil type is suitable for growing tomato?",INFORMATION
+"For my crop, which irrigation method should I use for my coconut?",DECISION
+"For my farm, what causes leaf curling in okra?",INFORMATION
+"For a farmer in Wayanad, should I use mulch in my tomato field?",DECISION
+"For a farmer in Wayanad, what is the ideal soil pH for banana cultivation?",INFORMATION
+"For my crop, which option is better for improving my rice yield?",DECISION
+"For a farmer in Wayanad, what would be the better option for my okra under the current conditions?",DECISION
+"On my farm, should I plant chilli now or wait for better weather?",DECISION
+"For my crop, what causes leaf curling in okra?",INFORMATION
+"For my crop, what are the signs of nitrogen deficiency in coconut?",INFORMATION
+Should I apply fertilizer to my brinjal now?,DECISION
+What soil type is suitable for growing chilli?,INFORMATION
+"In Kerala, should I spray a treatment for the pest affecting my tapioca?",DECISION
+"In Kerala, which irrigation method should I use for my brinjal?",DECISION
+"In Kerala, should I spray a treatment for the pest affecting my pineapple?",DECISION
+"For a farmer in Wayanad, what would be the better option for my tomato under the current conditions?",DECISION
+"In Kerala, what are the common pests that affect tapioca?",INFORMATION
+"For my farm, what should I do if my rice is showing yellow leaves?",DECISION
+"In my field, which fertilizer should I choose for my brinjal?",DECISION
+should I sell my tomato now or wait for better prices?,DECISION
+What is the ideal soil pH for pepper cultivation?,INFORMATION
+"In my field, how does excess rainfall affect okra?",INFORMATION
+What are the benefits of organic manure for tomato?,INFORMATION
+should I sell my pepper now or wait for better prices?,DECISION
+What are the benefits of mulching for okra?,INFORMATION
+Should I apply an organic manure treatment to my banana?,DECISION
+"For my crop, what is the ideal soil pH for brinjal cultivation?",INFORMATION
+What causes yellow leaves in pepper?,INFORMATION
+"For my crop, what is drip irrigation and how does it work for okra?",INFORMATION
+"In my field, should I sell my tapioca now or wait for better prices?",DECISION
+"In my field, should I sell my coconut now or wait for better prices?",DECISION
+"For my farm, what should I do about my coconut after heavy rainfall?",DECISION
+"On my farm, should I harvest my pepper now or wait?",DECISION
+What are the benefits of mulching for pepper?,INFORMATION
+which option is better for improving my tapioca yield?,DECISION
+what should I do about my pepper after heavy rainfall?,DECISION
+"For my crop, should I harvest my brinjal now or wait?",DECISION
+What nutrients does chilli need during flowering stage?,INFORMATION
+what is drip irrigation and how does it work for chilli?,INFORMATION
+"On my farm, should I plant tomato now or wait for better weather?",DECISION
+"For a farmer in Wayanad, should I irrigate my chilli today?",DECISION
+"In Kerala, what nutrients does tapioca need during vegetative stage?",INFORMATION
+What are the signs of nitrogen deficiency in rice?,INFORMATION
+"For a farmer in Wayanad, what are the symptoms of potassium deficiency in banana?",INFORMATION
+"For a farmer in Wayanad, what would be the better option for my brinjal under the current conditions?",DECISION
+"In my field, what should I do if my rice is showing yellow leaves?",DECISION
+What nutrients does pepper need during vegetative stage?,INFORMATION
+"In my field, what are the benefits of organic manure for brinjal?",INFORMATION
+"In Kerala, what is the best time to plant tapioca in Kerala?",INFORMATION
+What should I do about my pineapple after heavy rainfall?,DECISION
+"In my field, should I irrigate my banana today?",DECISION
+Should I spray a treatment for the pest affecting my brinjal?,DECISION
+"For my crop, should I use mulch in my brinjal field?",DECISION
+"On my farm, should I harvest my okra now or wait?",DECISION
+"On my farm, what should I do about my brinjal after heavy rainfall?",DECISION
+"In my field, should I plant chilli now or wait for better weather?",DECISION
+"On my farm, what are the common diseases affecting coconut?",INFORMATION
+"For my farm, what soil type is suitable for growing pineapple?",INFORMATION
+"In Kerala, should I take action immediately for my rice problem?",DECISION
+What is drip irrigation and how does it work for pepper?,INFORMATION
+"For my crop, what are the benefits of organic manure for coconut?",INFORMATION
+Should I irrigate my tapioca today?,DECISION
+should I change my irrigation schedule for tapioca?,DECISION
+What causes yellow leaves in tomato?,INFORMATION
+Should I use mulch in my coconut field?,DECISION
+"For my farm, what fertilizer is suitable for banana?",INFORMATION
+What causes yellow leaves in okra?,INFORMATION
+what are the common pests that affect brinjal?,INFORMATION
+"On my farm, should I apply fertilizer to my pepper now?",DECISION
+"For my farm, what are the important growth stages of pineapple?",INFORMATION
+What is the best time to plant pineapple in Kerala?,INFORMATION
+"In my field, should I change my irrigation schedule for chilli?",DECISION
+What is the best time to plant tomato in Kerala?,INFORMATION
+"For my crop, which fertilizer should I choose for my tapioca?",DECISION
+"In my field, what would be the better option for my coconut under the current conditions?",DECISION
+"For a farmer in Wayanad, how can I improve drainage in a field growing brinjal?",INFORMATION
+"For my crop, what are the common diseases affecting chilli?",INFORMATION
+Which fertilizer should I choose for my banana?,DECISION
+"For my farm, how often is chilli usually irrigated during vegetative stage?",INFORMATION
+What are common irrigation methods for chilli?,INFORMATION
+"For my farm, what nutrients does brinjal need during flowering stage?",INFORMATION
+"On my farm, what should I do if my pepper is showing yellow leaves?",DECISION
+"For a farmer in Wayanad, what nutrients does tomato need during harvesting stage?",INFORMATION
+"For a farmer in Wayanad, should I irrigate my rice today?",DECISION
+"For my farm, should I apply an organic manure treatment to my pineapple?",DECISION
+"For a farmer in Wayanad, what are common irrigation methods for banana?",INFORMATION
+Should I reduce irrigation because of the rain?,DECISION
+What would be the better option for my pepper under the current conditions?,DECISION
+how can I improve drainage in a field growing rice?,INFORMATION
+What are the signs of nitrogen deficiency in okra?,INFORMATION
+"In Kerala, should I change my irrigation schedule for chilli?",DECISION
+what are the symptoms of potassium deficiency in chilli?,INFORMATION
+Should I plant pepper now or wait for better weather?,DECISION
+Should I change my irrigation schedule for chilli?,DECISION
+"In Kerala, how often is coconut usually irrigated during flowering stage?",INFORMATION
+What nutrients does rice need during fruiting stage?,INFORMATION
+what are the common pests that affect rice?,INFORMATION
+"In my field, what are the common diseases affecting pepper?",INFORMATION
+"In my field, what are the common diseases affecting rice?",INFORMATION
+"In Kerala, what is drip irrigation and how does it work for coconut?",INFORMATION
+"On my farm, should I spray a treatment for the pest affecting my chilli?",DECISION
+"For a farmer in Wayanad, should I use mulch in my banana field?",DECISION
+"For my farm, should I use mulch in my chilli field?",DECISION
+What is the best time to plant rice in Kerala?,INFORMATION
+"In my field, what is the best time to plant rice in Kerala?",INFORMATION
+"On my farm, what is drip irrigation and how does it work for coconut?",INFORMATION
+"On my farm, should I sell my tomato now or wait for better prices?",DECISION
+"For a farmer in Wayanad, what are the common diseases affecting tapioca?",INFORMATION
+"In Kerala, should I change my irrigation schedule for tomato?",DECISION
+"In my field, should I sell my tomato now or wait for better prices?",DECISION
+"In my field, should I plant brinjal now or wait for better weather?",DECISION
+"For my farm, what precautions should I take during heavy rainfall for coconut?",INFORMATION
+"For my farm, how can I improve drainage in a field growing rice?",INFORMATION
+What should I do about my coconut after heavy rainfall?,DECISION
+What are the signs of nitrogen deficiency in pepper?,INFORMATION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for okra?",INFORMATION
+"In my field, what are the common diseases affecting tapioca?",INFORMATION
+"For my crop, should I irrigate my coconut today?",DECISION
+Should I irrigate my tomato today?,DECISION
+"For my crop, what should I do if my brinjal is showing yellow leaves?",DECISION
+"For a farmer in Wayanad, how does excess rainfall affect tapioca?",INFORMATION
+"For my crop, which fertilizer should I choose for my tomato?",DECISION
+"For my crop, which fertilizer should I choose for my banana?",DECISION
+"For a farmer in Wayanad, what soil type is suitable for growing pepper?",INFORMATION
+"In Kerala, what would be the better option for my tomato under the current conditions?",DECISION
+"In my field, what are the benefits of mulching for chilli?",INFORMATION
+"For my farm, should I irrigate my banana today?",DECISION
+"For my crop, how can I improve drainage in a field growing okra?",INFORMATION
+"In my field, what are the benefits of organic manure for pepper?",INFORMATION
+"In Kerala, what are common irrigation methods for pineapple?",INFORMATION
+"For my crop, should I improve drainage in my tapioca field?",DECISION
+"In my field, should I wait for the rain before irrigating my banana?",DECISION
+"For a farmer in Wayanad, which fertilizer should I choose for my banana?",DECISION
+"For a farmer in Wayanad, what causes yellow leaves in banana?",INFORMATION
+How often is tomato usually irrigated during harvesting stage?,INFORMATION
+"On my farm, what nutrients does pepper need during seedling stage?",INFORMATION
+should I harvest my tomato now or wait?,DECISION
+"For my crop, what nutrients does okra need during seedling stage?",INFORMATION
+what nutrients does rice need during vegetative stage?,INFORMATION
+"For my crop, should I wait for the rain before irrigating my coconut?",DECISION
+what are the signs of nitrogen deficiency in okra?,INFORMATION
+what would be the better option for my brinjal under the current conditions?,DECISION
+"For a farmer in Wayanad, what should I do if my chilli is showing yellow leaves?",DECISION
+What nutrients does brinjal need during vegetative stage?,INFORMATION
+should I improve drainage in my banana field?,DECISION
+What causes leaf curling in tapioca?,INFORMATION
+What are the signs of nitrogen deficiency in tomato?,INFORMATION
+"In Kerala, should I apply an organic manure treatment to my pineapple?",DECISION
+What is the ideal soil pH for okra cultivation?,INFORMATION
+"In Kerala, what nutrients does okra need during fruiting stage?",INFORMATION
+What is the ideal soil pH for banana cultivation?,INFORMATION
+"In my field, what nutrients does tomato need during seedling stage?",INFORMATION
+what are the common pests that affect tapioca?,INFORMATION
+What are the signs of nitrogen deficiency in pineapple?,INFORMATION
+How can I improve drainage in a field growing brinjal?,INFORMATION
+"For my crop, which fertilizer should I choose for my okra?",DECISION
+"For my crop, what is drip irrigation and how does it work for chilli?",INFORMATION
+"For my crop, what are the signs of nitrogen deficiency in tapioca?",INFORMATION
+what is the best time to plant chilli in Kerala?,INFORMATION
+What soil type is suitable for growing okra?,INFORMATION
+"For a farmer in Wayanad, what should I do if my tomato is showing yellow leaves?",DECISION
+"In my field, what is the ideal soil pH for coconut cultivation?",INFORMATION
+"For my farm, should I improve drainage in my rice field?",DECISION
+"For a farmer in Wayanad, what should I do about my tomato after heavy rainfall?",DECISION
+how often is pepper usually irrigated during fruiting stage?,INFORMATION
+What fertilizer is suitable for banana?,INFORMATION
+What are the benefits of mulching for tapioca?,INFORMATION
+what nutrients does tomato need during vegetative stage?,INFORMATION
+"In my field, what are the signs of nitrogen deficiency in okra?",INFORMATION
+"On my farm, how often is chilli usually irrigated during seedling stage?",INFORMATION
+"For a farmer in Wayanad, what are the common diseases affecting chilli?",INFORMATION
+"For a farmer in Wayanad, what should I do if my coconut is showing yellow leaves?",DECISION
+"In my field, what should I do if my banana is showing yellow leaves?",DECISION
+How often is pepper usually irrigated during harvesting stage?,INFORMATION
+"In Kerala, what are the common diseases affecting okra?",INFORMATION
+"For a farmer in Wayanad, should I use mulch in my okra field?",DECISION
+"In my field, should I use mulch in my coconut field?",DECISION
+"In Kerala, which option is better for improving my rice yield?",DECISION
+"For a farmer in Wayanad, should I harvest my chilli now or wait?",DECISION
+what are the benefits of organic manure for rice?,INFORMATION
+"On my farm, should I increase irrigation because the soil is dry?",DECISION
+what fertilizer is suitable for brinjal?,INFORMATION
+"For my crop, should I sell my tomato now or wait for better prices?",DECISION
+"In Kerala, should I use mulch in my chilli field?",DECISION
+"In Kerala, what fertilizer is suitable for banana?",INFORMATION
+"In my field, should I spray a treatment for the pest affecting my coconut?",DECISION
+should I change my irrigation schedule for pineapple?,DECISION
+"In my field, should I improve drainage in my chilli field?",DECISION
+What are the common diseases affecting chilli?,INFORMATION
+"On my farm, what causes yellow leaves in pepper?",INFORMATION
+How often is brinjal usually irrigated during flowering stage?,INFORMATION
+"In my field, how does excess rainfall affect tomato?",INFORMATION
+which option is better for improving my pineapple yield?,DECISION
+"On my farm, what are the important growth stages of banana?",INFORMATION
+Should I spray a treatment for the pest affecting my rice?,DECISION
+"On my farm, should I plant coconut now or wait for better weather?",DECISION
+"In my field, what nutrients does banana need during vegetative stage?",INFORMATION
+"For my farm, which fertilizer should I choose for my rice?",DECISION
+Which fertilizer should I choose for my pepper?,DECISION
+How does excess rainfall affect pineapple?,INFORMATION
+Should I sell my okra now or wait for better prices?,DECISION
+Which fertilizer should I choose for my okra?,DECISION
+"For a farmer in Wayanad, what is drip irrigation and how does it work for pepper?",INFORMATION
+"For my crop, what are the benefits of mulching for pepper?",INFORMATION
+"On my farm, should I take action immediately for my okra problem?",DECISION
+What nutrients does rice need during flowering stage?,INFORMATION
+"In my field, how can I improve drainage in a field growing chilli?",INFORMATION
+Which option is better for improving my rice yield?,DECISION
+"For my farm, should I apply an organic manure treatment to my brinjal?",DECISION
+"In my field, should I harvest my banana now or wait?",DECISION
+Should I wait for the rain before irrigating my tapioca?,DECISION
+"For a farmer in Wayanad, what fertilizer is suitable for tomato?",INFORMATION
+"For a farmer in Wayanad, what are the common pests that affect tapioca?",INFORMATION
+"In Kerala, what soil type is suitable for growing chilli?",INFORMATION
+What causes leaf curling in chilli?,INFORMATION
+"For my crop, which option is better for improving my tapioca yield?",DECISION
+how can I improve drainage in a field growing okra?,INFORMATION
+"In my field, should I spray a treatment for the pest affecting my brinjal?",DECISION
+"For my farm, what causes leaf curling in tomato?",INFORMATION
+Should I plant tapioca now or wait for better weather?,DECISION
+How often is pepper usually irrigated during seedling stage?,INFORMATION
+"On my farm, what would be the better option for my pineapple under the current conditions?",DECISION
+"For my crop, what are the common diseases affecting rice?",INFORMATION
+Should I apply an organic manure treatment to my rice?,DECISION
+"For a farmer in Wayanad, what should I do if my banana is showing yellow leaves?",DECISION
+What is the best time to plant tapioca in Kerala?,INFORMATION
+"For my farm, should I change my irrigation schedule for pepper?",DECISION
+"In my field, should I reduce irrigation because of the rain?",DECISION
+"For my farm, what should I do if my coconut is showing yellow leaves?",DECISION
+should I improve drainage in my tomato field?,DECISION
+"In my field, which option is better for improving my banana yield?",DECISION
+"In Kerala, should I irrigate my okra today?",DECISION
+What would be the better option for my chilli under the current conditions?,DECISION
+What are the symptoms of potassium deficiency in banana?,INFORMATION
+"In my field, which option is better for improving my chilli yield?",DECISION
+should I apply an organic manure treatment to my tomato?,DECISION
+what are the benefits of mulching for banana?,INFORMATION
+"In Kerala, should I spray a treatment for the pest affecting my tomato?",DECISION
+What should I do if my okra is showing yellow leaves?,DECISION
+"On my farm, should I irrigate my chilli today?",DECISION
+"For my crop, what is the ideal soil pH for chilli cultivation?",INFORMATION
+"On my farm, what fertilizer is suitable for chilli?",INFORMATION
+What precautions should I take during heavy rainfall for tomato?,INFORMATION
+Should I sell my brinjal now or wait for better prices?,DECISION
+should I sell my brinjal now or wait for better prices?,DECISION
+"For my farm, what is the best time to plant brinjal in Kerala?",INFORMATION
+What nutrients does pepper need during seedling stage?,INFORMATION
+"In my field, what are the benefits of mulching for okra?",INFORMATION
+"In my field, what is the best time to plant brinjal in Kerala?",INFORMATION
+"In Kerala, should I irrigate my banana today?",DECISION
+"In my field, what are common irrigation methods for okra?",INFORMATION
+"In my field, should I apply an organic manure treatment to my okra?",DECISION
+What soil type is suitable for growing tapioca?,INFORMATION
+"For my crop, should I wait for the rain before irrigating my rice?",DECISION
+Should I change my irrigation schedule for okra?,DECISION
+should I sell my banana now or wait for better prices?,DECISION
+"In my field, what fertilizer is suitable for banana?",INFORMATION
+what are the benefits of organic manure for brinjal?,INFORMATION
+"In Kerala, what should I do about my tomato after heavy rainfall?",DECISION
+What nutrients does brinjal need during flowering stage?,INFORMATION
+What fertilizer is suitable for pineapple?,INFORMATION
+"In my field, should I apply an organic manure treatment to my pepper?",DECISION
+how often is banana usually irrigated during fruiting stage?,INFORMATION
+Should I apply an organic manure treatment to my coconut?,DECISION
+"In Kerala, what are the signs of nitrogen deficiency in rice?",INFORMATION
+"For a farmer in Wayanad, what nutrients does brinjal need during fruiting stage?",INFORMATION
+"For my crop, what are the benefits of organic manure for rice?",INFORMATION
+"In Kerala, should I take action immediately for my banana problem?",DECISION
+"In my field, should I sell my rice now or wait for better prices?",DECISION
+"On my farm, should I apply an organic manure treatment to my rice?",DECISION
+"For my farm, should I spray a treatment for the pest affecting my coconut?",DECISION
+"In my field, what should I do about my okra after heavy rainfall?",DECISION
+what are the symptoms of potassium deficiency in pepper?,INFORMATION
+Should I harvest my rice now or wait?,DECISION
+"In Kerala, what are the benefits of organic manure for pineapple?",INFORMATION
+"For a farmer in Wayanad, how does excess rainfall affect okra?",INFORMATION
+"In my field, should I harvest my tapioca now or wait?",DECISION
+"In Kerala, which irrigation method should I use for my okra?",DECISION
+"For my crop, what are the benefits of mulching for banana?",INFORMATION
+How often is okra usually irrigated during flowering stage?,INFORMATION
+"For my crop, what precautions should I take during heavy rainfall for pepper?",INFORMATION
+which irrigation method should I use for my brinjal?,DECISION
+"For a farmer in Wayanad, what should I do if my rice is showing yellow leaves?",DECISION
+"For a farmer in Wayanad, how often is brinjal usually irrigated during flowering stage?",INFORMATION
+What soil type is suitable for growing tomato?,INFORMATION
+"In my field, what are the symptoms of potassium deficiency in banana?",INFORMATION
+"In my field, what are the benefits of mulching for coconut?",INFORMATION
+"For my crop, what are the common pests that affect pineapple?",INFORMATION
+"For a farmer in Wayanad, which irrigation method should I use for my okra?",DECISION
+"For a farmer in Wayanad, should I take action immediately for my tapioca problem?",DECISION
+"For my farm, which fertilizer should I choose for my banana?",DECISION
+"For my crop, what are common irrigation methods for tapioca?",INFORMATION
+Which fertilizer should I choose for my tapioca?,DECISION
+"In my field, what causes yellow leaves in banana?",INFORMATION
+which irrigation method should I use for my banana?,DECISION
+What are the signs of nitrogen deficiency in chilli?,INFORMATION
+should I improve drainage in my pineapple field?,DECISION
+what should I do about my okra after heavy rainfall?,DECISION
+"For a farmer in Wayanad, what are the benefits of mulching for tomato?",INFORMATION
+"For my farm, how can I improve drainage in a field growing chilli?",INFORMATION
+what nutrients does banana need during seedling stage?,INFORMATION
+"On my farm, what is the best time to plant rice in Kerala?",INFORMATION
+"For a farmer in Wayanad, should I apply an organic manure treatment to my brinjal?",DECISION
+should I spray a treatment for the pest affecting my tomato?,DECISION
+"For my crop, should I plant tapioca now or wait for better weather?",DECISION
+"In Kerala, which irrigation method should I use for my banana?",DECISION
+"For my crop, what is the best time to plant chilli in Kerala?",INFORMATION
+Should I wait for the rain before irrigating my coconut?,DECISION
+"For my crop, which option is better for improving my coconut yield?",DECISION
+should I apply fertilizer to my brinjal now?,DECISION
+"On my farm, should I spray a treatment for the pest affecting my brinjal?",DECISION
+"On my farm, should I improve drainage in my pepper field?",DECISION
+"On my farm, what are the benefits of mulching for rice?",INFORMATION
+"In Kerala, what is drip irrigation and how does it work for pepper?",INFORMATION
+"For my crop, what are the symptoms of potassium deficiency in banana?",INFORMATION
+"In my field, what is the ideal soil pH for pineapple cultivation?",INFORMATION
+"For my farm, how often is pineapple usually irrigated during harvesting stage?",INFORMATION
+which option is better for improving my coconut yield?,DECISION
+"In Kerala, should I sell my okra now or wait for better prices?",DECISION
+which irrigation method should I use for my pineapple?,DECISION
+"For my farm, which irrigation method should I use for my banana?",DECISION
+should I apply an organic manure treatment to my banana?,DECISION
+what causes leaf curling in tapioca?,INFORMATION
+"On my farm, should I improve drainage in my rice field?",DECISION
+"In my field, how often is tomato usually irrigated during seedling stage?",INFORMATION
+How often is rice usually irrigated during fruiting stage?,INFORMATION
+"In my field, what nutrients does okra need during flowering stage?",INFORMATION
+"For my crop, should I sell my pepper now or wait for better prices?",DECISION
+"For my crop, what would be the better option for my brinjal under the current conditions?",DECISION
+"For a farmer in Wayanad, what soil type is suitable for growing brinjal?",INFORMATION
+Should I change my irrigation schedule for pineapple?,DECISION
+"On my farm, should I take action immediately for my pineapple problem?",DECISION
+What are the symptoms of potassium deficiency in pepper?,INFORMATION
+what fertilizer is suitable for rice?,INFORMATION
+"On my farm, should I use mulch in my chilli field?",DECISION
+"For my crop, should I improve drainage in my okra field?",DECISION
+"In Kerala, should I change my irrigation schedule for pepper?",DECISION
+"On my farm, what is drip irrigation and how does it work for rice?",INFORMATION
+How often is tapioca usually irrigated during seedling stage?,INFORMATION
+How often is pepper usually irrigated during vegetative stage?,INFORMATION
+"For a farmer in Wayanad, should I change my irrigation schedule for pepper?",DECISION
+"For my farm, should I sell my banana now or wait for better prices?",DECISION
+"For my crop, should I spray a treatment for the pest affecting my rice?",DECISION
+"For my farm, should I use mulch in my okra field?",DECISION
+"For a farmer in Wayanad, what are the benefits of organic manure for pineapple?",INFORMATION
+should I harvest my chilli now or wait?,DECISION
+Which option is better for improving my coconut yield?,DECISION
+"For a farmer in Wayanad, should I wait for the rain before irrigating my tapioca?",DECISION
+how does excess rainfall affect coconut?,INFORMATION
+"In Kerala, should I irrigate my tapioca today?",DECISION
+How can I improve drainage in a field growing banana?,INFORMATION
+should I apply an organic manure treatment to my rice?,DECISION
+"In Kerala, should I plant banana now or wait for better weather?",DECISION
+What nutrients does pepper need during fruiting stage?,INFORMATION
+"For my crop, should I harvest my tomato now or wait?",DECISION
+"For my crop, should I plant banana now or wait for better weather?",DECISION
+"For my farm, should I spray a treatment for the pest affecting my banana?",DECISION
+"In my field, what would be the better option for my tapioca under the current conditions?",DECISION
+"In Kerala, should I apply fertilizer to my tomato now?",DECISION
+"In Kerala, should I spray a treatment for the pest affecting my coconut?",DECISION
+"In Kerala, which fertilizer should I choose for my brinjal?",DECISION
+how often is brinjal usually irrigated during seedling stage?,INFORMATION
+"On my farm, should I use mulch in my banana field?",DECISION
+Should I take action immediately for my chilli problem?,DECISION
+should I plant okra now or wait for better weather?,DECISION
+"For my farm, how can I improve drainage in a field growing banana?",INFORMATION
+"For my farm, should I improve drainage in my okra field?",DECISION
+"For a farmer in Wayanad, what should I do if my okra is showing yellow leaves?",DECISION
+"For my farm, how often is brinjal usually irrigated during harvesting stage?",INFORMATION
+"For a farmer in Wayanad, which option is better for improving my banana yield?",DECISION
+"For my crop, which fertilizer should I choose for my chilli?",DECISION
+"For a farmer in Wayanad, should I wait for the rain before irrigating my coconut?",DECISION
+"In Kerala, what should I do about my coconut after heavy rainfall?",DECISION
+"For my crop, should I sell my okra now or wait for better prices?",DECISION
+What are the benefits of organic manure for pineapple?,INFORMATION
+"For my crop, what is drip irrigation and how does it work for brinjal?",INFORMATION
+"For my farm, should I apply an organic manure treatment to my coconut?",DECISION
+"For my farm, should I wait for the rain before irrigating my pepper?",DECISION
+"On my farm, what causes leaf curling in tomato?",INFORMATION
+"In my field, what is drip irrigation and how does it work for tomato?",INFORMATION
+what should I do if my okra is showing yellow leaves?,DECISION
+"For a farmer in Wayanad, how does excess rainfall affect coconut?",INFORMATION
+"For a farmer in Wayanad, what fertilizer is suitable for coconut?",INFORMATION
+"For my crop, what nutrients does pepper need during harvesting stage?",INFORMATION
+"In Kerala, should I apply an organic manure treatment to my tomato?",DECISION
+"In my field, should I irrigate my pineapple today?",DECISION
+"For my crop, which irrigation method should I use for my brinjal?",DECISION
+"In my field, what is the best time to plant tomato in Kerala?",INFORMATION
+"For a farmer in Wayanad, should I plant chilli now or wait for better weather?",DECISION
+How often is brinjal usually irrigated during fruiting stage?,INFORMATION
+"On my farm, should I plant brinjal now or wait for better weather?",DECISION
+How does excess rainfall affect okra?,INFORMATION
+"For a farmer in Wayanad, what should I do about my tapioca after heavy rainfall?",DECISION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for pineapple?",INFORMATION
+"In my field, what are common irrigation methods for pepper?",INFORMATION
+what would be the better option for my tapioca under the current conditions?,DECISION
+"For my crop, should I change my irrigation schedule for brinjal?",DECISION
+Should I improve drainage in my pepper field?,DECISION
+"For a farmer in Wayanad, which option is better for improving my brinjal yield?",DECISION
+"For my crop, should I use mulch in my okra field?",DECISION
+"For my crop, should I use mulch in my pepper field?",DECISION
+"For my crop, which option is better for improving my okra yield?",DECISION
+What causes yellow leaves in tapioca?,INFORMATION
+"In Kerala, should I use mulch in my rice field?",DECISION
+what soil type is suitable for growing tomato?,INFORMATION
+"For my crop, what should I do if my banana is showing yellow leaves?",DECISION
+What would be the better option for my tomato under the current conditions?,DECISION
+"For my farm, what causes leaf curling in pepper?",INFORMATION
+How often is banana usually irrigated during harvesting stage?,INFORMATION
+Should I use mulch in my brinjal field?,DECISION
+What precautions should I take during heavy rainfall for tapioca?,INFORMATION
+How often is chilli usually irrigated during seedling stage?,INFORMATION
+"In my field, what precautions should I take during heavy rainfall for rice?",INFORMATION
+"For my crop, should I apply fertilizer to my okra now?",DECISION
+Which irrigation method should I use for my banana?,DECISION
+What are common irrigation methods for coconut?,INFORMATION
+How often is rice usually irrigated during vegetative stage?,INFORMATION
+"For my crop, what are the symptoms of potassium deficiency in chilli?",INFORMATION
+What are the common diseases affecting tapioca?,INFORMATION
+What are the important growth stages of tomato?,INFORMATION
+"On my farm, should I irrigate my tomato today?",DECISION
+Which option is better for improving my banana yield?,DECISION
+Should I change my irrigation schedule for pepper?,DECISION
+What are common irrigation methods for pepper?,INFORMATION
+"On my farm, should I wait for the rain before irrigating my banana?",DECISION
+"For my farm, should I improve drainage in my tomato field?",DECISION
+should I take action immediately for my pineapple problem?,DECISION
+Should I improve drainage in my brinjal field?,DECISION
+"For a farmer in Wayanad, what fertilizer is suitable for brinjal?",INFORMATION
+what are common irrigation methods for brinjal?,INFORMATION
+"In Kerala, how can I improve drainage in a field growing banana?",INFORMATION
+What causes yellow leaves in coconut?,INFORMATION
+"In Kerala, how can I improve drainage in a field growing brinjal?",INFORMATION
+should I improve drainage in my pepper field?,DECISION
+Which fertilizer should I choose for my pineapple?,DECISION
+"For my farm, should I irrigate my okra today?",DECISION
+"For my crop, how does excess rainfall affect brinjal?",INFORMATION
+What would be the better option for my tapioca under the current conditions?,DECISION
+"In my field, should I apply fertilizer to my coconut now?",DECISION
+"In Kerala, what would be the better option for my coconut under the current conditions?",DECISION
+"For a farmer in Wayanad, what are the signs of nitrogen deficiency in pineapple?",INFORMATION
+"For my crop, should I irrigate my pepper today?",DECISION
+"For my crop, how often is chilli usually irrigated during fruiting stage?",INFORMATION
+"In my field, what should I do if my brinjal is showing yellow leaves?",DECISION
+What is drip irrigation and how does it work for pineapple?,INFORMATION
+"In my field, should I improve drainage in my pineapple field?",DECISION
+Should I improve drainage in my rice field?,DECISION
+should I take action immediately for my pepper problem?,DECISION
+"In my field, should I spray a treatment for the pest affecting my chilli?",DECISION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for rice?",INFORMATION
+"In Kerala, what are the symptoms of potassium deficiency in rice?",INFORMATION
+"In Kerala, what should I do about my pineapple after heavy rainfall?",DECISION
+"On my farm, which option is better for improving my pepper yield?",DECISION
+"On my farm, which fertilizer should I choose for my chilli?",DECISION
+"For my farm, what are the important growth stages of okra?",INFORMATION
+"In Kerala, should I change my irrigation schedule for rice?",DECISION
+What are the symptoms of potassium deficiency in okra?,INFORMATION
+"In Kerala, should I wait for the rain before irrigating my brinjal?",DECISION
+"In Kerala, should I sell my pineapple now or wait for better prices?",DECISION
+What causes yellow leaves in rice?,INFORMATION
+"For a farmer in Wayanad, what are the benefits of mulching for brinjal?",INFORMATION
+Should I spray a treatment for the pest affecting my coconut?,DECISION
+Should I apply fertilizer to my banana now?,DECISION
+How does excess rainfall affect banana?,INFORMATION
+should I take action immediately for my tomato problem?,DECISION
+Should I apply an organic manure treatment to my tapioca?,DECISION
+"In my field, what are the benefits of mulching for tapioca?",INFORMATION
+"In Kerala, should I irrigate my tomato today?",DECISION
+"For my farm, what fertilizer is suitable for pineapple?",INFORMATION
+"For my farm, should I plant brinjal now or wait for better weather?",DECISION
+"On my farm, what soil type is suitable for growing pepper?",INFORMATION
+What is drip irrigation and how does it work for tomato?,INFORMATION
+What are the common diseases affecting pepper?,INFORMATION
+What nutrients does pineapple need during fruiting stage?,INFORMATION
+how can I improve drainage in a field growing tapioca?,INFORMATION
+"For a farmer in Wayanad, what would be the better option for my coconut under the current conditions?",DECISION
+"For my crop, what nutrients does coconut need during seedling stage?",INFORMATION
+Should I plant pineapple now or wait for better weather?,DECISION
+"For my farm, what are the signs of nitrogen deficiency in brinjal?",INFORMATION
+How can I improve drainage in a field growing rice?,INFORMATION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for pepper?",INFORMATION
+"On my farm, how often is rice usually irrigated during flowering stage?",INFORMATION
+"In my field, how can I improve drainage in a field growing tomato?",INFORMATION
+"On my farm, should I wait for the rain before irrigating my coconut?",DECISION
+"For a farmer in Wayanad, what are the important growth stages of banana?",INFORMATION
+"For a farmer in Wayanad, what causes yellow leaves in tapioca?",INFORMATION
+How often is chilli usually irrigated during fruiting stage?,INFORMATION
+how often is okra usually irrigated during seedling stage?,INFORMATION
+"In my field, which irrigation method should I use for my brinjal?",DECISION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for coconut?",INFORMATION
+Should I improve drainage in my chilli field?,DECISION
+"In my field, what precautions should I take during heavy rainfall for brinjal?",INFORMATION
+"In Kerala, what is the ideal soil pH for tomato cultivation?",INFORMATION
+"In Kerala, what is the ideal soil pH for tapioca cultivation?",INFORMATION
+"For my crop, what are common irrigation methods for coconut?",INFORMATION
+What are the benefits of organic manure for coconut?,INFORMATION
+"In Kerala, should I plant okra now or wait for better weather?",DECISION
+What causes yellow leaves in banana?,INFORMATION
+"In Kerala, what would be the better option for my tapioca under the current conditions?",DECISION
+"In Kerala, should I take action immediately for my pineapple problem?",DECISION
+"On my farm, should I take action immediately for my pepper problem?",DECISION
+"On my farm, what is drip irrigation and how does it work for tapioca?",INFORMATION
+How does excess rainfall affect pepper?,INFORMATION
+"For a farmer in Wayanad, what are the signs of nitrogen deficiency in chilli?",INFORMATION
+"For my farm, should I irrigate my pepper today?",DECISION
+How often is tomato usually irrigated during flowering stage?,INFORMATION
+"In Kerala, what is the best time to plant pineapple in Kerala?",INFORMATION
+should I plant coconut now or wait for better weather?,DECISION
+Should I harvest my banana now or wait?,DECISION
+What nutrients does pepper need during flowering stage?,INFORMATION
+how often is tomato usually irrigated during vegetative stage?,INFORMATION
+"In my field, which fertilizer should I choose for my pineapple?",DECISION
+"For a farmer in Wayanad, what are the benefits of mulching for pepper?",INFORMATION
+What should I do about my chilli after heavy rainfall?,DECISION
+"On my farm, what are the common diseases affecting pineapple?",INFORMATION
+should I sell my pineapple now or wait for better prices?,DECISION
+"For a farmer in Wayanad, how often is coconut usually irrigated during flowering stage?",INFORMATION
+"For my farm, should I take action immediately for my tomato problem?",DECISION
+"For my farm, should I harvest my brinjal now or wait?",DECISION
+"In Kerala, should I use mulch in my tapioca field?",DECISION
+"For my crop, what soil type is suitable for growing coconut?",INFORMATION
+Should I take action immediately for my pineapple problem?,DECISION
+What should I do about my rice after heavy rainfall?,DECISION
+"For my crop, what should I do if my tomato is showing yellow leaves?",DECISION
+"In my field, should I irrigate my pepper today?",DECISION
+"For a farmer in Wayanad, should I use mulch in my chilli field?",DECISION
+Which fertilizer should I choose for my chilli?,DECISION
+How does excess rainfall affect chilli?,INFORMATION
+Should I apply an organic manure treatment to my okra?,DECISION
+What is the ideal soil pH for brinjal cultivation?,INFORMATION
+Should I harvest my okra now or wait?,DECISION
+"For my farm, what soil type is suitable for growing banana?",INFORMATION
+"For a farmer in Wayanad, which irrigation method should I use for my rice?",DECISION
+What are the symptoms of potassium deficiency in tomato?,INFORMATION
+How often is chilli usually irrigated during vegetative stage?,INFORMATION
+What are the benefits of organic manure for rice?,INFORMATION
+what causes leaf curling in pepper?,INFORMATION
+should I use mulch in my pepper field?,DECISION
+What are the signs of nitrogen deficiency in banana?,INFORMATION
+"For my crop, should I wait for the rain before irrigating my tomato?",DECISION
+"For a farmer in Wayanad, what nutrients does chilli need during fruiting stage?",INFORMATION
+"For a farmer in Wayanad, what are the benefits of mulching for coconut?",INFORMATION
+"In Kerala, what are the common diseases affecting chilli?",INFORMATION
+How often is coconut usually irrigated during vegetative stage?,INFORMATION
+"In my field, what is the best time to plant chilli in Kerala?",INFORMATION
+"On my farm, what fertilizer is suitable for coconut?",INFORMATION
+"For my farm, should I use mulch in my pepper field?",DECISION
+"In Kerala, what are the symptoms of potassium deficiency in okra?",INFORMATION
+"In my field, what causes leaf curling in brinjal?",INFORMATION
+"For my crop, what is the ideal soil pH for rice cultivation?",INFORMATION
+Which option is better for improving my tapioca yield?,DECISION
+"In my field, should I apply an organic manure treatment to my brinjal?",DECISION
+"On my farm, what soil type is suitable for growing pineapple?",INFORMATION
+What nutrients does chilli need during harvesting stage?,INFORMATION
+what are the common diseases affecting coconut?,INFORMATION
+Should I take action immediately for my brinjal problem?,DECISION
+"For my farm, what are the signs of nitrogen deficiency in rice?",INFORMATION
+"For my farm, what are the benefits of mulching for okra?",INFORMATION
+"For a farmer in Wayanad, what are the important growth stages of tapioca?",INFORMATION
+"For my crop, should I take action immediately for my pepper problem?",DECISION
+What is the best time to plant coconut in Kerala?,INFORMATION
+which option is better for improving my pepper yield?,DECISION
+"For a farmer in Wayanad, should I wait for the rain before irrigating my tomato?",DECISION
+"In Kerala, should I wait for the rain before irrigating my pineapple?",DECISION
+"For my farm, what are the common diseases affecting banana?",INFORMATION
+what is drip irrigation and how does it work for pineapple?,INFORMATION
+should I spray a treatment for the pest affecting my coconut?,DECISION
+"For my crop, should I use mulch in my tapioca field?",DECISION
+Should I spray a treatment for the pest affecting my tapioca?,DECISION
+"For my farm, should I take action immediately for my brinjal problem?",DECISION
+"For my farm, what are the important growth stages of tomato?",INFORMATION
+Should I change my irrigation schedule for tapioca?,DECISION
+"For a farmer in Wayanad, which option is better for improving my coconut yield?",DECISION
+"For a farmer in Wayanad, should I take action immediately for my pineapple problem?",DECISION
+"For a farmer in Wayanad, what are the benefits of mulching for pineapple?",INFORMATION
+"For my farm, should I irrigate my coconut today?",DECISION
+"For my farm, should I take action immediately for my coconut problem?",DECISION
+Should I apply an organic manure treatment to my pineapple?,DECISION
+what is drip irrigation and how does it work for brinjal?,INFORMATION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for chilli?",INFORMATION
+What would be the better option for my pineapple under the current conditions?,DECISION
+"On my farm, what are the symptoms of potassium deficiency in coconut?",INFORMATION
+"In my field, what soil type is suitable for growing tomato?",INFORMATION
+What is the ideal soil pH for coconut cultivation?,INFORMATION
+"On my farm, should I plant rice now or wait for better weather?",DECISION
+"For my farm, what would be the better option for my pineapple under the current conditions?",DECISION
+how often is tapioca usually irrigated during fruiting stage?,INFORMATION
+"On my farm, which fertilizer should I choose for my pineapple?",DECISION
+"For my farm, what fertilizer is suitable for pepper?",INFORMATION
+How often is pineapple usually irrigated during vegetative stage?,INFORMATION
+"In Kerala, what are common irrigation methods for brinjal?",INFORMATION
+what is drip irrigation and how does it work for banana?,INFORMATION
+"For my farm, what fertilizer is suitable for tapioca?",INFORMATION
+What are the important growth stages of coconut?,INFORMATION
+"In Kerala, what are the important growth stages of banana?",INFORMATION
+"For my crop, should I apply fertilizer to my banana now?",DECISION
+"On my farm, what should I do if my banana is showing yellow leaves?",DECISION
+Should I improve drainage in my pineapple field?,DECISION
+"In Kerala, what causes yellow leaves in okra?",INFORMATION
+"In Kerala, what fertilizer is suitable for rice?",INFORMATION
+Should I increase irrigation because the soil is dry?,DECISION
+"For my farm, should I apply fertilizer to my tomato now?",DECISION
+"On my farm, what is drip irrigation and how does it work for chilli?",INFORMATION
+"In Kerala, what nutrients does coconut need during fruiting stage?",INFORMATION
+Should I irrigate my coconut today?,DECISION
+"For my farm, should I spray a treatment for the pest affecting my pineapple?",DECISION
+"For my farm, what precautions should I take during heavy rainfall for tapioca?",INFORMATION
+"For a farmer in Wayanad, should I apply an organic manure treatment to my pepper?",DECISION
+"In my field, what precautions should I take during heavy rainfall for tomato?",INFORMATION
+What are the common pests that affect pepper?,INFORMATION
+"For a farmer in Wayanad, should I change my irrigation schedule for rice?",DECISION
+"In my field, what would be the better option for my okra under the current conditions?",DECISION
+"For a farmer in Wayanad, should I harvest my tapioca now or wait?",DECISION
+"For my farm, what are the benefits of mulching for brinjal?",INFORMATION
+"In my field, what are the important growth stages of chilli?",INFORMATION
+Should I harvest my tapioca now or wait?,DECISION
+"In my field, should I sell my okra now or wait for better prices?",DECISION
+Should I spray a treatment for the pest affecting my tomato?,DECISION
+should I reduce irrigation because of the rain?,DECISION
+how does excess rainfall affect pineapple?,INFORMATION
+What are the symptoms of potassium deficiency in rice?,INFORMATION
+"For my crop, should I improve drainage in my banana field?",DECISION
+What is drip irrigation and how does it work for brinjal?,INFORMATION
+"In my field, should I spray a treatment for the pest affecting my rice?",DECISION
+"In Kerala, should I apply fertilizer to my chilli now?",DECISION
+"In Kerala, what causes yellow leaves in rice?",INFORMATION
+should I change my irrigation schedule for brinjal?,DECISION
+"In Kerala, should I apply fertilizer to my tapioca now?",DECISION
+"For my farm, which irrigation method should I use for my tapioca?",DECISION
+"For a farmer in Wayanad, what are common irrigation methods for pepper?",INFORMATION
+"In Kerala, what is drip irrigation and how does it work for rice?",INFORMATION
+"On my farm, what should I do about my banana after heavy rainfall?",DECISION
+"For my crop, what are the important growth stages of pineapple?",INFORMATION
+How often is brinjal usually irrigated during harvesting stage?,INFORMATION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for tapioca?",INFORMATION
+"In Kerala, should I wait for the rain before irrigating my rice?",DECISION
+What are the common pests that affect brinjal?,INFORMATION
+"In Kerala, should I apply fertilizer to my rice now?",DECISION
+"For a farmer in Wayanad, what are the symptoms of potassium deficiency in rice?",INFORMATION
+"For my crop, what should I do if my chilli is showing yellow leaves?",DECISION
+should I apply an organic manure treatment to my tapioca?,DECISION
+"For my farm, what is drip irrigation and how does it work for pepper?",INFORMATION
+"In my field, should I increase irrigation because the soil is dry?",DECISION
+"On my farm, what soil type is suitable for growing banana?",INFORMATION
+Should I sell my banana now or wait for better prices?,DECISION
+"On my farm, should I take action immediately for my banana problem?",DECISION
+how often is brinjal usually irrigated during flowering stage?,INFORMATION
+"For a farmer in Wayanad, should I apply an organic manure treatment to my tapioca?",DECISION
+"In my field, should I use mulch in my chilli field?",DECISION
+"On my farm, what are the signs of nitrogen deficiency in okra?",INFORMATION
+"In my field, what should I do about my pineapple after heavy rainfall?",DECISION
+what are the signs of nitrogen deficiency in tomato?,INFORMATION
+"For my farm, which option is better for improving my pepper yield?",DECISION
+"In my field, should I plant pepper now or wait for better weather?",DECISION
+"For my crop, what causes yellow leaves in coconut?",INFORMATION
+"For my farm, what would be the better option for my coconut under the current conditions?",DECISION
+"In my field, what are the symptoms of potassium deficiency in brinjal?",INFORMATION
+"For a farmer in Wayanad, which fertilizer should I choose for my chilli?",DECISION
+What causes leaf curling in pineapple?,INFORMATION
+"In my field, what should I do if my coconut is showing yellow leaves?",DECISION
+"For my crop, what is drip irrigation and how does it work for pepper?",INFORMATION
+Should I change my irrigation schedule for tomato?,DECISION
+"For my farm, should I irrigate my chilli today?",DECISION
+"In my field, what are the important growth stages of pepper?",INFORMATION
+"In Kerala, what should I do if my banana is showing yellow leaves?",DECISION
+What precautions should I take during heavy rainfall for brinjal?,INFORMATION
+"In Kerala, should I harvest my brinjal now or wait?",DECISION
+"For my crop, should I take action immediately for my tapioca problem?",DECISION
+"For my crop, what should I do about my pepper after heavy rainfall?",DECISION
+What are the common diseases affecting coconut?,INFORMATION
+What nutrients does banana need during harvesting stage?,INFORMATION
+What precautions should I take during heavy rainfall for banana?,INFORMATION
+"In Kerala, should I apply fertilizer to my banana now?",DECISION
+What causes leaf curling in rice?,INFORMATION
+"On my farm, what are the common diseases affecting banana?",INFORMATION
+What nutrients does pineapple need during harvesting stage?,INFORMATION
+"For my farm, how does excess rainfall affect pineapple?",INFORMATION
+"In Kerala, what would be the better option for my chilli under the current conditions?",DECISION
+What nutrients does coconut need during fruiting stage?,INFORMATION
+"For my crop, what are the benefits of organic manure for pepper?",INFORMATION
+Should I spray a treatment for the pest affecting my pepper?,DECISION
+"In Kerala, what would be the better option for my brinjal under the current conditions?",DECISION
+"In Kerala, which fertilizer should I choose for my pineapple?",DECISION
+"In my field, which fertilizer should I choose for my coconut?",DECISION
+"On my farm, what nutrients does banana need during flowering stage?",INFORMATION
+What fertilizer is suitable for tapioca?,INFORMATION
+"For a farmer in Wayanad, which irrigation method should I use for my tomato?",DECISION
+Which option is better for improving my chilli yield?,DECISION
+"In my field, should I use mulch in my banana field?",DECISION
+"On my farm, what are the benefits of mulching for pepper?",INFORMATION
+"In my field, what are the signs of nitrogen deficiency in coconut?",INFORMATION
+"In Kerala, should I take action immediately for my okra problem?",DECISION
+"On my farm, should I take action immediately for my rice problem?",DECISION
+"On my farm, should I apply fertilizer to my rice now?",DECISION
+How does excess rainfall affect brinjal?,INFORMATION
+What are the symptoms of potassium deficiency in pineapple?,INFORMATION
+"In my field, how often is brinjal usually irrigated during seedling stage?",INFORMATION
+"For a farmer in Wayanad, what precautions should I take during heavy rainfall for tomato?",INFORMATION
+how can I improve drainage in a field growing tomato?,INFORMATION
+"On my farm, what is the best time to plant brinjal in Kerala?",INFORMATION
+"On my farm, which fertilizer should I choose for my coconut?",DECISION
+"In my field, should I spray a treatment for the pest affecting my pepper?",DECISION
+"For my farm, should I harvest my chilli now or wait?",DECISION
+"On my farm, what would be the better option for my tomato under the current conditions?",DECISION
+should I sell my tapioca now or wait for better prices?,DECISION
+How often is brinjal usually irrigated during vegetative stage?,INFORMATION
+"For my crop, should I apply fertilizer to my rice now?",DECISION
+what nutrients does tomato need during fruiting stage?,INFORMATION
+Should I harvest my brinjal now or wait?,DECISION
+What precautions should I take during heavy rainfall for okra?,INFORMATION
+"On my farm, which irrigation method should I use for my pepper?",DECISION
+What are the common diseases affecting pineapple?,INFORMATION
+"In my field, how can I improve drainage in a field growing pepper?",INFORMATION
+"On my farm, should I apply fertilizer to my coconut now?",DECISION
+what causes leaf curling in coconut?,INFORMATION
+How often is tapioca usually irrigated during fruiting stage?,INFORMATION
+Which irrigation method should I use for my tomato?,DECISION
+"In my field, should I take action immediately for my okra problem?",DECISION
+what is the best time to plant brinjal in Kerala?,INFORMATION
+Which irrigation method should I use for my okra?,DECISION
+"In my field, should I apply an organic manure treatment to my chilli?",DECISION
+"For my crop, should I apply an organic manure treatment to my tapioca?",DECISION
+"In Kerala, what causes leaf curling in coconut?",INFORMATION
+"On my farm, what is the ideal soil pH for coconut cultivation?",INFORMATION
+what would be the better option for my okra under the current conditions?,DECISION
+"On my farm, what are the common pests that affect chilli?",INFORMATION
+"For my farm, should I change my irrigation schedule for tomato?",DECISION
+What is drip irrigation and how does it work for chilli?,INFORMATION
+What should I do if my coconut is showing yellow leaves?,DECISION
+"For my farm, should I take action immediately for my tapioca problem?",DECISION
+"For a farmer in Wayanad, should I take action immediately for my okra problem?",DECISION
+Should I use mulch in my tapioca field?,DECISION
+"For a farmer in Wayanad, should I take action immediately for my banana problem?",DECISION
+"In my field, what precautions should I take during heavy rainfall for chilli?",INFORMATION
+Should I apply an organic manure treatment to my pepper?,DECISION
+"On my farm, should I use mulch in my brinjal field?",DECISION
+"On my farm, what are the important growth stages of pineapple?",INFORMATION
+which fertilizer should I choose for my coconut?,DECISION
+"In my field, should I take action immediately for my banana problem?",DECISION
+"On my farm, how can I improve drainage in a field growing coconut?",INFORMATION
+what is drip irrigation and how does it work for pepper?,INFORMATION
+What would be the better option for my rice under the current conditions?,DECISION
+"For my crop, what would be the better option for my tapioca under the current conditions?",DECISION
+"For my crop, should I improve drainage in my tomato field?",DECISION
+"In Kerala, what precautions should I take during heavy rainfall for brinjal?",INFORMATION
+"On my farm, what causes yellow leaves in brinjal?",INFORMATION
+"In my field, what should I do about my pepper after heavy rainfall?",DECISION
+"For my farm, what are the common pests that affect tomato?",INFORMATION
+"In my field, what are the symptoms of potassium deficiency in tapioca?",INFORMATION
+"For a farmer in Wayanad, should I irrigate my brinjal today?",DECISION
+what are common irrigation methods for rice?,INFORMATION
+"In Kerala, how often is rice usually irrigated during fruiting stage?",INFORMATION
+"For my farm, what are the benefits of organic manure for brinjal?",INFORMATION
+"In Kerala, what should I do if my rice is showing yellow leaves?",DECISION
+"On my farm, how often is okra usually irrigated during harvesting stage?",INFORMATION
+"In my field, what are the signs of nitrogen deficiency in rice?",INFORMATION
+"In my field, what nutrients does tapioca need during vegetative stage?",INFORMATION
+What are the important growth stages of pepper?,INFORMATION
+what are the benefits of mulching for tapioca?,INFORMATION
+"In Kerala, what would be the better option for my pepper under the current conditions?",DECISION
+should I apply an organic manure treatment to my chilli?,DECISION
+What nutrients does coconut need during vegetative stage?,INFORMATION
+Which option is better for improving my pepper yield?,DECISION
+should I plant tomato now or wait for better weather?,DECISION
+"For my crop, what are the common pests that affect coconut?",INFORMATION
+"On my farm, which fertilizer should I choose for my okra?",DECISION
+"For my farm, what causes leaf curling in brinjal?",INFORMATION
+"In Kerala, what causes leaf curling in tomato?",INFORMATION
+What are the common diseases affecting rice?,INFORMATION
+"For my farm, should I spray a treatment for the pest affecting my brinjal?",DECISION
+"On my farm, what are the important growth stages of coconut?",INFORMATION
+"For my crop, should I take action immediately for my brinjal problem?",DECISION
+"In my field, what is the best time to plant pepper in Kerala?",INFORMATION
+"On my farm, which fertilizer should I choose for my pepper?",DECISION
+"On my farm, what are the important growth stages of tapioca?",INFORMATION
+What causes yellow leaves in brinjal?,INFORMATION
+"On my farm, what should I do if my rice is showing yellow leaves?",DECISION
+"In my field, what nutrients does banana need during harvesting stage?",INFORMATION
+"For my crop, should I change my irrigation schedule for rice?",DECISION
+"For my crop, should I irrigate my pineapple today?",DECISION
+"On my farm, should I apply fertilizer to my pineapple now?",DECISION
+"In my field, should I improve drainage in my tapioca field?",DECISION
+"On my farm, what are the symptoms of potassium deficiency in pepper?",INFORMATION
+"For my farm, what should I do about my chilli after heavy rainfall?",DECISION
+should I apply an organic manure treatment to my brinjal?,DECISION
+"On my farm, what should I do about my tomato after heavy rainfall?",DECISION
+"For a farmer in Wayanad, should I wait for the rain before irrigating my okra?",DECISION
+"In Kerala, should I apply an organic manure treatment to my banana?",DECISION
+What causes yellow leaves in pineapple?,INFORMATION
+"For a farmer in Wayanad, which irrigation method should I use for my pineapple?",DECISION
+"In my field, what are the common diseases affecting okra?",INFORMATION
+What causes leaf curling in banana?,INFORMATION
+"In my field, what is the ideal soil pH for chilli cultivation?",INFORMATION
+"For my crop, what causes leaf curling in rice?",INFORMATION
+What should I do about my okra after heavy rainfall?,DECISION
+"On my farm, which irrigation method should I use for my brinjal?",DECISION
+"In my field, should I spray a treatment for the pest affecting my tomato?",DECISION
+"For my farm, which irrigation method should I use for my pineapple?",DECISION
+"For my farm, which irrigation method should I use for my brinjal?",DECISION
+"In my field, what is the best time to plant banana in Kerala?",INFORMATION
+"For a farmer in Wayanad, what are the benefits of mulching for tapioca?",INFORMATION
+Which irrigation method should I use for my rice?,DECISION
+"For my farm, what precautions should I take during heavy rainfall for rice?",INFORMATION
+what would be the better option for my rice under the current conditions?,DECISION
+"In my field, how often is banana usually irrigated during flowering stage?",INFORMATION
+Should I change my irrigation schedule for rice?,DECISION
+Should I use mulch in my chilli field?,DECISION
+"For my farm, should I reduce irrigation because of the rain?",DECISION
+"For my farm, should I harvest my tomato now or wait?",DECISION
+How does excess rainfall affect rice?,INFORMATION
+"For a farmer in Wayanad, what are the benefits of organic manure for pepper?",INFORMATION
+"For my crop, should I wait for the rain before irrigating my pineapple?",DECISION
+What nutrients does tapioca need during harvesting stage?,INFORMATION
+"In Kerala, what precautions should I take during heavy rainfall for pepper?",INFORMATION
+Should I wait for the rain before irrigating my chilli?,DECISION
+Should I use mulch in my okra field?,DECISION
+What nutrients does chilli need during vegetative stage?,INFORMATION
+"For my farm, what precautions should I take during heavy rainfall for okra?",INFORMATION
+should I use mulch in my banana field?,DECISION
+"For my farm, should I improve drainage in my chilli field?",DECISION
+"For a farmer in Wayanad, should I harvest my tomato now or wait?",DECISION
+Should I harvest my coconut now or wait?,DECISION
+"For my farm, which irrigation method should I use for my chilli?",DECISION
+What fertilizer is suitable for chilli?,INFORMATION
+What are the important growth stages of tapioca?,INFORMATION
+What nutrients does brinjal need during seedling stage?,INFORMATION
+"For my farm, should I harvest my pepper now or wait?",DECISION
+Should I sell my tapioca now or wait for better prices?,DECISION
+"In Kerala, should I irrigate my coconut today?",DECISION
+What fertilizer is suitable for brinjal?,INFORMATION
+"For a farmer in Wayanad, what soil type is suitable for growing chilli?",INFORMATION
+"For my farm, what nutrients does chilli need during harvesting stage?",INFORMATION
+What is the ideal soil pH for tapioca cultivation?,INFORMATION
+"For my crop, what are the benefits of organic manure for okra?",INFORMATION
+"For my farm, what are the common pests that affect chilli?",INFORMATION
+what is the best time to plant tapioca in Kerala?,INFORMATION
+"In my field, should I take action immediately for my brinjal problem?",DECISION
+"On my farm, which fertilizer should I choose for my banana?",DECISION
+What are the signs of nitrogen deficiency in coconut?,INFORMATION
+Should I apply an organic manure treatment to my tomato?,DECISION
+"On my farm, what nutrients does okra need during fruiting stage?",INFORMATION
+What is the ideal soil pH for rice cultivation?,INFORMATION
+"For a farmer in Wayanad, what are the important growth stages of chilli?",INFORMATION
+"For a farmer in Wayanad, what causes leaf curling in tapioca?",INFORMATION
+what are the important growth stages of pineapple?,INFORMATION
+"In Kerala, should I wait for the rain before irrigating my banana?",DECISION
+"In my field, which option is better for improving my rice yield?",DECISION
+"For my crop, should I spray a treatment for the pest affecting my coconut?",DECISION
+"For my crop, what should I do about my pineapple after heavy rainfall?",DECISION
+"In my field, what are the common pests that affect pepper?",INFORMATION
+Should I spray a treatment for the pest affecting my chilli?,DECISION
+"In Kerala, how can I improve drainage in a field growing coconut?",INFORMATION
+What causes leaf curling in coconut?,INFORMATION
+"For my farm, should I sell my tomato now or wait for better prices?",DECISION
+"In Kerala, which irrigation method should I use for my rice?",DECISION
+"In Kerala, should I wait for the rain before irrigating my okra?",DECISION
+"For a farmer in Wayanad, what is the best time to plant brinjal in Kerala?",INFORMATION
+"For a farmer in Wayanad, should I harvest my pepper now or wait?",DECISION
+"For my farm, should I improve drainage in my brinjal field?",DECISION
+How often is tapioca usually irrigated during harvesting stage?,INFORMATION
+"For my crop, should I reduce irrigation because of the rain?",DECISION
+"In Kerala, what precautions should I take during heavy rainfall for rice?",INFORMATION
+"In Kerala, which option is better for improving my tomato yield?",DECISION
+"On my farm, what should I do if my tapioca is showing yellow leaves?",DECISION
+"For my farm, should I change my irrigation schedule for okra?",DECISION
+"In my field, should I spray a treatment for the pest affecting my okra?",DECISION
+"In my field, should I change my irrigation schedule for tomato?",DECISION
+Should I apply fertilizer to my coconut now?,DECISION
+"For my farm, should I sell my rice now or wait for better prices?",DECISION
+"In Kerala, should I plant brinjal now or wait for better weather?",DECISION
+"In my field, should I irrigate my okra today?",DECISION
+how often is rice usually irrigated during flowering stage?,INFORMATION
+"For a farmer in Wayanad, what fertilizer is suitable for rice?",INFORMATION
+"On my farm, what should I do if my tomato is showing yellow leaves?",DECISION
+Should I use mulch in my rice field?,DECISION
+What fertilizer is suitable for pepper?,INFORMATION
+should I use mulch in my okra field?,DECISION
+should I apply fertilizer to my okra now?,DECISION
+how often is tomato usually irrigated during harvesting stage?,INFORMATION
+"In Kerala, how often is brinjal usually irrigated during flowering stage?",INFORMATION
+What nutrients does tapioca need during flowering stage?,INFORMATION
+"For my farm, what are the benefits of organic manure for okra?",INFORMATION
+"For a farmer in Wayanad, what is the best time to plant coconut in Kerala?",INFORMATION
+"On my farm, what causes leaf curling in coconut?",INFORMATION
+"For a farmer in Wayanad, what are common irrigation methods for brinjal?",INFORMATION
+Should I apply fertilizer to my tomato now?,DECISION
+"For my crop, what is the ideal soil pH for pepper cultivation?",INFORMATION
+what should I do about my tomato after heavy rainfall?,DECISION
+"For my crop, should I apply an organic manure treatment to my chilli?",DECISION
+"For my farm, what would be the better option for my brinjal under the current conditions?",DECISION
+what nutrients does banana need during vegetative stage?,INFORMATION
+What are the common diseases affecting tomato?,INFORMATION
+"On my farm, should I reduce irrigation because of the rain?",DECISION
