@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="body-header">
+    <h1>Welcome</h1>
+</div>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            
+            <!-- Chat Card Container -->
+            <div class="card shadow-sm border-0">
+                <!-- Card Header -->
+                <div class="card-header bg-primary text-white py-3">
+                    <h5 class="mb-0 d-flex align-items-center">
+                        <span class="spinner-grow spinner-grow-sm me-2 text-success" role="status"></span>
+                        AI Chat Assistant
+                    </h5>
+                </div>
+                
+                <!-- Chat Window Body -->
+                <div id="chat-window" class="card-body p-4">
+                    <!-- Default System Welcome Message -->
+                    <div class="d-flex flex-row justify-content-start mb-4">
+                        <div class="p-3 ms-2 bg-white border rounded" style="border-radius: 15px; max-width: 75%;">
+                            <p class="small text-muted mb-0">Hello! How can I help you today?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat Input Field Footer -->
+                <div class="card-footer bg-white p-3 border-top-0">
+                    <form id="chat-form" class="input-group">
+                        <input type="text" id="user-input" class="form-control" placeholder="Type a message..." required autocomplete="off">
+                        <button class="btn btn-primary" type="submit" id="send-btn">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const chatForm = document.getElementById('chat-form');
+    const userInput = document.getElementById('user-input');
+    const chatWindow = document.getElementById('chat-window');
+
+    chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const messageText = userInput.value.trim();
+        if (!messageText) return;
+
+        // 1. Append the user message visually to the chat panel
+        appendMessage(messageText, 'user');
+        userInput.value = '';
+
+        // 2. Query the Flask Backend API via POST
+        try {
+            const response = await fetch('/get_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: messageText })
+            });
+            const data = await response.json();
+            
+            // 3. Append the server response back to the layout
+            appendMessage(data.reply, 'bot');
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            appendMessage('Error contacting server. Please try again.', 'bot text-danger');
+        }
+    });
+
+    function appendMessage(text, sender) {
+        const messageRow = document.createElement('div');
+        messageRow.classList.add('d-flex', 'flex-row', 'mb-4');
+
+        if (sender === 'user') {
+            // Align user text bubbles to the right
+            messageRow.classList.add('justify-content-end');
+            messageRow.innerHTML = `
+                <div class="p-3 me-2 text-white bg-primary rounded shadow-sm" style="border-radius: 15px; max-width: 75%;">
+                    <p class="small mb-0">${text}</p>
+                </div>
+            `;
+        } else {
+            // Align bot text bubbles to the left
+            messageRow.classList.add('justify-content-start');
+            messageRow.innerHTML = `
+                <div class="p-3 ms-2 bg-white border rounded shadow-sm" style="border-radius: 15px; max-width: 75%;">
+                    <p class="small mb-0">${text}</p>
+                </div>
+            `;
+        }
+
+        chatWindow.appendChild(messageRow);
+        // Autoscroll the chat box window container downward 
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+</script>
+
+{% endblock %}
