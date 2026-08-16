@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # ====================== MODEL LOADING ======================
 BASE_MODEL = "distilbert-base-uncased"
-ADAPTER_PATH = "/home/plasma/sih/Kaarshika-Agentic-Agricultural-Intelligence-Platform/AI/Notebooks/classifier_lora"
+ADAPTER_PATH = "./AI/Notebooks/classifier_lora"
 
 NUM_LABELS = 2
 LABEL_NAMES = [
