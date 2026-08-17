@@ -1,108 +1,310 @@
-{% extends 'base.html' %}
-
-{% block title %}Home Page{% endblock %}
+{% extends "base.html" %}
 
 {% block content %}
-<div class="body-header">
-    <h1>Welcome</h1>
-</div>
 
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-            
-            <!-- Chat Card Container -->
-            <div class="card shadow-sm border-0">
-                <!-- Card Header -->
-                <div class="card-header bg-primary text-white py-3">
-                    <h5 class="mb-0 d-flex align-items-center">
-                        <span class="spinner-grow spinner-grow-sm me-2 text-success" role="status"></span>
-                        AI Chat Assistant
-                    </h5>
-                </div>
-                
-                <!-- Chat Window Body -->
-                <div id="chat-window" class="card-body p-4">
-                    <!-- Default System Welcome Message -->
-                    <div class="d-flex flex-row justify-content-start mb-4">
-                        <div class="p-3 ms-2 bg-white border rounded" style="border-radius: 15px; max-width: 75%;">
-                            <p class="small text-muted mb-0">Hello! How can I help you today?</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Chat Input Field Footer -->
-                <div class="card-footer bg-white p-3 border-top-0">
-                    <form id="chat-form" class="input-group">
-                        <input type="text" id="user-input" class="form-control" placeholder="Type a message..." required autocomplete="off">
-                        <button class="btn btn-primary" type="submit" id="send-btn">
-                            Send
-                        </button>
-                    </form>
-                </div>
+<!-- ================================
+     HERO SECTION
+================================ -->
+
+<section class="landing-page">
+
+    <div class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                🌱 Smart Farming Assistant
+            </div>
+
+            <h1>
+                Grow Smarter with
+                <span>Kaarshika-AI</span>
+            </h1>
+
+            <p class="hero-description">
+                Your intelligent farming companion for crop guidance,
+                farming advice, weather insights, pest management,
+                and smarter agricultural decisions.
+            </p>
+
+            <div class="hero-actions">
+
+                    <a href="{{ url_for('register') }}"
+                       class="get-started-btn">
+                        Get Started
+                        <span>→</span>
+                    </a>
+
+                    <a href="{{ url_for('login') }}"
+                       class="login-btn">
+                        Already have an account?
+                        <strong>Login</strong>
+                    </a>
+
             </div>
 
         </div>
+
+
+        <!-- ================================
+             AI ASSISTANT CARD
+        ================================= -->
+
+        <div class="hero-visual">
+
+            <div class="assistant-card">
+
+                <div class="assistant-header">
+
+                    <div class="assistant-avatar">
+                        🌱
+                    </div>
+
+                    <div>
+                        <h3>Kaarshika-AI</h3>
+                        <p>
+                            <span class="online-dot"></span>
+                            Farmer Assistant
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="chat-preview">
+
+                    <div class="ai-message">
+                        <span class="message-icon">🤖</span>
+
+                        <div>
+                            Hello! I'm Kaarshika-AI.
+                            How can I help you with your farm today?
+                        </div>
+                    </div>
+
+
+                    <div class="user-message">
+                        What crop should I grow this season?
+                    </div>
+
+
+                    <div class="ai-message">
+                        <span class="message-icon">🌾</span>
+
+                        <div>
+                            I can help you choose a crop based on
+                            your soil, location, weather, and season.
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="chat-input-preview">
+                    <span>Ask your farming question...</span>
+                    <button>➤</button>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-</div>
 
-<script>
-    const chatForm = document.getElementById('chat-form');
-    const userInput = document.getElementById('user-input');
-    const chatWindow = document.getElementById('chat-window');
 
-    chatForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const messageText = userInput.value.trim();
-        if (!messageText) return;
+    <!-- ================================
+         FEATURES
+    ================================= -->
 
-        // 1. Append the user message visually to the chat panel
-        appendMessage(messageText, 'user');
-        userInput.value = '';
+    <section class="features-section">
 
-        // 2. Query the Flask Backend API via POST
-        try {
-            const response = await fetch('/get_response', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: messageText })
-            });
-            const data = await response.json();
-            
-            // 3. Append the server response back to the layout
-            appendMessage(data.reply, 'bot');
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            appendMessage('Error contacting server. Please try again.', 'bot text-danger');
-        }
-    });
+        <div class="feature-card">
+            <div class="feature-icon">🌾</div>
 
-    function appendMessage(text, sender) {
-        const messageRow = document.createElement('div');
-        messageRow.classList.add('d-flex', 'flex-row', 'mb-4');
+            <h3>Crop Guidance</h3>
 
-        if (sender === 'user') {
-            // Align user text bubbles to the right
-            messageRow.classList.add('justify-content-end');
-            messageRow.innerHTML = `
-                <div class="p-3 me-2 text-white bg-primary rounded shadow-sm" style="border-radius: 15px; max-width: 75%;">
-                    <p class="small mb-0">${text}</p>
+            <p>
+                Get helpful information about crops,
+                growing conditions, and farming practices.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">🌦️</div>
+
+            <h3>Weather Insights</h3>
+
+            <p>
+                Understand how weather conditions can
+                affect your farming decisions.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">🐛</div>
+
+            <h3>Pest Management</h3>
+
+            <p>
+                Learn about common crop pests and
+                ways to protect your plants.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">💡</div>
+
+            <h3>AI Assistance</h3>
+
+            <p>
+                Ask farming questions and receive
+                quick, easy-to-understand guidance.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         FARMING FACTS
+    ================================= -->
+
+    <section class="facts-section">
+
+        <div class="facts-header">
+
+            <span class="facts-badge">
+                🌿 Did You Know?
+            </span>
+
+            <h2>
+                Farming Facts
+            </h2>
+
+            <p>
+                A few interesting facts from the world of agriculture.
+            </p>
+
+        </div>
+
+
+        <div class="facts-grid">
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    01
                 </div>
-            `;
-        } else {
-            // Align bot text bubbles to the left
-            messageRow.classList.add('justify-content-start');
-            messageRow.innerHTML = `
-                <div class="p-3 ms-2 bg-white border rounded shadow-sm" style="border-radius: 15px; max-width: 75%;">
-                    <p class="small mb-0">${text}</p>
-                </div>
-            `;
-        }
 
-        chatWindow.appendChild(messageRow);
-        // Autoscroll the chat box window container downward 
-        chatWindow.scrollTop = chatWindow.scrollHeight;
-    }
-</script>
+                <div>
+                    <h3>Soil Matters</h3>
+
+                    <p>
+                        Healthy soil supports healthy crops.
+                        Soil quality influences nutrient availability,
+                        water retention, and plant growth.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    02
+                </div>
+
+                <div>
+                    <h3>Water Efficiency</h3>
+
+                    <p>
+                        Efficient irrigation can help reduce water
+                        waste while providing crops with the moisture
+                        they need.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    03
+                </div>
+
+                <div>
+                    <h3>Crop Rotation</h3>
+
+                    <p>
+                        Rotating crops can help maintain soil health
+                        and can reduce the buildup of certain pests
+                        and diseases.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    04
+                </div>
+
+                <div>
+                    <h3>Plants Need More Than Water</h3>
+
+                    <p>
+                        Plants require nutrients, sunlight, water,
+                        suitable temperatures, and healthy soil
+                        conditions to grow well.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         FINAL CTA
+    ================================= -->
+
+
+    <section class="final-cta">
+
+        <div>
+
+            <span>🌱 Ready to farm smarter?</span>
+
+            <h2>
+                Let Kaarshika-AI be your
+                farming companion.
+            </h2>
+
+            <p>
+                Create your free account and start exploring
+                smarter agricultural assistance.
+            </p>
+
+            <a href="{{ url_for('register') }}"
+               class="get-started-btn">
+                Get Started
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+</section>
 
 {% endblock %}

@@ -1,64 +1,153 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>{% block title %}Kaarshika-AI{% endblock %}</title>
-    
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-3" href="/">
-                <span class="text-primary">Kaarshika-AI</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+     <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>{{ app_name if app_name else 'Kaarshika-AI' }}</title> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+     </head> 
+     <body>
+<div class="app-wrapper">
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                    </ul>
-            </div>
+  <!-- Sidebar -->
+  <aside class="sidebar collapsed"  id="sidebarNav">
+
+    <div class="sidebar-header">
+
+      <div class="sidebar-brand">
+        <span class="brand-text">
+          {{ app_name if app_name else 'Kaarshika-AI' }}
+        </span>
+      </div>
+
+      <button class="sidebar-collapse-btn"
+              id="sidebarToggle"
+              type="button"
+              aria-label="Toggle sidebar">
+        ☰
+      </button>
+
+    </div>
+
+
+    <button class="btn-new-chat">
+      <span class="new-chat-icon">＋</span>
+      <span class="sidebar-text">New Chat</span>
+    </button>
+
+
+    <div class="search-wrapper">
+      <span class="search-icon">⌕</span>
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search conversations..."
+      >
+    </div>
+
+
+    <div class="sidebar-content">
+
+      <p class="section-label">Today</p>
+
+      {% if today_chats %}
+        <ul class="chat-list">
+          {% for chat in today_chats %}
+            <li>{{ chat.title }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="empty-note">No conversations yet today</p>
+      {% endif %}
+
+
+      <p class="section-label">Previous</p>
+
+      {% if previous_chats %}
+        <ul class="chat-list">
+          {% for chat in previous_chats %}
+            <li>{{ chat.title }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="empty-note">No previous conversations</p>
+      {% endif %}
+
+    </div>
+
+
+    <!-- Farm State -->
+    <div class="farm-state-card">
+
+      <div class="farm-state-header">
+        <span class="sidebar-text">Farm State</span>
+        <button class="sidebar-text">Edit</button>
+      </div>
+
+      {% if farm_state %}
+
+        <div class="farm-row">
+          <span class="label">Location</span>
+          <span>
+            {{ farm_state.location if farm_state.location else 'Not set' }}
+          </span>
         </div>
-    </nav>
 
-    <!-- Flash Messages -->
-    <div class="container mt-3">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+        <div class="farm-row">
+          <span class="label">Crop</span>
+
+          {% if farm_state.crop %}
+            <span class="badge-crop">
+              {{ farm_state.crop }}
+            </span>
+          {% else %}
+            <span>Not set</span>
+          {% endif %}
+
+        </div>
+
+        <div class="farm-row">
+          <span class="label">Stage</span>
+          <span>
+            {{ farm_state.stage if farm_state.stage else 'Not set' }}
+          </span>
+        </div>
+
+        <div class="farm-row">
+          <span class="label">Soil Moisture</span>
+          <span>
+            {{ farm_state.soil_moisture if farm_state.soil_moisture else 'Not set' }}
+          </span>
+        </div>
+
+      {% else %}
+
+        <p class="empty-note">
+          No farm data set.
+        </p>
+
+      {% endif %}
+
     </div>
 
-    <!-- Main Content -->
-    <div class="container mt-4">
-        {% block content %}
-        <!-- Child templates will override this -->
-        {% endblock %}
-    </div>
+  </aside>
 
-    <!-- Footer -->
-    <footer class="bg-light text-center py-4 mt-5 border-top">
-        <p class="mb-0 text-muted">&copy; 2026 Kaarshika-AI • All Rights Reserved</p>
-    </footer>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    {% block content %}
+    {% endblock %}
+
+  </main>
+  <script>
+    const sidebar = document.getElementById("sidebarNav");
+    const toggle = document.getElementById("sidebarToggle");
+
+    toggle.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+    });
+</script>
+
+</div>
 </body>
-</html>

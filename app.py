@@ -36,6 +36,18 @@ print("Model loaded successfully!")
 def index():
     return render_template("index.html")
 
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+@app.route('/register')
+def register():
+    return render_template("register.html")
+
+@app.route('/chat')
+def chat():
+    return render_template("chat.html")
+
 
 @app.route('/get_response', methods=['POST'])
 def get_response():
