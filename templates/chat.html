@@ -22,6 +22,7 @@
     {% endif %}
   </div>
 
+  {% if is_new_chat %}
   <div class="row justify-content-center mb-4 px-3">
     {% if suggestion_cards %}
       {% for card in suggestion_cards %}
@@ -38,6 +39,7 @@
       </div>
     {% endif %}
   </div>
+  {% endif %}
 
   <!-- Chat Card Container -->
   <div class="container px-3">
@@ -47,11 +49,14 @@
         <div class="card shadow-sm border-0" style="border:1px solid #28a745 !important;">
 
           <!-- Card Header -->
-          <div class="card-header bg-success text-white py-3">
+          <div class="card-header bg-success text-white py-3 d-flex justify-content-between align-items-center">
             <h5 class="mb-0 d-flex align-items-center">
               <span class="spinner-grow spinner-grow-sm me-2 text-white" role="status"></span>
               {{ app_name if app_name else 'AI Chat Assistant' }}
             </h5>
+            {% if not is_new_chat %}
+              <a href="{{ url_for('chat') }}" class="btn btn-sm btn-light text-success fw-bold">+ New Chat</a>
+            {% endif %}
           </div>
 
           <!-- Chat Window Body -->
@@ -70,24 +75,31 @@
                   {% endif %}
                 </div>
               {% endfor %}
-            {% else %}
+            {% elif is_new_chat %}
               <div class="d-flex flex-row justify-content-start mb-4">
                 <div class="p-3 ms-2 bg-white border rounded" style="border-radius:15px; max-width:75%; border-color:#28a745 !important;">
                   <p class="small text-muted mb-0">Hello! How can I help you today?</p>
                 </div>
               </div>
+            {% else %}
+              <div class="text-center text-muted small fst-italic py-4">
+                No messages found in this conversation.
+              </div>
             {% endif %}
           </div>
 
-          <!-- Chat Input Field Footer -->
+          {% if is_new_chat %}
+          <!-- Chat Input Field Footer (only shown for a new/active chat) -->
           <div class="card-footer bg-white p-3 border-top-0" style="border-top:1px solid #28a745 !important;">
             <form id="chat-form" class="input-group">
+              <input type="hidden" id="chat-id" value="{{ chat_id if chat_id else '' }}">
               <input type="text" id="user-input" class="form-control border-success" placeholder="Type a message..." required autocomplete="off">
               <button class="btn btn-success" type="submit" id="send-btn">
                 Send
               </button>
             </form>
           </div>
+          {% endif %}
 
         </div>
 
@@ -97,10 +109,12 @@
 
 </div>
 
+{% if is_new_chat %}
 <script>
     const chatForm = document.getElementById('chat-form');
     const userInput = document.getElementById('user-input');
     const chatWindow = document.getElementById('chat-window');
+    const chatIdInput = document.getElementById('chat-id');
 
     chatForm.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -116,12 +130,24 @@
             const response = await fetch('{{ url_for("get_response") }}', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: messageText })
+                body: JSON.stringify({
+                    message: messageText,
+                    chat_id: chatIdInput.value || null
+                })
             });
             const data = await response.json();
 
             // 3. Append the server response back to the layout
             appendMessage(data.reply, 'bot');
+
+            // 4. Remember the chat_id once the backend creates/updates one,
+            //    so all following messages in this session attach to the same chat.
+            if (data.chat_id) {
+                chatIdInput.value = data.chat_id;
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState(null, '', '/chat/' + data.chat_id);
+                }
+            }
         } catch (error) {
             console.error('Error fetching data:', error);
             appendMessage('Error contacting server. Please try again.', 'bot text-danger');
@@ -133,7 +159,6 @@
         messageRow.classList.add('d-flex', 'flex-row', 'mb-4');
 
         if (sender === 'user') {
-            // Align user text bubbles to the right
             messageRow.classList.add('justify-content-end');
             messageRow.innerHTML = `
                 <div class="p-3 me-2 text-white bg-success rounded shadow-sm" style="border-radius: 15px; max-width: 75%;">
@@ -141,7 +166,6 @@
                 </div>
             `;
         } else {
-            // Align bot text bubbles to the left
             messageRow.classList.add('justify-content-start');
             messageRow.innerHTML = `
                 <div class="p-3 ms-2 bg-white border rounded shadow-sm" style="border-radius: 15px; max-width: 75%; border-color:#28a745;">
@@ -151,8 +175,8 @@
         }
 
         chatWindow.appendChild(messageRow);
-        // Autoscroll the chat box window container downward
         chatWindow.scrollTop = chatWindow.scrollHeight;
     }
 </script>
+{% endif %}
 {% endblock %}
