@@ -1,4 +1,12 @@
-Flask
-transformers
-peft
-torch
+torch==2.13.0
+transformers==4.45.2
+datasets==5.0.0
+peft==0.6.2
+trl==0.9.6
+accelerate==1.14.0
+safetensors==0.8.0
+tokenizers==0.20.3
+huggingface_hub==0.36.2
+numpy==1.26.4
+pandas==3.0.3
+tqdm==4.68.2
