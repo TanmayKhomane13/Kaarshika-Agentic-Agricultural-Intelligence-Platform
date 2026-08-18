@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}Register - Kaarshika-AI{% endblock %}
+
+{% block content %}
+
+<div class="login-page">
+
+    <div class="login-card register-card">
+
+        <!-- Brand -->
+        <div class="login-brand">
+
+            <div class="login-logo">
+                🌱
+            </div>
+
+            <h1>Kaarshika-AI</h1>
+
+            <p>Your intelligent farming companion</p>
+
+        </div>
+
+
+        <!-- Heading -->
+        <div class="login-heading">
+
+            <h2>Create Account</h2>
+
+            <p>
+                Join Kaarshika-AI and start farming smarter.
+            </p>
+
+        </div>
+
+
+        <!-- Registration Form -->
+        <form method="POST" action="/register">
+
+            <!-- Full Name -->
+            <div class="login-field">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                    autofocus
+                >
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="login-field">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create a password"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Confirm Password -->
+            <div class="login-field">
+
+                <label for="confirmation">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmation"
+                    name="confirmation"
+                    placeholder="Confirm your password"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Error -->
+            {% if error %}
+
+                <div class="login-error">
+                    {{ error }}
+                </div>
+
+            {% endif %}
+
+
+            <!-- Register -->
+            <button type="submit" class="login-submit">
+                Create Account
+                <span>→</span>
+            </button>
+
+        </form>
+
+
+        <!-- Login -->
+        <div class="register-link">
+
+            <p>
+                Already have an account?
+                <a href="/login">
+                    Login here
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

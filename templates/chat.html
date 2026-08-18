@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block title %}Kaarshika-AI{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column w-100">
+
+  <div class="text-center py-4">
+    <h5 class="text-success fw-bold mb-1">{{ tagline if tagline else 'Welcome' }}</h5>
+    <p class="text-muted small">{{ subtext if subtext else '' }}</p>
+
+    {% if farm_state and farm_state.location %}
+      <span class="badge bg-light text-success border border-success me-2">{{ farm_state.location }}</span>
+    {% else %}
+      <span class="badge bg-light text-muted border border-secondary me-2">Location not set</span>
+    {% endif %}
+
+    {% if farm_state and farm_state.crop %}
+      <span class="badge bg-light text-success border border-success">{{ farm_state.crop }} ({{ farm_state.stage if farm_state.stage else 'Stage unknown' }})</span>
+    {% else %}
+      <span class="badge bg-light text-muted border border-secondary">Crop not set</span>
+    {% endif %}
+  </div>
+
+  <div class="row justify-content-center mb-4 px-3">
+    {% if suggestion_cards %}
+      {% for card in suggestion_cards %}
+        <div class="col-md-4 mb-3">
+          <div class="border rounded p-3 h-100" style="border-color:#28a745 !important;">
+            <h6 class="text-success mb-2">{{ card.title }}</h6>
+            <p class="small text-muted mb-0">"{{ card.prompt }}"</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="col-12 text-center">
+        <p class="text-muted small fst-italic">No suggestions available right now</p>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Chat Card Container -->
+  <div class="container px-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="card shadow-sm border-0" style="border:1px solid #28a745 !important;">
+
+          <!-- Card Header -->
+          <div class="card-header bg-success text-white py-3">
+            <h5 class="mb-0 d-flex align-items-center">
+              <span class="spinner-grow spinner-grow-sm me-2 text-white" role="status"></span>
+              {{ app_name if app_name else 'AI Chat Assistant' }}
+            </h5>
+          </div>
+
+          <!-- Chat Window Body -->
+          <div id="chat-window" class="card-body p-4" style="max-height:500px; overflow-y:auto;">
+            {% if messages %}
+              {% for message in messages %}
+                <div class="d-flex flex-row mb-4 {{ 'justify-content-end' if message.sender == 'user' else 'justify-content-start' }}">
+                  {% if message.sender == 'user' %}
+                    <div class="p-3 me-2 text-white bg-success rounded shadow-sm" style="border-radius:15px; max-width:75%;">
+                      <p class="small mb-0">{{ message.text }}</p>
+                    </div>
+                  {% else %}
+                    <div class="p-3 ms-2 bg-white border rounded shadow-sm" style="border-radius:15px; max-width:75%; border-color:#28a745 !important;">
+                      <p class="small text-dark mb-0">{{ message.text }}</p>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="d-flex flex-row justify-content-start mb-4">
+                <div class="p-3 ms-2 bg-white border rounded" style="border-radius:15px; max-width:75%; border-color:#28a745 !important;">
+                  <p class="small text-muted mb-0">Hello! How can I help you today?</p>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Chat Input Field Footer -->
+          <div class="card-footer bg-white p-3 border-top-0" style="border-top:1px solid #28a745 !important;">
+            <form id="chat-form" class="input-group">
+              <input type="text" id="user-input" class="form-control border-success" placeholder="Type a message..." required autocomplete="off">
+              <button class="btn btn-success" type="submit" id="send-btn">
+                Send
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+    const chatForm = document.getElementById('chat-form');
+    const userInput = document.getElementById('user-input');
+    const chatWindow = document.getElementById('chat-window');
+
+    chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const messageText = userInput.value.trim();
+        if (!messageText) return;
+
+        // 1. Append the user message visually to the chat panel
+        appendMessage(messageText, 'user');
+        userInput.value = '';
+
+        // 2. Query the Flask Backend API via POST
+        try {
+            const response = await fetch('{{ url_for("get_response") }}', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: messageText })
+            });
+            const data = await response.json();
+
+            // 3. Append the server response back to the layout
+            appendMessage(data.reply, 'bot');
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            appendMessage('Error contacting server. Please try again.', 'bot text-danger');
+        }
+    });
+
+    function appendMessage(text, sender) {
+        const messageRow = document.createElement('div');
+        messageRow.classList.add('d-flex', 'flex-row', 'mb-4');
+
+        if (sender === 'user') {
+            // Align user text bubbles to the right
+            messageRow.classList.add('justify-content-end');
+            messageRow.innerHTML = `
+                <div class="p-3 me-2 text-white bg-success rounded shadow-sm" style="border-radius: 15px; max-width: 75%;">
+                    <p class="small mb-0">${text}</p>
+                </div>
+            `;
+        } else {
+            // Align bot text bubbles to the left
+            messageRow.classList.add('justify-content-start');
+            messageRow.innerHTML = `
+                <div class="p-3 ms-2 bg-white border rounded shadow-sm" style="border-radius: 15px; max-width: 75%; border-color:#28a745;">
+                    <p class="small text-dark mb-0">${text}</p>
+                </div>
+            `;
+        }
+
+        chatWindow.appendChild(messageRow);
+        // Autoscroll the chat box window container downward
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+</script>
+{% endblock %}

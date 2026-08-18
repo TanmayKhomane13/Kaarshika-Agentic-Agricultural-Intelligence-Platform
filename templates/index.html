@@ -2,10 +2,6 @@
 
 {% block content %}
 
-<!-- ================================
-     HERO SECTION
-================================ -->
-
 <section class="landing-page">
 
     <div class="hero-section">
@@ -26,9 +22,17 @@
                 farming advice, weather insights, pest management,
                 and smarter agricultural decisions.
             </p>
-
+            {% if session.get("user_id") %}
             <div class="hero-actions">
+                 <a href="{{ url_for('chat') }}"
+                       class="get-started-btn">
+                        Get Started
+                        <span>→</span>
+                </a>
 
+            </div>
+            {% else %}
+            <div class="hero-actions">
                     <a href="{{ url_for('register') }}"
                        class="get-started-btn">
                         Get Started
@@ -42,13 +46,9 @@
                     </a>
 
             </div>
+            {% endif %}
 
         </div>
-
-
-        <!-- ================================
-             AI ASSISTANT CARD
-        ================================= -->
 
         <div class="hero-visual">
 
@@ -111,11 +111,6 @@
 
     </div>
 
-
-    <!-- ================================
-         FEATURES
-    ================================= -->
-
     <section class="features-section">
 
         <div class="feature-card">
@@ -166,11 +161,6 @@
         </div>
 
     </section>
-
-
-    <!-- ================================
-         FARMING FACTS
-    ================================= -->
 
     <section class="facts-section">
 
@@ -273,10 +263,6 @@
     </section>
 
 
-    <!-- ================================
-         FINAL CTA
-    ================================= -->
-
 
     <section class="final-cta">
 
@@ -293,12 +279,19 @@
                 Create your free account and start exploring
                 smarter agricultural assistance.
             </p>
-
+            {% if session.get("user_id") %}
+            <a href="{{ url_for('chat') }}"
+               class="get-started-btn">
+                Get Started
+                <span>→</span>
+            </a>
+            {% else %}
             <a href="{{ url_for('register') }}"
                class="get-started-btn">
                 Get Started
                 <span>→</span>
             </a>
+            {% endif %}
 
         </div>
 
