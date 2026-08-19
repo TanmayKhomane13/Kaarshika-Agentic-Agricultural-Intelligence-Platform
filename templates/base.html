@@ -33,7 +33,7 @@
     </div>
 
 
-    <button class="btn-new-chat">
+    <button class="btn-new-chat" type="button">
       <span class="new-chat-icon">＋</span>
       <span class="sidebar-text">New Chat</span>
     </button>
@@ -84,7 +84,7 @@
 
       <div class="farm-state-header">
         <span class="sidebar-text">Farm State</span>
-        <button class="sidebar-text">Edit</button>
+        <button class="sidebar-text" id="edit_state">Edit</button>
       </div>
 
       {% if farm_state %}
@@ -150,6 +150,15 @@
     toggle.addEventListener("click", function () {
         sidebar.classList.toggle("collapsed");
     });
+  
+    document.querySelector(".btn-new-chat").addEventListener("click", function () {
+        window.location.href = "{{ url_for('new_chat_page') }}";
+    });
+
+    document.getElementById("edit_state").addEventListener("click", function () {
+        window.location.href = "{{ url_for('farm_state') }}";
+    });
+
 </script>
 
 </div>

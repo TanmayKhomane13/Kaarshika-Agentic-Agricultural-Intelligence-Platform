@@ -7,6 +7,13 @@ accelerate==1.14.0
 safetensors==0.8.0
 tokenizers==0.20.3
 huggingface_hub==0.36.2
-numpy==1.26.4
-pandas==3.0.3
+numpy
+#pandas==3.0.3
 tqdm==4.68.2
+Flask-Session
+flask-requests
+flask-flash
+datetime
+pymongo
+werkzeug
+bson
