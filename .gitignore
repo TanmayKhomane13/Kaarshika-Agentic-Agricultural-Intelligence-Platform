@@ -1,2 +1,7 @@
 AI/Notebooks/*.zip
 AI/Notebooks/qwen2.5-3b-lora/
+/model
+.venv
+__pycache__
+flask_session
+*.db

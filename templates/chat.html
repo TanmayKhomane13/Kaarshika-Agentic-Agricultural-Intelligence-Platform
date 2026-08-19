@@ -55,7 +55,7 @@
               {{ app_name if app_name else 'AI Chat Assistant' }}
             </h5>
             {% if not is_new_chat %}
-              <a href="{{ url_for('chat') }}" class="btn btn-sm btn-light text-success fw-bold">+ New Chat</a>
+              <a href="{{ url_for('chat/{{chat_id}}') }}" class="btn btn-sm btn-light text-success fw-bold">+ New Chat</a>
             {% endif %}
           </div>
 
@@ -117,65 +117,249 @@
     const chatIdInput = document.getElementById('chat-id');
 
     chatForm.addEventListener('submit', async function(e) {
+
         e.preventDefault();
+
         const messageText = userInput.value.trim();
+
         if (!messageText) return;
 
-        // 1. Append the user message visually to the chat panel
+        // ==========================================
+        // 1. Show user message
+        // ==========================================
+
         appendMessage(messageText, 'user');
+
         userInput.value = '';
 
-        // 2. Query the Flask Backend API via POST
+        // ==========================================
+        // 2. Create empty bot message
+        // ==========================================
+
+        const botMessage = createBotMessage();
+
+        let botResponse = '';
+
         try {
-            const response = await fetch('{{ url_for("get_response") }}', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    message: messageText,
-                    chat_id: chatIdInput.value || null
-                })
-            });
-            const data = await response.json();
 
-            // 3. Append the server response back to the layout
-            appendMessage(data.reply, 'bot');
+            // ==========================================
+            // 3. Send request to Flask
+            // ==========================================
 
-            // 4. Remember the chat_id once the backend creates/updates one,
-            //    so all following messages in this session attach to the same chat.
-            if (data.chat_id) {
-                chatIdInput.value = data.chat_id;
-                if (window.history && window.history.replaceState) {
-                    window.history.replaceState(null, '', '/chat/' + data.chat_id);
+            const response = await fetch(
+                '{{ url_for("get_response") }}',
+                {
+                    method: 'POST',
+
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+
+                    body: JSON.stringify({
+                        message: messageText,
+                        chat_id: chatIdInput.value || null
+                    })
                 }
+            );
+
+            if (!response.ok) {
+                throw new Error(
+                    `HTTP error: ${response.status}`
+                );
             }
+
+            // ==========================================
+            // 4. Get streaming reader
+            // ==========================================
+
+            const reader = response.body.getReader();
+
+            const decoder = new TextDecoder();
+
+            // ==========================================
+            // 5. Read token/chunks continuously
+            // ==========================================
+
+            while (true) {
+
+                const { value, done } =
+                    await reader.read();
+
+                if (done) {
+                    break;
+                }
+
+                // Convert received bytes to text
+                const chunk = decoder.decode(
+                    value,
+                    { stream: true }
+                );
+
+                // Add chunk to complete response
+                botResponse += chunk;
+
+                // Update bot message immediately
+                botMessage.textContent = botResponse;
+
+                // Keep chat scrolled to bottom
+                chatWindow.scrollTop =
+                    chatWindow.scrollHeight;
+            }
+
+            // Flush remaining decoder data
+            botResponse += decoder.decode();
+
+            botMessage.textContent =
+                botResponse;
+
         } catch (error) {
-            console.error('Error fetching data:', error);
-            appendMessage('Error contacting server. Please try again.', 'bot text-danger');
+
+            console.error(
+                'Error fetching data:',
+                error
+            );
+
+            botMessage.textContent =
+                'Error contacting server. Please try again.';
         }
     });
 
+
+    // ==========================================
+    // APPEND USER MESSAGE
+    // ==========================================
+
     function appendMessage(text, sender) {
-        const messageRow = document.createElement('div');
-        messageRow.classList.add('d-flex', 'flex-row', 'mb-4');
+
+        const messageRow =
+            document.createElement('div');
+
+        messageRow.classList.add(
+            'd-flex',
+            'flex-row',
+            'mb-4'
+        );
 
         if (sender === 'user') {
-            messageRow.classList.add('justify-content-end');
-            messageRow.innerHTML = `
-                <div class="p-3 me-2 text-white bg-success rounded shadow-sm" style="border-radius: 15px; max-width: 75%;">
-                    <p class="small mb-0">${text}</p>
-                </div>
-            `;
+
+            messageRow.classList.add(
+                'justify-content-end'
+            );
+
+            const messageBox =
+                document.createElement('div');
+
+            messageBox.className =
+                'p-3 me-2 text-white bg-success rounded shadow-sm';
+
+            messageBox.style.borderRadius =
+                '15px';
+
+            messageBox.style.maxWidth =
+                '75%';
+
+            const paragraph =
+                document.createElement('p');
+
+            paragraph.className =
+                'small mb-0';
+
+            // textContent prevents HTML injection
+            paragraph.textContent = text;
+
+            messageBox.appendChild(paragraph);
+
+            messageRow.appendChild(messageBox);
+
         } else {
-            messageRow.classList.add('justify-content-start');
-            messageRow.innerHTML = `
-                <div class="p-3 ms-2 bg-white border rounded shadow-sm" style="border-radius: 15px; max-width: 75%; border-color:#28a745;">
-                    <p class="small text-dark mb-0">${text}</p>
-                </div>
-            `;
+
+            messageRow.classList.add(
+                'justify-content-start'
+            );
+
+            const messageBox =
+                document.createElement('div');
+
+            messageBox.className =
+                'p-3 ms-2 bg-white border rounded shadow-sm';
+
+            messageBox.style.borderRadius =
+                '15px';
+
+            messageBox.style.maxWidth =
+                '75%';
+
+            messageBox.style.borderColor =
+                '#28a745';
+
+            const paragraph =
+                document.createElement('p');
+
+            paragraph.className =
+                'small text-dark mb-0';
+
+            paragraph.textContent = text;
+
+            messageBox.appendChild(paragraph);
+
+            messageRow.appendChild(messageBox);
         }
 
         chatWindow.appendChild(messageRow);
-        chatWindow.scrollTop = chatWindow.scrollHeight;
+
+        chatWindow.scrollTop =
+            chatWindow.scrollHeight;
+    }
+
+
+    // ==========================================
+    // CREATE EMPTY BOT MESSAGE
+    // ==========================================
+
+    function createBotMessage() {
+
+        const messageRow =
+            document.createElement('div');
+
+        messageRow.classList.add(
+            'd-flex',
+            'flex-row',
+            'mb-4',
+            'justify-content-start'
+        );
+
+        const messageBox =
+            document.createElement('div');
+
+        messageBox.className =
+            'p-3 ms-2 bg-white border rounded shadow-sm';
+
+        messageBox.style.borderRadius =
+            '15px';
+
+        messageBox.style.maxWidth =
+            '75%';
+
+        messageBox.style.borderColor =
+            '#28a745';
+
+        const paragraph =
+            document.createElement('p');
+
+        paragraph.className =
+            'small text-dark mb-0';
+
+        messageBox.appendChild(paragraph);
+
+        messageRow.appendChild(messageBox);
+
+        chatWindow.appendChild(messageRow);
+
+        chatWindow.scrollTop =
+            chatWindow.scrollHeight;
+
+        // Return the <p> element
+        return paragraph;
     }
 </script>
 {% endif %}

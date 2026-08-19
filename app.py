@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, jsonify,session, flash,redirect,url_for
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from flask import Flask, render_template, request, jsonify,session, flash,redirect,url_for,Response, stream_with_context
+from transformers import AutoTokenizer,AutoModelForCausalLM, AutoModelForSequenceClassification,TextIteratorStreamer
 from peft import PeftModel
 import torch
+from threading import Thread
 from werkzeug.security import check_password_hash, generate_password_hash
 from helper import apology, login_required
 import sqlite3
@@ -9,6 +10,8 @@ from flask_session import Session
 from datetime import datetime 
 from pymongo import MongoClient
 from bson import ObjectId
+import textwrap
+import os
 
 app = Flask(__name__)
 
@@ -27,11 +30,13 @@ db = client["Kaarshika"]
 chats_collection = db["chats"]
 farm_states_collection = db["farm_context"]
 
-# ====================== MODEL LOADING ======================
-BASE_MODEL = "distilbert-base-uncased"
-ADAPTER_PATH = "./AI/Notebooks/classifier_lora"
+# ====================== MODEL 1: INTENT CLASSIFIER ======================
+
+CLASSIFIER_BASE_MODEL = "distilbert-base-uncased"
+CLASSIFIER_ADAPTER_PATH = "./AI/Notebooks/classifier_lora"
 
 NUM_LABELS = 2
+
 LABEL_NAMES = [
     "DECISION",
     "INFORMATION"
@@ -39,20 +44,65 @@ LABEL_NAMES = [
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-print("Loading tokenizer...")
-tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
+print("Loading Model 1 tokenizer...")
 
-print("Loading base model + LoRA adapter...")
-base_model = AutoModelForSequenceClassification.from_pretrained(
-    BASE_MODEL,
+tokenizer_1 = AutoTokenizer.from_pretrained(
+    CLASSIFIER_BASE_MODEL
+)
+
+print("Loading Model 1 base model + LoRA adapter...")
+
+base_model_1 = AutoModelForSequenceClassification.from_pretrained(
+    CLASSIFIER_BASE_MODEL,
     num_labels=NUM_LABELS
 )
-model = PeftModel.from_pretrained(base_model, ADAPTER_PATH)
-model.to(DEVICE)
-model.eval()
-print("Model loaded successfully!")
-# ===========================================================
 
+model_1 = PeftModel.from_pretrained(
+    base_model_1,
+    CLASSIFIER_ADAPTER_PATH
+)
+
+model_1.to(DEVICE)
+model_1.eval()
+
+print("Model 1 loaded successfully!")
+
+
+# ====================== MODEL 2: RESPONSE GENERATOR ======================
+
+GENERATOR_BASE_MODEL = "Qwen/Qwen2.5-3B-Instruct"
+GENERATOR_LORA_PATH = "./model/qwen2.5-3b-lora"
+
+OFFLOAD_DIR = "./content/offload"
+os.makedirs(OFFLOAD_DIR, exist_ok=True)
+
+print("Loading Model 2 tokenizer...")
+
+tokenizer_2 = AutoTokenizer.from_pretrained(
+    GENERATOR_LORA_PATH
+)
+
+print("Loading Model 2 base model...")
+
+base_model_2 = AutoModelForCausalLM.from_pretrained(
+    GENERATOR_BASE_MODEL,
+    torch_dtype=torch.float16,
+    device_map="auto",
+    offload_folder=OFFLOAD_DIR
+)
+
+print("Loading Model 2 LoRA adapter...")
+
+model_2 = PeftModel.from_pretrained(
+    base_model_2,
+    GENERATOR_LORA_PATH
+)
+
+model_2.eval()
+
+print("Model 2 loaded successfully!")
+
+#=======================================================
 
 @app.route("/")
 def index():
@@ -320,7 +370,6 @@ def get_response():
     if not chat_id:
         return jsonify({
             'error': 'Chat ID is required.'
-
         }), 400
 
     try:
@@ -330,7 +379,6 @@ def get_response():
         return jsonify({
             'error': 'Invalid chat ID.'
         }), 400
-
 
     chat_doc = chats_collection.find_one({
         '_id': object_id,
@@ -342,8 +390,37 @@ def get_response():
             'error': 'Chat not found.'
         }), 404
 
+    user_id = session.get("user_id")
 
-    inputs = tokenizer(
+    # ==========================================
+    # FARM CONTEXT
+    # ==========================================
+
+    farm_context_doc = farm_states_collection.find_one({
+        'user_id': user_id
+    })
+
+    if not farm_context_doc:
+        return jsonify({
+            'error': 'Farm context not found.'
+        }), 404
+
+    farm_context_doc.pop('_id', None)
+
+    farm_context_text = f"""
+Crop: {farm_context_doc.get('crop', 'Unknown')}
+Stage: {farm_context_doc.get('stage', 'Unknown')}
+Soil moisture: {farm_context_doc.get('soil_moisture', 'Unknown')}
+Rain probability: high
+Temperature: {farm_context_doc.get('temperature', 'Unknown')}
+Humidity: {farm_context_doc.get('humidity', 'Unknown')}
+"""
+
+    # ==========================================
+    # MODEL 1
+    # ==========================================
+
+    inputs = tokenizer_1(
         user_message,
         return_tensors="pt",
         truncation=True,
@@ -356,82 +433,189 @@ def get_response():
         for k, v in inputs.items()
     }
 
-
     with torch.no_grad():
-        outputs = model(**inputs)
-        probs = torch.softmax(
-            outputs.logits,
-            dim=-1
-        )
+
+        outputs = model_1(**inputs)
+
         predicted_id = torch.argmax(
-            probs,
+            outputs.logits,
             dim=-1
         ).item()
 
-
     intent = LABEL_NAMES[predicted_id]
 
+    # ==========================================
+    # MODEL 2 PROMPT
+    # ==========================================
 
-    now = datetime.utcnow()
+    model_2_prompt = f"""Farmer query:
+{user_message}
 
-    user_msg_doc = {
-        'sender': 'user',
-        'text': user_message,
-        'timestamp': now
-    }
+Farm context:
+{farm_context_text}
 
-    bot_msg_doc = {
-        'sender': 'bot',
-        'text': intent,
-        'timestamp': datetime.utcnow()
-    }
+Decision engine selected action:
+{intent}
 
+Generate a clear and helpful response for the farmer.
 
-    messages = chat_doc.get('messages', [])
-    is_first_message = len(messages) == 0
+Rules:
+- The selected action is FINAL.
+- Do not change the selected action.
+- Do not override the decision.
+- Explain why the action was selected using the farm context.
+- Keep the response practical and easy to understand.
+"""
 
+    # ==========================================
+    # STREAM MODEL 2
+    # ==========================================
 
-    if is_first_message:
-        title = ' '.join(
-            user_message.split()
+    def generate():
+
+        complete_response = ""
+
+        for token in generate_response(
+            model_2_prompt,
+            max_new_tokens=200
+        ):
+
+            complete_response += token
+
+            yield token
+
+        # ======================================
+        # SAVE COMPLETE RESPONSE TO MONGODB
+        # ======================================
+
+        now = datetime.utcnow()
+
+        user_msg_doc = {
+            'sender': 'user',
+            'text': user_message,
+            'timestamp': now
+        }
+
+        bot_msg_doc = {
+            'sender': 'bot',
+            'text': complete_response,
+            'intent': intent,
+            'timestamp': now
+        }
+
+        messages = chat_doc.get(
+            'messages',
+            []
         )
-        # Limit title to 50 characters
-        if len(title) > 50:
-            title = title[:50].rstrip() + '...'
-    else:
-        title = chat_doc.get(
-            'title',
-            'New Chat'
-        )
 
-    chats_collection.update_one(
-        {
-            '_id': object_id,
-            'user_id': session.get("user_id")
-        },
+        if len(messages) == 0:
 
-        {
-            '$set': {
-                'title': title,
-                'updated_at': datetime.utcnow()
+            title = ' '.join(
+                user_message.split()
+            )
+
+            if len(title) > 50:
+                title = title[:50].rstrip() + '...'
+
+        else:
+
+            title = chat_doc.get(
+                'title',
+                'New Chat'
+            )
+
+        chats_collection.update_one(
+            {
+                '_id': object_id,
+                'user_id': user_id
             },
-
-            '$push': {
-                'messages': {
-                    '$each': [
-                        user_msg_doc,
-                        bot_msg_doc
-                    ]
+            {
+                '$set': {
+                    'title': title,
+                    'updated_at': datetime.utcnow()
+                },
+                '$push': {
+                    'messages': {
+                        '$each': [
+                            user_msg_doc,
+                            bot_msg_doc
+                        ]
+                    }
                 }
             }
+        )
+
+    return Response(
+        stream_with_context(generate()),
+        mimetype='text/plain',
+        headers={
+            'Cache-Control': 'no-cache',
+            'X-Accel-Buffering': 'no'
         }
     )
 
-    return jsonify({
-        'reply': intent,
-        'chat_id': chat_id,
-        'title': title
-    })
-  
+
+def generate_response(user_prompt, max_new_tokens=200):
+
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are Kaarshika's conversational response generator. "
+                "The decision engine has already selected the action. "
+                "Explain the selected action clearly without changing it."
+            )
+        },
+        {
+            "role": "user",
+            "content": user_prompt
+        }
+    ]
+
+    prompt = tokenizer_2.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+    )
+
+    inputs = tokenizer_2(
+        prompt,
+        return_tensors="pt"
+    ).to("cuda")
+
+    input_device = model_2.get_input_embeddings().weight.device
+
+    inputs = {
+        k: v.to(input_device)
+        for k, v in inputs.items()
+    }
+
+    streamer = TextIteratorStreamer(
+        tokenizer_2,
+        skip_prompt=True,
+        skip_special_tokens=True
+    )
+
+    generation_kwargs = {
+        **inputs,
+        "streamer": streamer,
+        "max_new_tokens": max_new_tokens,
+        "do_sample": False,
+        "eos_token_id": tokenizer_2.eos_token_id,
+        "pad_token_id": tokenizer_2.eos_token_id
+    }
+
+    thread = Thread(
+        target=model_2.generate,
+        kwargs=generation_kwargs
+    )
+
+    thread.start()
+
+    for new_text in streamer:
+        yield new_text
+
+    thread.join()
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
