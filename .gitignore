@@ -5,3 +5,4 @@ AI/Notebooks/qwen2.5-3b-lora/
 __pycache__
 flask_session
 *.db
+.env

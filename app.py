@@ -12,6 +12,12 @@ from pymongo import MongoClient
 from bson import ObjectId
 import textwrap
 import os
+from dotenv import load_dotenv
+import requests
+
+load_dotenv()
+
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 app = Flask(__name__)
 
@@ -292,6 +298,74 @@ def new_chat_page():
             chat_id=str(chat_id)
         )
     )
+
+def classify_rainfall(total_mm):
+    """
+    Classifies total rainfall for today.
+
+    low      : < 10 mm
+    moderate : 10 - 50 mm
+    high     : > 50 mm
+    """
+
+    if total_mm < 10:
+        return "low"
+    elif total_mm <= 50:
+        return "moderate"
+    else:
+        return "high"
+
+def get_today_rainfall(city):
+
+    url = "https://api.openweathermap.org/data/2.5/forecast"
+
+    params = {
+        "q": city,
+        "appid": OPENWEATHER_API_KEY,
+        "units": "metric"
+    }
+
+    response = requests.get(url, params=params, timeout=10)
+
+    if response.status_code != 200:
+        raise Exception(
+            f"OpenWeather API error: {response.status_code} "
+            f"{response.text}"
+        )
+
+    data = response.json()
+
+    # print("City:", data["city"]["name"])
+    # print("Forecast entries:", len(data["list"]))
+
+    # Today's date
+    today = datetime.now().date()
+
+    total_rainfall = 0.0
+
+    for forecast in data["list"]:
+
+        # Forecast datetime
+        forecast_time = datetime.fromtimestamp(
+            forecast["dt"]
+        )
+
+        # Only consider today's forecast
+        if forecast_time.date() != today:
+            continue
+
+        # OpenWeather gives rainfall in mm for the
+        # preceding 3-hour period.
+        rain_data = forecast.get("rain", {})
+
+        rainfall_3h = rain_data.get("3h", 0)
+
+        total_rainfall += rainfall_3h
+
+    rainfall_level = classify_rainfall(total_rainfall)
+
+    return rainfall_level
+
 @app.route('/farm_state', methods=['GET', 'POST'])
 @login_required
 def farm_state():
@@ -407,11 +481,14 @@ def get_response():
 
     farm_context_doc.pop('_id', None)
 
+    location = farm_context_doc.get("location", "Unknown")
+    rainfall_data = get_today_rainfall(location)
+
     farm_context_text = f"""
 Crop: {farm_context_doc.get('crop', 'Unknown')}
 Stage: {farm_context_doc.get('stage', 'Unknown')}
 Soil moisture: {farm_context_doc.get('soil_moisture', 'Unknown')}
-Rain probability: high
+Rain probability: {rainfall_data}
 Temperature: {farm_context_doc.get('temperature', 'Unknown')}
 Humidity: {farm_context_doc.get('humidity', 'Unknown')}
 """
