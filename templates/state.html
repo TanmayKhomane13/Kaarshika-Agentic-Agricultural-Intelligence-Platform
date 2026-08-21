@@ -3,169 +3,160 @@
 {% block title %}Farm State - Kaarshika-AI{% endblock %}
 
 {% block content %}
+<div class="farm-state-page">
+    <div class="farm-form-card">
+        <!-- Header -->
+        <div class="farm-form-header">
+            <h4>
+                🌱 Farm State
+            </h4>
+            <p>
+                Update your farm information
+            </p>
+        </div>
 
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-7 col-md-9">
-            <div class="card shadow-sm border-0">
-                <!-- Header -->
-                <div class="card-header bg-success text-white py-3">
-
-                    <h4 class="mb-1">
-                        🌱 Farm State
-                    </h4>
-
-                    <p class="mb-0 small">
-                        Update your farm information
-                    </p>
-
-                </div>
-                <!-- Form -->
-                <div class="card-body p-4">
-
-                    <form
-                        method="POST"
-                        action="{{ url_for('farm_state') }}"
+        <!-- Form -->
+        <div class="farm-form-body">
+            <form
+                method="POST"
+                action="{{ url_for('farm_state') }}"
+            >
+                <!-- Location -->
+                <div class="login-field mb-3">
+                    <label
+                        for="location"
                     >
-                        <!-- Location -->
-                        <div class="mb-3">
-                            <label
-                                for="location"
-                                class="form-label fw-bold"
-                            >
-                                Location
-                            </label>
-                            <input
-                                type="text"
-                                id="location"
-                                name="location"
-                                class="form-control"
-                                placeholder="e.g. Thrissur"
-                                value="{{ farm_state.location if farm_state else '' }}"
-                                required
-                            >
-                        </div>
-                        <!-- Crop -->
-                        <div class="mb-3">
-                            <label
-                                for="crop"
-                                class="form-label fw-bold"
-                            >
-                                Crop
-                            </label>
-                            <input
-                                type="text"
-                                id="crop"
-                                name="crop"
-                                class="form-control"
-                                placeholder="e.g. Soyabean"
-                                value="{{ farm_state.crop if farm_state else '' }}"
-                                required
-                            >
-                        </div>
-                        <!-- Stage -->
-                        <div class="mb-3">
-                            <label
-                                for="stage"
-                                class="form-label fw-bold"
-                            >
-                                Stage
-                            </label>
-                            <input
-                                type="text"
-                                id="stage"
-                                name="stage"
-                                class="form-control"
-                                placeholder="e.g. Flowering"
-                                value="{{ farm_state.stage if farm_state else '' }}"
-                                required
-                            >
-                        </div>
-                        <!-- Acres -->
-                        <div class="mb-3">
-
-                            <label
-                                for="acres"
-                                class="form-label fw-bold"
-                            >
-                                Acres of Land
-                            </label>
-
-                            <input
-                                type="number"
-                                id="acres"
-                                name="acres"
-                                class="form-control"
-                                placeholder="e.g. 2"
-                                min="0.1"
-                                step="0.1"
-                                value="{{ farm_state.acres if farm_state else '' }}"
-                                required
-                            >
-                        </div>
-                        <!-- Soil Moisture -->
-                        <div class="mb-4">
-                            <label
-                                for="soil_moisture"
-                                class="form-label fw-bold"
-                            >
-                                Soil Moisture
-                            </label>
-                            <select
-                                id="soil_moisture"
-                                name="soil_moisture"
-                                class="form-select"
-                            >
-                                <option
-                                    value="high"
-                                    {% if farm_state and farm_state.soil_moisture == 'high' %}
-                                        selected
-                                    {% endif %}
-                                >
-                                    High
-                                </option>
-
-                                <option
-                                    value="moderate"
-                                    {% if farm_state and farm_state.soil_moisture == 'moderate' %}
-                                        selected
-                                    {% endif %}
-                                >
-                                    Moderate
-                                </option>
-                                <option
-                                    value="low"
-                                    {% if farm_state and farm_state.soil_moisture == 'low' %}
-                                        selected
-                                    {% endif %}
-                                >
-                                    Low
-                                </option>
-                            </select>
-                        </div>
-                        <!-- Buttons -->
-                        <div class="d-flex gap-2">
-                            <button
-                                type="submit"
-                                class="btn btn-success"
-                            >
-                                {% if farm_state %}
-                                    Update Farm State
-                                {% else %}
-                                    Save Farm State
-                                {% endif %}
-                            </button>
-
-                            <a
-                                href="{{ url_for('new_chat_page') }}"
-                                class="btn btn-outline-success"
-                            >
-                                Go to Chat
-                            </a>
-                        </div>
-                    </form>
+                        Location
+                    </label>
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        class="form-control"
+                        placeholder="e.g. Thrissur"
+                        value="{{ farm_state.location if farm_state else '' }}"
+                        required
+                    >
                 </div>
-            </div>
+
+                <!-- Crop -->
+                <div class="login-field mb-3">
+                    <label
+                        for="crop"
+                    >
+                        Crop
+                    </label>
+                    <input
+                        type="text"
+                        id="crop"
+                        name="crop"
+                        class="form-control"
+                        placeholder="e.g. Soyabean"
+                        value="{{ farm_state.crop if farm_state else '' }}"
+                        required
+                    >
+                </div>
+
+                <!-- Stage -->
+                <div class="login-field mb-3">
+                    <label
+                        for="stage"
+                    >
+                        Stage
+                    </label>
+                    <input
+                        type="text"
+                        id="stage"
+                        name="stage"
+                        class="form-control"
+                        placeholder="e.g. Flowering"
+                        value="{{ farm_state.stage if farm_state else '' }}"
+                        required
+                    >
+                </div>
+
+                <!-- Acres -->
+                <div class="login-field mb-3">
+                    <label
+                        for="acres"
+                    >
+                        Acres of Land
+                    </label>
+
+                    <input
+                        type="number"
+                        id="acres"
+                        name="acres"
+                        class="form-control"
+                        placeholder="e.g. 2"
+                        min="0.1"
+                        step="0.1"
+                        value="{{ farm_state.acres if farm_state else '' }}"
+                        required
+                    >
+                </div>
+
+                <!-- Soil Moisture -->
+                <div class="login-field mb-4">
+                    <label
+                        for="soil_moisture"
+                    >
+                        Soil Moisture
+                    </label>
+                    <select
+                        id="soil_moisture"
+                        name="soil_moisture"
+                        class="form-select"
+                    >
+                        <option
+                            value="high"
+                            {% if farm_state and farm_state.soil_moisture == 'high' %}
+                                selected
+                            {% endif %}
+                        >
+                            High
+                        </option>
+
+                        <option
+                            value="moderate"
+                            {% if farm_state and farm_state.soil_moisture == 'moderate' %}
+                                selected
+                            {% endif %}
+                        >
+                            Moderate
+                        </option>
+                        <option
+                            value="low"
+                            {% if farm_state and farm_state.soil_moisture == 'low' %}
+                                selected
+                            {% endif %}
+                        >
+                            Low
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions-group">
+                    <button
+                        type="submit"
+                        class="btn-farm-submit"
+                    >
+                        {% if farm_state %}
+                            Update Farm State
+                        {% else %}
+                            Save Farm State
+                        {% endif %}
+                    </button>
+
+                    <a
+                        href="{{ url_for('new_chat_page') }}"
+                        class="btn-farm-outline"
+                    >
+                        Go to Chat
+                    </a>
+                </div>
+            </form>
         </div>
     </div>
 </div>

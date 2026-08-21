@@ -7,13 +7,14 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from helper import apology, login_required
 import sqlite3
 from flask_session import Session
-from datetime import datetime 
+from datetime import datetime, timedelta
 from pymongo import MongoClient
 from bson import ObjectId
 import textwrap
 import os
 from dotenv import load_dotenv
 import requests
+import secrets
 
 load_dotenv()
 
@@ -39,7 +40,7 @@ farm_states_collection = db["farm_context"]
 # ====================== MODEL 1: INTENT CLASSIFIER ======================
 
 CLASSIFIER_BASE_MODEL = "distilbert-base-uncased"
-CLASSIFIER_ADAPTER_PATH = "./AI/Notebooks/classifier_lora"
+CLASSIFIER_ADAPTER_PATH = "./model/classifier_lora"
 
 NUM_LABELS = 2
 
@@ -49,6 +50,14 @@ LABEL_NAMES = [
 ]
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+GPU_MEMORY_CAP_GB = 3
+
+MAX_MEMORY = (
+    {0: f"{GPU_MEMORY_CAP_GB}GiB", "cpu": "16GiB"}
+    if torch.cuda.is_available()
+    else None
+)
 
 print("Loading Model 1 tokenizer...")
 
@@ -92,8 +101,9 @@ print("Loading Model 2 base model...")
 
 base_model_2 = AutoModelForCausalLM.from_pretrained(
     GENERATOR_BASE_MODEL,
-    torch_dtype=torch.float16,
+    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
     device_map="auto",
+    max_memory=MAX_MEMORY,
     offload_folder=OFFLOAD_DIR
 )
 
@@ -108,7 +118,90 @@ model_2.eval()
 
 print("Model 2 loaded successfully!")
 
+# ====================== MODEL 3: REWARD / RL AGENT ======================
+
+REWARD_BASE_MODEL = "distilbert-base-uncased"
+REWARD_ADAPTER_PATH = "./model/reward_model"
+
+print("Loading Model 3 tokenizer...")
+
+reward_tokenizer = AutoTokenizer.from_pretrained(
+    REWARD_ADAPTER_PATH
+)
+
+print("Loading Model 3 base model + LoRA adapter...")
+
+reward_base_model = AutoModelForSequenceClassification.from_pretrained(
+    REWARD_BASE_MODEL,
+    num_labels=1
+)
+
+reward_model = PeftModel.from_pretrained(
+    reward_base_model,
+    REWARD_ADAPTER_PATH
+)
+
+reward_model.to(DEVICE)
+reward_model.eval()
+
+print("Model 3 loaded successfully!")
+
 #=======================================================
+
+@app.context_processor
+def inject_chat_history():
+
+    user_id = session.get("user_id")
+    chat_id = ObjectId()
+
+    # User is not logged in
+    if user_id is None:
+        return {
+            "today_chats": [],
+            "previous_chats": []
+        }
+
+    # Get today's date
+    today = datetime.now().date()
+
+    # Start of today
+    start_of_today = datetime.combine(
+        today,
+        datetime.min.time()
+    )
+
+    # Start of tomorrow
+    start_of_tomorrow = start_of_today + timedelta(days=1)
+
+    # -----------------------------
+    # Today's chats
+    # -----------------------------
+    today_chats = list(
+        chats_collection.find({
+            "user_id": user_id,
+            "created_at": {
+                "$gte": start_of_today,
+                "$lt": start_of_tomorrow
+            }
+        }).sort("updated_at", -1)
+    )
+
+    # -----------------------------
+    # Previous chats
+    # -----------------------------
+    previous_chats = list(
+        chats_collection.find({
+            "user_id": user_id,
+            "created_at": {
+                "$lt": start_of_today
+            }
+        }).sort("updated_at", -1)
+    )
+
+    return {
+        "today_chats": today_chats,
+        "previous_chats": previous_chats
+    }
 
 @app.route("/")
 def index():
@@ -243,18 +336,13 @@ def register():
 @login_required
 def chat(chat_id):
 
-    user_id = session.get("user_id")
+    user_id = session.get('user_id')
 
-    # Validate MongoDB ObjectId
-    try:
-        object_id = ObjectId(chat_id)
+    print("OPENING CHAT:", chat_id)
+    print("USER:", user_id)
 
-    except Exception:
-        return redirect(url_for('new_chat_page'))
-
-    # Find chat belonging to logged-in user
     chat_doc = chats_collection.find_one({
-        '_id': object_id,
+        'chat_id': chat_id,
         'user_id': user_id
     })
 
@@ -279,24 +367,25 @@ def chat(chat_id):
 @login_required
 def new_chat_page():
 
-    chat_id = ObjectId()
+    chat_id = secrets.token_urlsafe(16)
+    now = datetime.utcnow()
 
     new_chat = {
-        '_id': chat_id,
-        'user_id': session.get("user_id"),
+        '_id': ObjectId(),
+        'chat_id': chat_id,
+        'user_id': session.get('user_id'),
         'title': 'New Chat',
         'messages': [],
-        'created_at': datetime.utcnow(),
-        'updated_at': datetime.utcnow()
+        'created_at': now,
+        'updated_at': now
     }
 
     chats_collection.insert_one(new_chat)
 
+    print("NEW CHAT CREATED:", chat_id)
+
     return redirect(
-        url_for(
-            'chat',
-            chat_id=str(chat_id)
-        )
+        url_for('chat', chat_id=chat_id)
     )
 
 def classify_rainfall(total_mm):
@@ -343,6 +432,9 @@ def get_today_rainfall(city):
 
     total_rainfall = 0.0
 
+    temperatures = []
+    humidities = []
+
     for forecast in data["list"]:
 
         # Forecast datetime
@@ -353,18 +445,41 @@ def get_today_rainfall(city):
         # Only consider today's forecast
         if forecast_time.date() != today:
             continue
-
-        # OpenWeather gives rainfall in mm for the
-        # preceding 3-hour period.
+        
         rain_data = forecast.get("rain", {})
 
         rainfall_3h = rain_data.get("3h", 0)
 
         total_rainfall += rainfall_3h
 
+        # Temperature and humidity live under "main" for each 3h slot.
+        main_data = forecast.get("main", {})
+
+        if "temp" in main_data:
+            temperatures.append(main_data["temp"])
+
+        if "humidity" in main_data:
+            humidities.append(main_data["humidity"])
+
     rainfall_level = classify_rainfall(total_rainfall)
 
-    return rainfall_level
+    avg_temperature = (
+        round(sum(temperatures) / len(temperatures), 1)
+        if temperatures
+        else "Unknown"
+    )
+
+    avg_humidity = (
+        round(sum(humidities) / len(humidities), 1)
+        if humidities
+        else "Unknown"
+    )
+
+    return {
+        "rainfall": rainfall_level,
+        "temperature": avg_temperature,
+        "humidity": avg_humidity
+    }
 
 @app.route('/farm_state', methods=['GET', 'POST'])
 @login_required
@@ -427,6 +542,182 @@ def farm_state():
 
     return redirect(url_for('new_chat_page'))
 
+# ==========================================
+# PROMPT BUILDERS
+# ==========================================
+
+def format_farm_context(farm_context):
+    return f"""Crop: {farm_context['crop']}
+
+Stage: {farm_context['stage']}
+Soil moisture: {farm_context['soil_moisture']}
+Rain probability: {farm_context['rain_probability']}
+Temperature: {farm_context['temperature']}
+Humidity: {farm_context['humidity']}
+Water availability: {farm_context['water_availability']}"""
+
+
+def build_candidate_prompt(user_query, farm_context, retrieved_guidance):
+
+    context = format_farm_context(farm_context)
+
+    return f"""Farmer query: {user_query}
+
+Farm context:
+
+{context}
+
+Retrieved guidance:
+
+{retrieved_guidance}
+"""
+
+
+def build_rl_prompt(farm_context):
+
+    return f"""Crop: {farm_context['crop']}
+Stage: {farm_context['stage']}
+Soil moisture: {farm_context['soil_moisture']}
+Rain probability: {farm_context['rain_probability']}
+Temperature: {farm_context['temperature']}
+Humidity: {farm_context['humidity']}
+Water availability: {farm_context['water_availability']}
+
+Which action is more appropriate for this farm state?"""
+
+
+def build_response_prompt(user_query, farm_context, retrieved_guidance, selected_action):
+
+    context = format_farm_context(farm_context)
+
+    return f"""Farmer query: {user_query}
+
+Farm context:
+
+{context}
+
+Retrieved guidance:
+
+{retrieved_guidance}
+
+RL-selected action: {selected_action}
+"""
+
+
+# ==========================================
+# REWARD AGENT (RL) HELPERS
+# ==========================================
+
+def score_actions(prompt, responses):
+    scores = []
+
+    for response in responses:
+
+        text = f"{prompt}\nAction: {response}"
+
+        inputs = reward_tokenizer(
+            text,
+            return_tensors='pt',
+            truncation=True,
+            max_length=512
+        )
+
+        inputs = {
+            k: v.to(reward_model.device)
+            for k, v in inputs.items()
+        }
+
+        with torch.no_grad():
+            score = reward_model(**inputs).logits.item()
+
+        scores.append(score)
+
+    return scores
+
+
+def select_best_action(responses, scores):
+    best_index = scores.index(max(scores))
+
+    return responses[best_index]
+
+
+def rl_agent(prompt, responses):
+    scores = score_actions(
+        prompt, responses
+    )
+
+    best_action = select_best_action(
+        responses, scores
+    )
+
+    return best_action, scores
+
+
+def parse_candidate_actions(candidate_text):
+
+    actions = [
+        line.strip()
+        for line in candidate_text.split("\n")
+        if line.strip()
+    ]
+
+    return actions
+
+
+def generate_candidate_actions(user_prompt, max_new_tokens=100):
+
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are Kaarshika's agricultural decision candidate generator. "
+                "Analyze the farmer query, farm context, and retrieved guidance. "
+                "Generate possible actions that are appropriate for the given farm state. "
+                "Return only the action names, one per line. "
+                "Do not explain the actions. "
+                "Do not select the best action."
+            )
+        },
+        {
+            "role": "user",
+            "content": user_prompt
+        }
+    ]
+
+    prompt = tokenizer_2.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+    )
+
+    inputs = tokenizer_2(
+        prompt,
+        return_tensors="pt"
+    ).to(model_2.get_input_embeddings().weight.device)
+
+    outputs = model_2.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        do_sample=False,
+        eos_token_id=tokenizer_2.eos_token_id,
+        pad_token_id=tokenizer_2.eos_token_id,
+        temperature=None,
+        top_p=None,
+        top_k=None
+    )
+
+    generated_tokens = outputs[0][
+        inputs["input_ids"].shape[1]:
+    ]
+
+    response = tokenizer_2.decode(
+        generated_tokens,
+        skip_special_tokens=True
+    )
+
+    return response.strip()
+
+
 @app.route('/get_response', methods=['POST'])
 @login_required
 def get_response():
@@ -435,6 +726,10 @@ def get_response():
 
     user_message = data.get('message', '').strip()
     chat_id = data.get('chat_id')
+    user_id = session.get("user_id")
+    # ==========================================
+    # VALIDATION
+    # ==========================================
 
     if not user_message:
         return jsonify({
@@ -446,17 +741,14 @@ def get_response():
             'error': 'Chat ID is required.'
         }), 400
 
-    try:
-        object_id = ObjectId(chat_id)
 
-    except Exception:
-        return jsonify({
-            'error': 'Invalid chat ID.'
-        }), 400
+    # ==========================================
+    # FIND CHAT USING RANDOM chat_id
+    # ==========================================
 
     chat_doc = chats_collection.find_one({
-        '_id': object_id,
-        'user_id': session.get("user_id")
+        'chat_id': chat_id,
+        'user_id': user_id
     })
 
     if not chat_doc:
@@ -481,20 +773,28 @@ def get_response():
 
     farm_context_doc.pop('_id', None)
 
-    location = farm_context_doc.get("location", "Unknown")
-    rainfall_data = get_today_rainfall(location)
+    location = farm_context_doc.get(
+        "location",
+        "Unknown"
+    )
 
-    farm_context_text = f"""
-Crop: {farm_context_doc.get('crop', 'Unknown')}
-Stage: {farm_context_doc.get('stage', 'Unknown')}
-Soil moisture: {farm_context_doc.get('soil_moisture', 'Unknown')}
-Rain probability: {rainfall_data}
-Temperature: {farm_context_doc.get('temperature', 'Unknown')}
-Humidity: {farm_context_doc.get('humidity', 'Unknown')}
-"""
+    weather_data = get_today_rainfall(location)
+
+    farm_context = {
+        'crop': farm_context_doc.get('crop', 'Unknown'),
+        'stage': farm_context_doc.get('stage', 'Unknown'),
+        'soil_moisture': farm_context_doc.get('soil_moisture', 'Unknown'),
+        'rain_probability': weather_data['rainfall'],
+        'temperature': weather_data['temperature'],
+        'humidity': weather_data['humidity'],
+        'water_availability': farm_context_doc.get('water_availability', 'Unknown')
+    }
+
+    # RAG is not wired up yet, so retrieved guidance stays empty for now.
+    retrieved_guidance = ""
 
     # ==========================================
-    # MODEL 1
+    # MODEL 1 - INTENT CLASSIFIER
     # ==========================================
 
     inputs = tokenizer_1(
@@ -522,27 +822,47 @@ Humidity: {farm_context_doc.get('humidity', 'Unknown')}
     intent = LABEL_NAMES[predicted_id]
 
     # ==========================================
+    # DECISION PATH: CANDIDATE ACTIONS + REWARD AGENT
+    # ==========================================
+
+    selected_action = None
+    action_scores = None
+
+    if intent == "DECISION":
+
+        candidate_prompt = build_candidate_prompt(
+            user_message,
+            farm_context,
+            retrieved_guidance
+        )
+
+        candidate_text = generate_candidate_actions(
+            candidate_prompt
+        )
+
+        candidate_actions = parse_candidate_actions(
+            candidate_text
+        )
+
+        if candidate_actions:
+
+            rl_prompt = build_rl_prompt(farm_context)
+
+            selected_action, action_scores = rl_agent(
+                rl_prompt,
+                candidate_actions
+            )
+
+    # ==========================================
     # MODEL 2 PROMPT
     # ==========================================
 
-    model_2_prompt = f"""Farmer query:
-{user_message}
-
-Farm context:
-{farm_context_text}
-
-Decision engine selected action:
-{intent}
-
-Generate a clear and helpful response for the farmer.
-
-Rules:
-- The selected action is FINAL.
-- Do not change the selected action.
-- Do not override the decision.
-- Explain why the action was selected using the farm context.
-- Keep the response practical and easy to understand.
-"""
+    model_2_prompt = build_response_prompt(
+        user_message,
+        farm_context,
+        retrieved_guidance,
+        selected_action if selected_action else intent
+    )
 
     # ==========================================
     # STREAM MODEL 2
@@ -552,6 +872,7 @@ Rules:
 
         complete_response = ""
 
+        # Stream response to frontend
         for token in generate_response(
             model_2_prompt,
             max_new_tokens=200
@@ -562,7 +883,7 @@ Rules:
             yield token
 
         # ======================================
-        # SAVE COMPLETE RESPONSE TO MONGODB
+        # SAVE RESPONSE TO MONGODB
         # ======================================
 
         now = datetime.utcnow()
@@ -577,9 +898,15 @@ Rules:
             'sender': 'bot',
             'text': complete_response,
             'intent': intent,
+            'selected_action': selected_action,
+            'action_scores': action_scores,
             'timestamp': now
         }
 
+
+        # ======================================
+        # GENERATE CHAT TITLE
+        # ======================================
         messages = chat_doc.get(
             'messages',
             []
@@ -601,9 +928,12 @@ Rules:
                 'New Chat'
             )
 
+        # ======================================
+        # UPDATE CHAT
+        # ======================================
         chats_collection.update_one(
             {
-                '_id': object_id,
+                'chat_id': chat_id,
                 'user_id': user_id
             },
             {
@@ -630,7 +960,6 @@ Rules:
             'X-Accel-Buffering': 'no'
         }
     )
-
 
 def generate_response(user_prompt, max_new_tokens=200):
 

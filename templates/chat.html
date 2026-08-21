@@ -1,366 +1,240 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 
-{% block title %}Kaarshika-AI{% endblock %}
+{% block title %}Kaarshika-AI{% endblock %} 
 
 {% block content %}
-<div class="d-flex flex-column w-100">
 
-  <div class="text-center py-4">
-    <h5 class="text-success fw-bold mb-1">{{ tagline if tagline else 'Welcome' }}</h5>
-    <p class="text-muted small">{{ subtext if subtext else '' }}</p>
-
-    {% if farm_state and farm_state.location %}
-      <span class="badge bg-light text-success border border-success me-2">{{ farm_state.location }}</span>
-    {% else %}
-      <span class="badge bg-light text-muted border border-secondary me-2">Location not set</span>
-    {% endif %}
-
-    {% if farm_state and farm_state.crop %}
-      <span class="badge bg-light text-success border border-success">{{ farm_state.crop }} ({{ farm_state.stage if farm_state.stage else 'Stage unknown' }})</span>
-    {% else %}
-      <span class="badge bg-light text-muted border border-secondary">Crop not set</span>
-    {% endif %}
-  </div>
-
-  {% if is_new_chat %}
-  <div class="row justify-content-center mb-4 px-3">
-    {% if suggestion_cards %}
-      {% for card in suggestion_cards %}
-        <div class="col-md-4 mb-3">
-          <div class="border rounded p-3 h-100" style="border-color:#28a745 !important;">
-            <h6 class="text-success mb-2">{{ card.title }}</h6>
-            <p class="small text-muted mb-0">"{{ card.prompt }}"</p>
-          </div>
-        </div>
-      {% endfor %}
-    {% else %}
-      <div class="col-12 text-center">
-        <p class="text-muted small fst-italic">No suggestions available right now</p>
+<div class="app-layout">
+   <!-- Top Navigation / Menu Bar -->
+   <header class="app-header">
+      <div class="header-brand">
+         <span class="status-pulse"></span>
+         {{ app_name if app_name else 'Kaarshika-AI' }}
       </div>
-    {% endif %}
-  </div>
-  {% endif %}
 
-  <!-- Chat Card Container -->
-  <div class="container px-3">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+      {% if not is_new_chat %}
+      <a href="{{ url_for('chat', chat_id=chat_id) }}" class="btn-new-chat">
+         + New Chat
+      </a>
+      {% endif %}
+   </header>
 
-        <div class="card shadow-sm border-0" style="border:1px solid #28a745 !important;">
+   <!-- Full Height Chat Body -->
+   <main class="chat-body-wrapper">
+      <!-- Messages -->
+      <div id="chat-window" class="chat-window">
+         {% if messages %} 
+         {% for message in messages %}
 
-          <!-- Card Header -->
-          <div class="card-header bg-success text-white py-3 d-flex justify-content-between align-items-center">
-            <h5 class="mb-0 d-flex align-items-center">
-              <span class="spinner-grow spinner-grow-sm me-2 text-white" role="status"></span>
-              {{ app_name if app_name else 'AI Chat Assistant' }}
-            </h5>
-            {% if not is_new_chat %}
-              <a href="{{ url_for('chat/{{chat_id}}') }}" class="btn btn-sm btn-light text-success fw-bold">+ New Chat</a>
-            {% endif %}
-          </div>
+         <div
+            class="message-row {{ 'user' if message.sender == 'user' else 'bot' }}"
+         >
+            <div class="message-bubble">
+               <p>{{ message.text }}</p>
+            </div>
+         </div>
 
-          <!-- Chat Window Body -->
-          <div id="chat-window" class="card-body p-4" style="max-height:500px; overflow-y:auto;">
-            {% if messages %}
-              {% for message in messages %}
-                <div class="d-flex flex-row mb-4 {{ 'justify-content-end' if message.sender == 'user' else 'justify-content-start' }}">
-                  {% if message.sender == 'user' %}
-                    <div class="p-3 me-2 text-white bg-success rounded shadow-sm" style="border-radius:15px; max-width:75%;">
-                      <p class="small mb-0">{{ message.text }}</p>
-                    </div>
-                  {% else %}
-                    <div class="p-3 ms-2 bg-white border rounded shadow-sm" style="border-radius:15px; max-width:75%; border-color:#28a745 !important;">
-                      <p class="small text-dark mb-0">{{ message.text }}</p>
-                    </div>
-                  {% endif %}
-                </div>
-              {% endfor %}
-            {% elif is_new_chat %}
-              <div class="d-flex flex-row justify-content-start mb-4">
-                <div class="p-3 ms-2 bg-white border rounded" style="border-radius:15px; max-width:75%; border-color:#28a745 !important;">
-                  <p class="small text-muted mb-0">Hello! How can I help you today?</p>
-                </div>
-              </div>
-            {% else %}
-              <div class="text-center text-muted small fst-italic py-4">
-                No messages found in this conversation.
-              </div>
-            {% endif %}
-          </div>
+         {% endfor %}
+        {% elif not is_new_chat %}
 
-          {% if is_new_chat %}
-          <!-- Chat Input Field Footer (only shown for a new/active chat) -->
-          <div class="card-footer bg-white p-3 border-top-0" style="border-top:1px solid #28a745 !important;">
-            <form id="chat-form" class="input-group">
-              <input type="hidden" id="chat-id" value="{{ chat_id if chat_id else '' }}">
-              <input type="text" id="user-input" class="form-control border-success" placeholder="Type a message..." required autocomplete="off">
-              <button class="btn btn-success" type="submit" id="send-btn">
-                Send
-              </button>
-            </form>
-          </div>
-          {% endif %}
+         <div class="empty-chat">No messages found in this conversation.</div>
 
-        </div>
-
+         {% endif %}
       </div>
-    </div>
-  </div>
 
+      <!-- Chat Input -->
+      <div
+         id="input-container"
+         class="input-wrapper {{ 'is-centered' if is_new_chat and not messages else 'is-footer' }}"
+      >
+         <form id="chat-form" class="chat-form">
+            <input type="hidden" id="chat-id" value="{{ chat_id }}" />
+
+            <input
+               type="text"
+               id="user-input"
+               class="chat-input"
+               placeholder="How can Kaarshika-AI help you today?"
+               required
+               autocomplete="off"
+            />
+
+            <button
+               class="btn-send"
+               type="submit"
+               id="send-btn"
+               aria-label="Send Message"
+            >
+               ➔
+            </button>
+         </form>
+      </div>
+   </main>
 </div>
 
-{% if is_new_chat %}
 <script>
-    const chatForm = document.getElementById('chat-form');
-    const userInput = document.getElementById('user-input');
-    const chatWindow = document.getElementById('chat-window');
-    const chatIdInput = document.getElementById('chat-id');
+   document.addEventListener("DOMContentLoaded", () => {
+      const chatForm = document.getElementById("chat-form");
+      const userInput = document.getElementById("user-input");
+      const chatWindow = document.getElementById("chat-window");
+      const chatIdInput = document.getElementById("chat-id");
+      const inputContainer = document.getElementById("input-container");
+      const sendButton = document.getElementById("send-btn");
 
-    chatForm.addEventListener('submit', async function(e) {
+      if (!chatForm) {
+         console.error("Chat form not found.");
+         return;
+      }
 
-        e.preventDefault();
+      let chatId = chatIdInput ? chatIdInput.value.trim() : "";
+      console.log("Current Chat ID:", chatId);
 
-        const messageText = userInput.value.trim();
+      if (!chatId) {
+         console.error("Chat ID is missing.");
+         userInput.disabled = true;
+         sendButton.disabled = true;
+         appendErrorMessage("Chat ID is missing. Please start a new chat.");
+         return;
+      }
 
-        if (!messageText) return;
+      chatWindow.scrollTop = chatWindow.scrollHeight;
 
-        // ==========================================
-        // 1. Show user message
-        // ==========================================
+      chatForm.addEventListener("submit", async function (e) {
+         e.preventDefault();
+         const messageText = userInput.value.trim();
+         if (!messageText) {
+            return;
+         }
+         chatId = chatIdInput.value.trim();
 
-        appendMessage(messageText, 'user');
+         if (!chatId) {
+            console.error("Chat ID is missing.");
+            appendErrorMessage("Chat ID is missing. Please start a new chat.");
+            return;
+         }
+         console.log("Sending message:", messageText);
+         console.log("Using Chat ID:", chatId);
+         if (
+            inputContainer &&
+            inputContainer.classList.contains("is-centered")
+         ) {
+            inputContainer.classList.remove("is-centered");
+            inputContainer.classList.add("is-footer");
+         }
 
-        userInput.value = '';
+         userInput.disabled = true;
+         sendButton.disabled = true;
+         appendMessage(messageText, "user");
+         userInput.value = "";
+         const botMessage = createBotMessage();
+         let botResponse = "";
 
-        // ==========================================
-        // 2. Create empty bot message
-        // ==========================================
+         try {
+            const response = await fetch("{{ url_for('get_response') }}", {
+               method: "POST",
+               headers: {
+                  "Content-Type": "application/json",
+                  Accept: "text/plain",
+               },
 
-        const botMessage = createBotMessage();
-
-        let botResponse = '';
-
-        try {
-
-            // ==========================================
-            // 3. Send request to Flask
-            // ==========================================
-
-            const response = await fetch(
-                '{{ url_for("get_response") }}',
-                {
-                    method: 'POST',
-
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-
-                    body: JSON.stringify({
-                        message: messageText,
-                        chat_id: chatIdInput.value || null
-                    })
-                }
-            );
+               body: JSON.stringify({
+                  message: messageText,
+                  chat_id: chatId,
+               }),
+            });
 
             if (!response.ok) {
-                throw new Error(
-                    `HTTP error: ${response.status}`
-                );
+               let errorMessage = `HTTP error: ${response.status}`;
+               try {
+                  const errorData = await response.json();
+                  errorMessage =
+                     errorData.error || errorData.reply || errorMessage;
+               } catch (jsonError) {
+                  console.error("Could not parse error:", jsonError);
+               }
+               throw new Error(errorMessage);
             }
-
-            // ==========================================
-            // 4. Get streaming reader
-            // ==========================================
-
+            if (!response.body) {
+               throw new Error("Server returned an empty response.");
+            }
             const reader = response.body.getReader();
-
             const decoder = new TextDecoder();
 
-            // ==========================================
-            // 5. Read token/chunks continuously
-            // ==========================================
-
             while (true) {
+               const { value, done } = await reader.read();
+               if (done) {
+                  break;
+               }
+               const chunk = decoder.decode(value, {
+                  stream: true,
+               });
+               botResponse += chunk;
+               botMessage.textContent = botResponse;
+               chatWindow.scrollTop = chatWindow.scrollHeight;
+            }
+            botResponse += decoder.decode();
+            botMessage.textContent = botResponse;
 
-                const { value, done } =
-                    await reader.read();
-
-                if (done) {
-                    break;
-                }
-
-                // Convert received bytes to text
-                const chunk = decoder.decode(
-                    value,
-                    { stream: true }
-                );
-
-                // Add chunk to complete response
-                botResponse += chunk;
-
-                // Update bot message immediately
-                botMessage.textContent = botResponse;
-
-                // Keep chat scrolled to bottom
-                chatWindow.scrollTop =
-                    chatWindow.scrollHeight;
+            if (chatId && window.history && window.history.replaceState) {
+               window.history.replaceState(
+                  null,
+                  "",
+                  "/chat/" + encodeURIComponent(chatId),
+               );
             }
 
-            // Flush remaining decoder data
-            botResponse += decoder.decode();
-
+            console.log("Message saved successfully.");
+         } catch (error) {
+            console.error("Error fetching response:", error);
             botMessage.textContent =
-                botResponse;
+               error.message || "Error contacting server. Please try again.";
+         } finally {
+            
+            userInput.disabled = false;
+            sendButton.disabled = false;
+            userInput.focus();
+         }
+      });
 
-        } catch (error) {
+      function appendMessage(text, sender) {
+         const messageRow = document.createElement("div");
+         messageRow.className = `message-row ${sender}`;
+         const messageBubble = document.createElement("div");
+         messageBubble.className = "message-bubble";
+         const paragraph = document.createElement("p");
+         paragraph.textContent = text;
+         messageBubble.appendChild(paragraph);
+         messageRow.appendChild(messageBubble);
+         chatWindow.appendChild(messageRow);
+         chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
 
-            console.error(
-                'Error fetching data:',
-                error
-            );
+      function createBotMessage() {
+         const messageRow = document.createElement("div");
+         messageRow.className = "message-row bot";
+         const messageBubble = document.createElement("div");
+         messageBubble.className = "message-bubble";
+         const paragraph = document.createElement("p");
+         messageBubble.appendChild(paragraph);
+         messageRow.appendChild(messageBubble);
+         chatWindow.appendChild(messageRow);
+         chatWindow.scrollTop = chatWindow.scrollHeight;
+         return paragraph;
+      }
 
-            botMessage.textContent =
-                'Error contacting server. Please try again.';
-        }
-    });
-
-
-    // ==========================================
-    // APPEND USER MESSAGE
-    // ==========================================
-
-    function appendMessage(text, sender) {
-
-        const messageRow =
-            document.createElement('div');
-
-        messageRow.classList.add(
-            'd-flex',
-            'flex-row',
-            'mb-4'
-        );
-
-        if (sender === 'user') {
-
-            messageRow.classList.add(
-                'justify-content-end'
-            );
-
-            const messageBox =
-                document.createElement('div');
-
-            messageBox.className =
-                'p-3 me-2 text-white bg-success rounded shadow-sm';
-
-            messageBox.style.borderRadius =
-                '15px';
-
-            messageBox.style.maxWidth =
-                '75%';
-
-            const paragraph =
-                document.createElement('p');
-
-            paragraph.className =
-                'small mb-0';
-
-            // textContent prevents HTML injection
-            paragraph.textContent = text;
-
-            messageBox.appendChild(paragraph);
-
-            messageRow.appendChild(messageBox);
-
-        } else {
-
-            messageRow.classList.add(
-                'justify-content-start'
-            );
-
-            const messageBox =
-                document.createElement('div');
-
-            messageBox.className =
-                'p-3 ms-2 bg-white border rounded shadow-sm';
-
-            messageBox.style.borderRadius =
-                '15px';
-
-            messageBox.style.maxWidth =
-                '75%';
-
-            messageBox.style.borderColor =
-                '#28a745';
-
-            const paragraph =
-                document.createElement('p');
-
-            paragraph.className =
-                'small text-dark mb-0';
-
-            paragraph.textContent = text;
-
-            messageBox.appendChild(paragraph);
-
-            messageRow.appendChild(messageBox);
-        }
-
-        chatWindow.appendChild(messageRow);
-
-        chatWindow.scrollTop =
-            chatWindow.scrollHeight;
-    }
-
-
-    // ==========================================
-    // CREATE EMPTY BOT MESSAGE
-    // ==========================================
-
-    function createBotMessage() {
-
-        const messageRow =
-            document.createElement('div');
-
-        messageRow.classList.add(
-            'd-flex',
-            'flex-row',
-            'mb-4',
-            'justify-content-start'
-        );
-
-        const messageBox =
-            document.createElement('div');
-
-        messageBox.className =
-            'p-3 ms-2 bg-white border rounded shadow-sm';
-
-        messageBox.style.borderRadius =
-            '15px';
-
-        messageBox.style.maxWidth =
-            '75%';
-
-        messageBox.style.borderColor =
-            '#28a745';
-
-        const paragraph =
-            document.createElement('p');
-
-        paragraph.className =
-            'small text-dark mb-0';
-
-        messageBox.appendChild(paragraph);
-
-        messageRow.appendChild(messageBox);
-
-        chatWindow.appendChild(messageRow);
-
-        chatWindow.scrollTop =
-            chatWindow.scrollHeight;
-
-        // Return the <p> element
-        return paragraph;
-    }
+      function appendErrorMessage(errorText) {
+         const messageRow = document.createElement("div");
+         messageRow.className = "message-row bot";
+         const messageBubble = document.createElement("div");
+         messageBubble.className = "message-bubble";
+         const paragraph = document.createElement("p");
+         paragraph.textContent = errorText;
+         messageBubble.appendChild(paragraph);
+         messageRow.appendChild(messageBubble);
+         chatWindow.appendChild(messageRow);
+         chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+   });
 </script>
-{% endif %}
+
 {% endblock %}
